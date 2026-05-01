@@ -1,0 +1,4 @@
+interface:
+  display_name: "Curriculum Lesson Updater"
+  short_description: "Update curriculum lessons with rich launch-ready content."
+  default_prompt: "Update the requested curriculum lessons with verified top-of-page videos, Mermaid diagrams, math, runnable examples, and build validation."

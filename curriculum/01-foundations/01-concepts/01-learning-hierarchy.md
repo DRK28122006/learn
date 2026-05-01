@@ -1,5 +1,25 @@
+---
+id: learning-hierarchy
+title: Learning Hierarchy
+track: foundations
+level: beginner
+version: 1.1
+---
+
 # Learning Hierarchy
 
+## Watch First
+
+<div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%', marginBottom: '1.5rem'}}>
+ <iframe
+ src="https://www.youtube.com/embed/OHIuUks4azQ"
+ title="6 Steps to Learn Anything: Bloom&#x27;s Taxonomy"
+ style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0}}
+ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+ referrerPolicy="strict-origin-when-cross-origin"
+ allowFullScreen
+ />
+</div>
 
 ## Learning Objectives
 
@@ -9,6 +29,27 @@ By the end of this lesson, you should be able to:
 - Identify the different levels of cognitive learning as applied to software engineering
 - Apply hierarchical thinking to break down complex decentralized technology concepts
 - Evaluate your own learning progress through the hierarchy levels
+
+## Concept Map
+
+```mermaid
+flowchart LR
+ A["Source"] --> B["Question"]
+ B --> C["Practice"]
+ C --> D["Artifact"]
+ D --> E["Review"]
+ E --> B
+```
+
+## Quantitative Lens
+
+A learning loop is strongest when practice and feedback both happen:
+
+$$
+M = U \times P \times F
+$$
+
+$M$ is mastery, $U$ is understanding, $P$ is deliberate practice, and $F$ is feedback quality.
 
 ## Introduction
 
@@ -121,6 +162,17 @@ Use this framework to evaluate your progress:
 3. **Practice Areas:** Where can you move from understanding to application?
 4. **Growth Opportunities:** What advanced projects could help you reach higher levels?
 
+## Implementation Sketch
+
+```yaml
+lesson: learning-hierarchy
+artifact: short written note or working demo
+evidence:
+ - explain the idea in your own words
+ - apply it in a small task
+ - record feedback and next action
+```
+
 ## Practical Exercise
 
 **Task:** Analyze your current learning approach to one decentralized technology concept.
@@ -141,6 +193,13 @@ Use this framework to evaluate your progress:
 - In decentralized technologies, understanding context (like African infrastructure constraints) enhances evaluation and creation skills
 - Regular self-assessment against the hierarchy helps identify growth opportunities
 - The ultimate goal is to become an active contributor who not only uses technology but shapes its future
+
+## Further Reading
+
+- [Bloom taxonomy](https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/)
+- [Markdown syntax](https://www.markdownguide.org/basic-syntax/)
+- [Git documentation](https://git-scm.com/doc)
+- [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow)
 
 ## Next Steps
 

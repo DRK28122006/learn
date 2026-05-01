@@ -3,241 +3,302 @@ id: transformers
 title: Transformers
 track: ai-ml
 level: advanced
-version: 1.0
+version: 1.1
 ---
 
 # Transformers
+
+## Watch First
+
+<div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%', marginBottom: '1.5rem'}}>
+  <iframe
+    src="https://www.youtube.com/embed/wjZofJX0v4M"
+    title="But what is a GPT? Visual intro to transformers"
+    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0}}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  />
+</div>
 
 ## Learning Objectives
 
 By the end of this lesson, you will be able to:
 
-- Explain what a **transformer** is and why it is a “drop‑in” replacement for RNNs in many ML tasks [web:252][web:259].  
-- Describe the core idea of **self‑attention** and how it captures long‑range dependencies in sequences [web:252][web:258].  
-- Sketch the overall **encoder‑decoder** and **decoder‑only** transformer patterns used in models like BERT and GPT‑family LLMs [web:253][web:259].  
-- Connect transformers to the Flow‑style view of ML: **data → embeddings → attention → prediction**.
+- Explain how transformers replace recurrence with attention over tokens.
+- Derive the intuition behind scaled dot-product attention.
+- Compare encoder-only, decoder-only, and encoder-decoder transformer patterns.
+- Implement a small attention calculation and know when a transformer is the right tool.
 
-## Introduction
+## Architecture Map
 
-**Transformers** are a class of neural architectures that have become the backbone of modern language models, vision‑based models, and other sequence‑style systems [web:252][web:259].  
-Unlike older recurrent networks that process data step‑by‑step, transformers use an **attention mechanism** to weigh the importance of every element in the input relative to every other element [web:252][web:258].
+```mermaid
+flowchart LR
+  Text["Input text or sequence"] --> Tokenizer["Tokenizer"]
+  Tokenizer --> Embeddings["Token + positional embeddings"]
+  Embeddings --> Attention["Multi-head self-attention"]
+  Attention --> FFN["Feed-forward network"]
+  FFN --> Blocks["Repeated transformer blocks"]
+  Blocks --> Head["Task head<br/>classification, generation, embedding"]
+```
 
-In practice, this means:
+Transformers are sequence models built around attention. Instead of processing tokens one step at a time like an RNN, a transformer lets each token compare itself with other tokens in the sequence.
 
-- they can learn **long‑range relationships** in text, code, or sequences,  
-- they can be trained **in parallel** (much faster than RNNs),  
-- and they generalize to many downstream tasks via fine‑tuning.
+That single idea unlocked models that can handle long context, train in parallel, and transfer across tasks.
 
-For Flow engineers, transformers are not magic; they are a **pattern** for turning sequences into structured, context‑aware representations.
+:::tip Launch Rule
+Use transformers when sequence context is central to the task. For small tabular problems, start with simpler models first.
+:::
 
----
+## Why Transformers Replaced Many RNN Workflows
 
-## Why Transformers Exist
+RNNs, LSTMs, and GRUs process sequences step by step:
 
-Before transformers, many sequence tasks used:
+```mermaid
+flowchart LR
+  X1["x1"] --> H1["h1"]
+  H1 --> H2["h2"]
+  X2["x2"] --> H2
+  H2 --> H3["h3"]
+  X3["x3"] --> H3
+```
 
-- **RNNs** (Recurrent Neural Networks),  
-- **LSTMs**, or **GRUs**.
+That design has two practical limits:
 
-These models process one token at a time and pass a “hidden state” forward. This has two big problems [web:253][web:259]:
+- training is harder to parallelize,
+- long-range dependencies can fade as information moves through many steps.
 
-1. **They are slow to train** because each step must wait for the previous one.  
-2. **Long‑range dependencies are hard**; the hidden state can forget distant tokens.
+Transformers use attention so every token can directly inspect the rest of the context.
 
-Transformers were introduced to fix this. The core idea: instead of relying on hidden‑state propagation, let **each token talk to all the others** through attention.
+## Self-Attention
 
----
+Self-attention turns each token embedding into three vectors:
 
-## The Core Idea: Self‑Attention
+- Query `Q`: what this token is looking for,
+- Key `K`: what this token offers for matching,
+- Value `V`: the information this token contributes.
 
-### Intuition
+The attention formula is:
 
-In **self‑attention**, every token in a sequence asks:
+$$
+Attention(Q, K, V) = softmax\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+$$
 
-- “Which other tokens should I pay attention to in order to understand my own meaning?”
+Read it as:
 
-Each token produces a **context‑aware embedding** that mixes information from the entire sequence, not just nearby neighbors [web:252][web:258].
+1. Compare queries with keys.
+2. Scale scores by the key dimension.
+3. Convert scores into weights with softmax.
+4. Use those weights to mix the value vectors.
 
-### Mechanism (Conceptual)
+## Attention From Scratch
 
-Roughly, for each token in the sequence:
+This small NumPy example computes scaled dot-product attention for three token embeddings.
 
-1. Convert it into three vectors:  
-   - **Query** (`Q`) — what this token is “looking for”.  
-   - **Key** (`K`) — how well this token matches other queries.  
-   - **Value** (`V`) — what this token contains to share.
+```python
+import numpy as np
 
-2. For token `i`, compute scores against every token `j` using `Q_i` and `K_j` (often a dot product).  
-3. Normalize these scores into attention weights (e.g., via softmax).  
-4. Weight the `V` vectors of all tokens by these attention weights and sum them.  
-5. The result is a new embedding for token `i` that incorporates information from the whole sequence.
+def softmax(x, axis=-1):
+    x = x - np.max(x, axis=axis, keepdims=True)
+    exp_x = np.exp(x)
+    return exp_x / exp_x.sum(axis=axis, keepdims=True)
 
-In pseudo‑math, the attention output for one token is:
+tokens = np.array([
+    [1.0, 0.0, 1.0, 0.0],
+    [0.0, 2.0, 0.0, 2.0],
+    [1.0, 1.0, 1.0, 1.0],
+])
 
-`attention_output = sum(attention_weights_j * V_j)`
+rng = np.random.default_rng(42)
+W_q = rng.normal(size=(4, 4))
+W_k = rng.normal(size=(4, 4))
+W_v = rng.normal(size=(4, 4))
 
-This is often called **scaled dot‑product attention**, and it is repeated in multiple “heads” (multi‑head attention) to let the model capture different kinds of relationships at once [web:252][web:255][web:258].
+Q = tokens @ W_q
+K = tokens @ W_k
+V = tokens @ W_v
 
-### Why It Works
+scores = Q @ K.T / np.sqrt(K.shape[-1])
+weights = softmax(scores)
+contextual_tokens = weights @ V
 
-Self‑attention lets the model:
+print("attention weights")
+print(np.round(weights, 3))
+print("contextual embeddings")
+print(np.round(contextual_tokens, 3))
+```
 
-- focus on **distant tokens** when necessary (e.g., the subject of a sentence far away),  
-- avoid the “forgetting” problems of RNNs, and  
-- learn **parallelizable patterns** that speed up training and inference.
+The output embeddings are contextual: each token representation now includes weighted information from the other tokens.
 
----
+## Multi-Head Attention
 
-## Transformer Architecture (Encoder‑Decoder)
+One attention head learns one kind of relationship. Multiple heads let the model learn several relationship patterns in parallel.
 
-The classic transformer is an **encoder‑decoder** architecture [web:252][web:259]:
+$$
+MultiHead(Q, K, V) = Concat(head_1, \dots, head_h)W^O
+$$
 
-### 1. Tokenization & Embedding
+where each head is:
 
-- The input sequence (e.g., a sentence) is split into **tokens**.  
-- Each token is mapped to a **word embedding** vector and combined with a **positional embedding** (so the model knows the order of tokens) [web:252][web:259].
+$$
+head_i = Attention(QW_i^Q, KW_i^K, VW_i^V)
+$$
 
-These embeddings are then passed through several identical **transformer blocks** in both encoder and decoder.
+In language, one head might focus on subject-verb agreement, another on coreference, and another on local syntax. The model learns these patterns from data.
 
-### 2. Encoder
+## Positional Information
 
-The **encoder** takes the input sequence and:
+Attention alone does not know token order. Transformers add positional information to token embeddings.
 
-- repeatedly applies **self‑attention** to build rich, context‑aware representations,  
-- passes these through a **feed‑forward network** (e.g., a small MLP) to refine the representations.
+```mermaid
+flowchart LR
+  Token["Token embedding"] --> Add["Add"]
+  Position["Position embedding"] --> Add
+  Add --> Block["Transformer block"]
+```
 
-Each encoder block:
+Without positional information, "mentor helps learner" and "learner helps mentor" would look too similar.
 
-- attends to all tokens in the input,  
-- learns how each token relates to the others,  
-- and outputs a stack of refined embeddings.
+## Transformer Block
 
-The encoder’s final output is a contextualized representation of the input, often used as “context” for tasks like translation or summarization.
+A standard transformer block includes:
 
-### 3. Decoder
+- multi-head attention,
+- residual connections,
+- layer normalization,
+- feed-forward network.
 
-The **decoder** generates the output sequence, such as a translated sentence or a completion.
+```mermaid
+flowchart TD
+  X["Input embeddings"] --> Attn["Multi-head attention"]
+  Attn --> Add1["Residual add + norm"]
+  Add1 --> FFN["Feed-forward network"]
+  FFN --> Add2["Residual add + norm"]
+  Add2 --> Out["Output embeddings"]
+```
 
-It:
+The feed-forward network is applied to each token position independently after attention has mixed contextual information.
 
-- also uses self‑attention on the output tokens it has generated so far,  
-- uses **cross‑attention** to attend back to the encoder’s outputs (this is how the decoder “remembers” the input),  
-- then applies a feed‑forward network.
+## Encoder, Decoder, and Decoder-Only Patterns
 
-Because the decoder generates tokens one at a time, it is often **auto‑regressive**: the prediction for token `t` depends on the outputs for tokens `1` to `t-1` [web:253][web:259].
+| Pattern | Attention behavior | Common use |
+| --- | --- | --- |
+| Encoder-only | Bidirectional attention over input | classification, retrieval, embeddings |
+| Decoder-only | Causal attention over previous tokens | text/code generation |
+| Encoder-decoder | Encoder reads input, decoder generates output | translation, summarization |
 
----
+### Encoder-Only
 
-## Variants: Only‑Encoder and Only‑Decoder
+Encoder-only models are strong when you need a representation of a full input.
 
-In practice, people often use **subsets** of the full transformer pattern.
+Examples:
 
-### Only‑Encoder (e.g., BERT‑style)
+- classify a governance proposal,
+- embed a lesson for semantic search,
+- detect whether a support message needs escalation.
 
-- You keep the **encoder** part and drop the decoder.  
-- You feed the context‑aware embeddings into a task‑specific head (e.g., classification, NER, or QA).  
-- Training often uses objectives like **masked language modeling** (predicting masked tokens), which forces the model to understand context.
+### Decoder-Only
 
-This is common for tasks such as:
+Decoder-only models predict the next token.
 
-- document classification,  
-- named‑entity recognition,  
-- sentence similarity.
+$$
+P(x_1, \dots, x_T) = \prod_{t=1}^{T}P(x_t \mid x_{<t})
+$$
 
-### Only‑Decoder / Decoder‑Only (e.g., GPT‑style)
+This is the pattern behind many generative LLMs.
 
-- You keep the **decoder** part and train it to predict the next token in a sequence, given the previous ones.  
-- This is typically **auto‑regressive**: each token is generated based on all prior tokens.
+### Encoder-Decoder
 
-This pattern is the backbone of many large language models (LLMs) and tools that generate text, code, or explanations.
+Encoder-decoder models are useful when the output is a new sequence conditioned on an input sequence.
 
----
+Examples:
 
-## How Transformers Fit Into the Flow‑Style Pipeline
+- translate text,
+- summarize long notes,
+- convert a rough project brief into structured documentation.
 
-From a Flow‑engineer perspective, a transformer‑based model can be viewed as a pipeline:
+## Minimal Transformers Library Example
 
-`input sequence → tokenizer → embeddings → attention layers → feed‑forward layers → prediction`
+Install dependencies:
 
-At each stage:
+```bash
+pip install transformers torch
+```
 
-- **Tokenization** converts text or structure into a sequence of tokens.  
-- **Embeddings** map tokens into vectors.  
-- **Attention** mixes information across the entire sequence.  
-- **Feed‑forward** layers refine and transform the representations.  
-- **Head** is a small network layer on top that produces the final output (e.g., a class, a next token, or a continuous value).
+Run a small embedding extraction:
 
-This is very similar to the supervised‑learning pattern you already know:
+```python
+import torch
+from transformers import AutoModel, AutoTokenizer
 
-- features → transformation → representation → decision.
+model_name = "distilbert-base-uncased"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModel.from_pretrained(model_name)
 
-Transformers simply bring **sequence‑aware representations** and **attention‑style mixing** into the middle of that pipeline.
+text = "Flow builders learn machine learning in public."
+inputs = tokenizer(text, return_tensors="pt")
 
----
+with torch.no_grad():
+    outputs = model(**inputs)
 
-## When to Use Transformers
+last_hidden_state = outputs.last_hidden_state
+cls_embedding = last_hidden_state[:, 0, :]
 
-Transformers are powerful but not always necessary.  
-They shine when you have:
+print(last_hidden_state.shape)
+print(cls_embedding.shape)
+```
 
-- **Sequences of data** (text, code, time‑series, logs, etc.),  
-- **Long‑range dependencies** that are hard to capture with simple models,  
-- or tasks that benefit from **context‑aware embeddings** (e.g., language understanding, code comprehension, or complex recommendation logic).
+The `last_hidden_state` contains contextual embeddings for each token.
 
-In Flow‑style systems, transformers are useful:
+## When Transformers Are Worth It
 
-- for **language‑style problems** (e.g., explaining learning‑progress, governance‑policy reasoning, or conversation‑style assistants).  
-- for **structured‑text problems** (e.g., logs, reports, or code‑quality‑related tasks).
+Use a transformer when:
 
-However, for simple tabular problems, classic supervised‑learning models may be faster, easier, and sufficient.
+- order and context matter,
+- long-range relationships matter,
+- text, code, logs, or sequences are central,
+- transfer learning from a pretrained model saves data and time.
 
----
+Be cautious when:
+
+- the dataset is small and tabular,
+- latency or cost is tight,
+- interpretability is more important than raw capability,
+- a simpler model already meets the product need.
 
 ## Practical Exercises
 
-### Exercise 1: Sketch a Transformer Pipeline
+### Exercise 1: Inspect Attention
 
-Pick a Flow‑style task that involves sequences (e.g., text‑based learning explainers):
+Run the NumPy attention example and change the token vectors. Observe how the attention weights change.
 
-- Sketch the pipeline:
+### Exercise 2: Compare Model Families
 
-  - input → tokenize → embed → attention → feed‑forward → output head.  
-- Write a short note describing how attention helps in this task compared to treating the sequence as a flat bag of words.
+For three tasks, choose encoder-only, decoder-only, encoder-decoder, or no transformer:
 
-### Exercise 2: Explore a Simple Transformer‑Style Model
+- proposal classification,
+- learner-support chatbot,
+- weekly metric forecast.
 
-Using a small library like `transformers` (from Hugging Face) or a minimal example:
+### Exercise 3: Extract Embeddings
 
-- Load a pre‑trained encoder‑only model (e.g., a BERT‑style tokenizer and model).  
-- Pass a short sentence through it and inspect the contextual embeddings.  
-- Reflect on how the embeddings differ from a simple bag‑of‑words vector.
+Use the Transformers library example and compare embeddings for two similar sentences.
 
-### Exercise 3: Design a Minimal Use Case
-
-For the same lab:
-
-- Design a minimal use case where a transformer would improve performance over a non‑sequence model.  
-- List the data, the task, and the expected benefits.
-
----
-
-## Self‑Assessment
+## Self-Assessment
 
 Rate yourself from 1 to 5:
 
-- I can explain what a transformer is and how it differs from RNNs.  
-- I can explain self‑attention in simple terms.  
-- I can sketch the encoder‑decoder transformer architecture and describe its stages.  
-- I can see where transformers fit into the Flow‑style ML pipeline.
+- I can explain self-attention without mysticism.
+- I can read the scaled dot-product attention formula.
+- I can distinguish encoder-only, decoder-only, and encoder-decoder designs.
+- I can decide when a transformer is worth the complexity.
 
-Action item: write a short note in your lab repo describing one transformer‑style model you might use in a Flow‑style project and why it is better than a non‑sequence model.
+## Further Reading
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+- [Hugging Face Transformers documentation](https://huggingface.co/docs/transformers/index)
 
 ## Next Steps
 
-- Read `02-graph-neural-networks.md` next to explore how graph‑based architectures extend the idea of “relational” representations to non‑sequence structures.  
-- Use transformers as a **tool** for sequence‑rich problems, not as a universal default.  
-- Keep the Flow‑style view: **data → embeddings → attention/relational representation → prediction**.
-
----
-
-*This lesson gives Flow Initiative trainees an advanced‑level understanding of transformers in ML systems, focusing on how self‑attention works, how transformers are architected, and how they fit into the Flow‑style pipeline for sequence‑rich problems.*
+Next, study graph neural networks. Transformers model dense relationships inside sequences; GNNs model explicit relationships between entities.

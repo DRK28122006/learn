@@ -3,230 +3,14 @@ id: graph-neural-networks
 title: Graph Neural Networks
 track: ai-ml
 level: advanced
-version: 1.0
+version: 1.1
 ---
 
 # Graph Neural Networks
 
-## Learning Objectives
+## Watch First
 
-By the end of this lesson, you will be able to:
-
-- Explain what a **graph** is in the ML context: nodes, edges, and structure [web:263][web:273].  
-- Describe the **message‑passing (neighbourhood aggregation)** idea behind Graph Neural Networks (GNNs) [web:263][web:269].  
-- Distinguish key GNN families: GCNs, GATs, and GraphSAGE‑style approaches [web:264][web:269].  
-- See where GNNs differ from transformers and where they complement each other [web:267][web:273].  
-- Sketch a minimal GNN‑style pipeline for a Flow‑style relational problem.
-
-## Introduction
-
-In many real‑world Flow‑style problems, data is not just rows in a table or tokens in a sequence; it is **relational**.  
-Students, lessons, proposals, and community nodes form **networks** of connections, not isolated instances.
-
-**Graph Neural Networks (GNNs)** are architectures designed to learn from **graph‑structured data**: nodes (entities) and edges (relationships) [web:263][web:269].  
-They generalize ideas from CNNs and transformers to structured, relational settings.
-
-In this lesson you will see GNNs as a **pattern** for turning graphs into rich, context‑aware node, edge, or graph‑level representations.
-
----
-
-## What Is a Graph?
-
-In ML, a **graph** is a structure containing:
-
-- **Nodes** (vertices) — entities such as students, lessons, proposals, or governance actions.  
-- **Edges** (links) — relationships such as “is enrolled in”, “depends on”, “follows”, or “co‑author”.
-
-Mathematically, a graph is often written as `G = (V, E)`, where:
-
-- `V` is the set of nodes,  
-- `E` is the set of edges [web:263].
-
-Each node can have features (e.g., a student’s engagement score), and each edge can have weights or types (e.g., “strong influence”, “weak dependency”).
-
----
-
-## Why Graphs Matter
-
-Many problems become clearer when you model them as graphs:
-
-- **Social / learning networks** — students connected by collaborations, mentorship, or shared paths.  
-- **Knowledge graphs** — lessons, prerequisites, and outcomes linked together.  
-- **Infrastructure networks** — governance‑proposals depending on each other, or services forming a dependency graph.
-
-Traditional models treat each student or lesson as an isolated record.  
-GNNs can instead **follow the links** between entities, learning how local neighborhoods influence behavior.
-
----
-
-## The Core Idea: Message Passing
-
-### Intuition
-
-In a **graph**, information flows along edges:
-
-- each node gathers signals from its neighbors,  
-- updates its own representation,  
-- and passes new messages outward.
-
-This is called **message passing** or **neighbourhood aggregation** [web:263][web:273].
-
-In simple terms, a GNN block does:
-
-- take each node’s features,  
-- aggregate features from its immediate neighbors,  
-- combine them into a new node embedding,  
-- repeat over several layers so information can reach farther nodes.
-
----
-
-### How It Works (Conceptual)
-
-Roughly, for each node `v` in the graph [web:263][web:269]:
-
-1. Collect the current embeddings of all neighbors `u` of `v`.  
-2. Apply a transformation (e.g., a small neural net) to each neighbor embedding.  
-3. Aggregate these transformed embeddings (often via sum, mean, or max).  
-4. Combine this aggregated message with node `v`’s own embedding.  
-5. Optionally normalize the result and store it as the new embedding for `v`.
-
-After several layers, each node’s embedding reflects not only its own features, but also the structure of its neighborhood and the attributes of nearby nodes.
-
----
-
-## Variants of GNNs
-
-Different GNN families tweak the “how do I aggregate?” rule.
-
-### 1. Graph Convolutional Networks (GCNs)
-
-GCNs extend the intuition of convolution to graphs [web:263][web:264].  
-Each node aggregates a **weighted average** of its neighbors’ features, where the weights are often determined by the graph structure.
-
-GCNs are good for tasks where:
-
-- the local topology (who is connected to whom) matters a lot,  
-- and the relationships are relatively uniform (no need to dynamically weight neighbors).
-
-### 2. Graph Attention Networks (GATs)
-
-GATs add **attention** over neighbors [web:264][web:265].  
-Instead of a fixed averaging rule, each node learns to assign **importance scores** to its neighbors and then aggregates only the most relevant ones.
-
-This is conceptually similar to transformer self‑attention, but with a key difference:
-
-- transformers typically treat the sequence as a **fully connected graph** (any token can attend to any token),  
-- GATs restrict attention to the **explicit graph edges** (so you can’t attend to nodes that are not connected) [web:267][web:270].
-
-### 3. GraphSAGE‑Style Models
-
-GraphSAGE‑style approaches sample neighbors instead of using the full neighborhood.  
-They learn how to aggregate a **fixed‑size neighborhood sample**, which makes them scalable to large graphs where a node may have many neighbors.
-
-These are good for:
-
-- massive interaction graphs (e.g., social or recommendation graphs),  
-- settings where you want to control memory and computation per node.
-
----
-
-## How GNNs Differ from Transformers
-
-Transformers and GNNs both deal with **structured data**, but they make different assumptions [web:267][web:273].
-
-### Transformers
-
-- Assume **sequences** of tokens connected by positions.  
-- Use **global self‑attention**: every token can attend to every other token, more or less independently of an explicit graph.  
-- Are great for text, code, and time‑series where order and global context matter.
-
-### GNNs
-
-- Assume **explicit graphs** (nodes + edges).  
-- Use **local‑neighbourhood aggregation**: each node primarily talks to its graph‑neighbors, possibly with attention.  
-- Are great for relational systems, such as networks of students, lessons, and proposals.
-
-One way to think about it:
-
-- A **sequence is a special kind of graph** (linear chain of nodes with edges between consecutive tokens).  
-- In that view, **transformers are a kind of GNN**, but with a very dense (fully connected) adjacency matrix and special handling of order and masking [web:267][web:273].
-
----
-
-## GNNs in the Flow‑Style Pipeline
-
-From a Flow‑engineer perspective, a GNN‑based model maps:
-
-`graph data → node/edge features → message‑passing layers → aggregated embeddings → prediction`
-
-At each stage:
-
-- **Graph construction** converts your domain objects (students, lessons, proposals) into nodes and edges.  
-- **Feature assignment** gives each node and edge meaningful attributes.  
-- **Message‑passing layers** propagate information along edges, enriching node embeddings.  
-- **Aggregation** summarizes the final embeddings (per‑node, per‑edge, or per‑graph).  
-- **Head** is a small network layer that produces the final output (e.g., prediction of student risk, lesson difficulty, or proposal success).
-
-This is very similar to the earlier supervised‑learning and transformer pipelines: **data → transformation → representation → decision**.  
-GNNs just add the **graph layer** in the middle.
-
----
-
-## When to Use GNNs
-
-GNNs shine when your data is inherently relational and you want to exploit links between entities [web:263][web:269].
-
-In Flow‑style systems, consider GNNs for:
-
-- **Learning‑network analysis** — students linked by collaborations, co‑enrollment, or mentorship.  
-- **Knowledge‑graph‑style systems** — lessons, prerequisites, and learning paths as a graph.  
-- **Governance‑proposal‑dependency graphs** — proposals that depend on each other or share common authors.
-
-However, for simple tabular or sequential tasks, classic models (or transformers for sequences) may be simpler and sufficient.
-
----
-
-## Practical Exercises
-
-### Exercise 1: Sketch a GNN Pipeline
-
-Pick a Flow‑style relational problem (e.g., a student‑collaboration or lesson‑prerequisite graph):
-
-- Sketch the pipeline:
-
-  - graph construction → node/edge features → message‑passing layers → aggregation → prediction head.  
-- Write a short note describing how message passing helps compared to ignoring the graph.
-
-### Exercise 2: Explore a Simple GNN
-
-Using a library like `PyTorch Geometric` or `Deep Graph Library`:
-
-- Load a small graph dataset (e.g., a small collaboration graph).  
-- Train a simple GCN or GAT to predict node labels or edge properties.  
-- Inspect the learned node embeddings and reflect on how they differ from non‑relational features.
-
-### Exercise 3: Compare GNNs and Transformers
-
-- Think of a sequence‑style problem and a graph‑style problem.  
-- For each, write a short note explaining whether a transformer, a GNN, or both are appropriate, and why.
-
----
-
-## Self‑Assessment
-
-Rate yourself from 1 to 5:
-
-- I can explain what a graph is and why it matters for ML.  
-- I can explain the message‑passing / neighbourhood‑aggregation idea in GNNs.  
-- I can distinguish GCNs, GATs, and GraphSAGE‑style models.  
-- I can see where GNNs differ from and complement transformers.  
-- I can sketch a GNN‑style pipeline for a Flow‑style relational problem.
-
-Action item: write a short note in your lab repo describing one GNN‑style model you might use in a Flow‑style project and why it is better than a non‑relational model.
-
-## Video
-
-<div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%'}}>
+<div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%', marginBottom: '1.5rem'}}>
   <iframe
     src="https://www.youtube.com/embed/xFMhLp52qKI"
     title="Graph Neural Networks: A gentle introduction"
@@ -237,14 +21,241 @@ Action item: write a short note in your lab repo describing one GNN‑style mode
   />
 </div>
 
----
+## Learning Objectives
+
+By the end of this lesson, you will be able to:
+
+- Represent relational ML problems as nodes, edges, and features.
+- Explain message passing and neighborhood aggregation.
+- Compare GCN, GAT, and GraphSAGE-style models.
+- Implement a small graph aggregation step and decide when a GNN is justified.
+
+## Graph Learning Map
+
+```mermaid
+flowchart LR
+  Domain["Domain objects<br/>learners, lessons, proposals"] --> Graph["Graph construction"]
+  Graph --> Features["Node and edge features"]
+  Features --> Passing["Message passing"]
+  Passing --> Embeddings["Node, edge, or graph embeddings"]
+  Embeddings --> Head["Prediction head"]
+  Head --> Task["Node label, link prediction,<br/>graph classification"]
+```
+
+Many ML problems are not just rows or sequences. They are networks.
+
+A graph neural network learns from entities and the relationships between them. In a Flow-style system, this might mean learners connected to lessons, contributors connected to proposals, or services connected through dependencies.
+
+:::tip Launch Rule
+Reach for a GNN when the edges are meaningful. If the links are arbitrary or weak, a simpler tabular or sequence model may be better.
+:::
+
+## Graph Basics
+
+A graph is usually written:
+
+$$
+G = (V, E)
+$$
+
+where:
+
+- `V` is a set of nodes,
+- `E` is a set of edges.
+
+Nodes can have feature vectors:
+
+$$
+x_v \in \mathbb{R}^d
+$$
+
+Edges can also have attributes:
+
+- type,
+- weight,
+- timestamp,
+- direction.
+
+## Example: Learning Path Graph
+
+```mermaid
+graph LR
+  Math["Math for ML"] --> Pipelines["Data pipelines"]
+  Pipelines --> Lifecycle["Model lifecycle"]
+  Lifecycle --> Regression["Regression and classification"]
+  Regression --> Features["Feature engineering"]
+  Features --> Tuning["Hyperparameter tuning"]
+```
+
+In this graph:
+
+- lessons are nodes,
+- prerequisite relationships are edges,
+- node features can include difficulty, topic, estimated time, or completion rate.
+
+A GNN could learn lesson embeddings that understand both content and position in the curriculum.
+
+## Message Passing
+
+The core GNN operation is message passing.
+
+For node `v`, the model gathers information from its neighbors:
+
+$$
+h_v^{(k+1)} = UPDATE\left(h_v^{(k)}, AGGREGATE\left(\{h_u^{(k)} : u \in N(v)\}\right)\right)
+$$
+
+Read it as:
+
+1. Look at the current node embedding.
+2. Collect neighbor embeddings.
+3. Aggregate them with mean, sum, max, or attention.
+4. Update the node embedding.
+
+After one layer, each node knows about immediate neighbors. After two layers, it can include neighbors-of-neighbors.
+
+## Message Passing From Scratch
+
+This pure NumPy example performs one neighborhood aggregation step.
+
+```python
+import numpy as np
+
+# Nodes: 0=Math, 1=Pipelines, 2=Lifecycle, 3=Regression
+adjacency = np.array([
+    [1, 1, 0, 0],
+    [1, 1, 1, 0],
+    [0, 1, 1, 1],
+    [0, 0, 1, 1],
+], dtype=float)
+
+features = np.array([
+    [1.0, 0.0],  # math-heavy
+    [0.8, 0.4],  # data-heavy
+    [0.4, 0.8],  # lifecycle-heavy
+    [0.9, 0.7],  # modeling-heavy
+])
+
+degree = adjacency.sum(axis=1, keepdims=True)
+neighbor_mean = adjacency @ features / degree
+
+W = np.array([
+    [0.7, -0.2],
+    [0.3, 0.8],
+])
+
+new_embeddings = np.maximum(0, neighbor_mean @ W)
+
+print(np.round(new_embeddings, 3))
+```
+
+This is not a full GNN training loop, but it shows the central operation: each node is updated from its neighborhood.
+
+## Common GNN Families
+
+### Graph Convolutional Networks
+
+GCNs use normalized neighbor aggregation. A common update pattern is:
+
+$$
+H^{(k+1)} = \sigma(\tilde{D}^{-\frac{1}{2}}\tilde{A}\tilde{D}^{-\frac{1}{2}}H^{(k)}W^{(k)})
+$$
+
+where:
+
+- `A` is the adjacency matrix,
+- `D` is the degree matrix,
+- `H` is the node embedding matrix,
+- `W` is a learned weight matrix.
+
+GCNs are a strong baseline for node classification and graph representation.
+
+### Graph Attention Networks
+
+GATs learn how much attention each neighbor deserves.
+
+$$
+h_v' = \sum_{u \in N(v)} \alpha_{vu}Wh_u
+$$
+
+where `alpha` is a learned attention weight.
+
+Use attention when some neighbors matter more than others.
+
+### GraphSAGE-Style Models
+
+GraphSAGE samples neighborhoods and learns aggregators. This helps scale to large graphs where using every neighbor is expensive.
+
+Use GraphSAGE-style approaches when:
+
+- graphs are large,
+- nodes have many neighbors,
+- new nodes arrive over time.
+
+## Task Types
+
+| Task | What the model predicts | Example |
+| --- | --- | --- |
+| Node classification | Label for each node | learner risk, lesson difficulty |
+| Link prediction | Whether an edge should exist | mentor match, related lesson |
+| Graph classification | Label for whole graph | proposal quality, workflow risk |
+| Node regression | Numeric value for each node | expected completion score |
+
+## GNNs vs. Transformers
+
+Transformers and GNNs both move information between elements, but they start from different assumptions.
+
+| Model | Relationship structure | Best fit |
+| --- | --- | --- |
+| Transformer | Dense attention over tokens | text, code, sequence context |
+| GNN | Explicit graph edges | networks, dependencies, relational data |
+
+A transformer can be seen as using attention over a mostly dense graph of tokens. A GNN usually respects explicit edges.
+
+## Practical Design Checklist
+
+Before building a GNN, answer:
+
+- What are the nodes?
+- What are the edges?
+- Are edges directed or undirected?
+- Are there edge types or weights?
+- What features are available at prediction time?
+- Is the task node-level, edge-level, or graph-level?
+- What baseline will you compare against?
+
+If you cannot define meaningful edges, the GNN probably has no useful graph to learn from.
+
+## Practical Exercises
+
+### Exercise 1: Build a Graph Schema
+
+Choose a Flow-style system and define nodes, edges, features, and prediction target.
+
+### Exercise 2: Run the NumPy Aggregator
+
+Modify the adjacency matrix and observe how node embeddings change.
+
+### Exercise 3: Compare Against a Baseline
+
+For your graph problem, write down a non-GNN baseline and explain what the graph is expected to add.
+
+## Self-Assessment
+
+Rate yourself from 1 to 5:
+
+- I can represent a domain as a graph.
+- I can explain message passing.
+- I can compare GCNs, GATs, and GraphSAGE.
+- I can decide whether graph structure is meaningful enough for a GNN.
+
+## Further Reading
+
+- [Semi-Supervised Classification with Graph Convolutional Networks](https://arxiv.org/abs/1609.02907)
+- [Graph Attention Networks](https://arxiv.org/abs/1710.10903)
+- [Inductive Representation Learning on Large Graphs](https://arxiv.org/abs/1706.02216)
+- [PyTorch Geometric documentation](https://pytorch-geometric.readthedocs.io/)
 
 ## Next Steps
 
-- Read `03-reinforcement-learning.md` next to explore how sequential decision‑making and environments extend these ideas further.  
-- Use GNNs as a **tool** for relational problems, not a universal default.  
-- Keep the Flow‑style view: **entities → relationships → message‑passing → rich representations → prediction**.
-
----
-
-*This lesson gives Flow Initiative trainees an advanced‑level understanding of Graph Neural Networks in ML systems, focusing on how message‑passing works, how different GNN families behave, and how they fit into the Flow‑style pipeline for relational problems.*
+Next, study reinforcement learning. GNNs learn from relationships; RL learns from interaction and feedback over time.

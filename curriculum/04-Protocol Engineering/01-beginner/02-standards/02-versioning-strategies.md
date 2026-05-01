@@ -3,33 +3,65 @@ id: versioning-strategies
 title: Versioning Strategies
 track: protocol-engineering
 level: beginner
-version: 1.0
+version: 1.1
 ---
 
 # Versioning Strategies
+
+## Watch First
+
+<div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%', marginBottom: '1.5rem'}}>
+ <iframe
+ src="https://www.youtube.com/embed/97i9pOa2EyE"
+ title="What is Semantic Versioning"
+ style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0}}
+ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+ referrerPolicy="strict-origin-when-cross-origin"
+ allowFullScreen
+ />
+</div>
 
 ## Learning Objectives
 
 By the end of this lesson, you will be able to:
 
-- Explain why **versioning** is critical for evolving protocols and APIs.  
-- Describe common **versioning schemes** (e.g., semantic versioning, URIs, headers).  
-- Classify **breaking vs non‑breaking changes** and how they affect version numbers.  
-- Choose a versioning strategy for a Flow‑style protocol or API.
+- Explain why **versioning** is critical for evolving protocols and APIs.
+- Describe common **versioning schemes** (e.g., semantic versioning, URIs, headers).
+- Classify **breaking vs non-breaking changes** and how they affect version numbers.
+- Choose a versioning strategy for a Flow-style protocol or API.
+
+## Concept Map
+
+```mermaid
+flowchart LR
+  A["Patch"] --> B["Bug fix"]
+  C["Minor"] --> D["Backward-compatible feature"]
+  E["Major"] --> F["Breaking change"]
+```
+
+## Quantitative Lens
+
+Semantic versioning separates compatibility from chronology:
+
+$$
+version = major.minor.patch
+$$
+
+Increment `major` when existing clients must change to remain correct.
 
 ## Introduction
 
-In protocol work, you rarely “freeze” a design forever.  
-New features, bug fixes, and security updates inevitably change how systems talk to each other [web:400][web:412].
+In protocol work, you rarely "freeze" a design forever.
+New features, bug fixes, and security updates inevitably change how systems talk to each other.
 
 **Versioning** is the practice of:
 
-- tagging each released form of a protocol or API with a **version identifier**,  
-- and using that tag to control **breaking** versus **non‑breaking** evolution [web:404][web:414].
+- tagging each released form of a protocol or API with a **version identifier**,
+- and using that tag to control **breaking** versus **non-breaking** evolution.
 
-In Flow‑style systems, versioning keeps:
+In Flow-style systems, versioning keeps:
 
-- different implementations (e.g., clients, dashboards, governance tools)  
+- different implementations (e.g., clients, dashboards, governance tools)
 - able to **interoperate** even as the protocol changes over time.
 
 ---
@@ -38,97 +70,97 @@ In Flow‑style systems, versioning keeps:
 
 Without versioning, a small change in a protocol can:
 
-- break existing clients,  
-- confuse users,  
-- or create multiple “local forks” of the same protocol in practice.
+- break existing clients,
+- confuse users,
+- or create multiple "local forks" of the same protocol in practice.
 
 Versioning gives you:
 
-- **clear boundaries** between different eras of a protocol,  
-- **upgrade paths** for implementers,  
+- **clear boundaries** between different eras of a protocol,
+- **upgrade paths** for implementers,
 - and a way to **support multiple versions** while evolving forward.
 
-In Flow‑style thinking:
+In Flow-style thinking:
 
-- a protocol is a **shared contract** between actors.  
+- a protocol is a **shared contract** between actors.
 - **versioning** is how you manage that contract over time without losing trust.
 
 ---
 
 ## Semantic Versioning (SemVer)
 
-The most widely used scheme is **semantic versioning**: `MAJOR.MINOR.PATCH` [web:405][web:414].
+The most widely used scheme is **semantic versioning**: `MAJOR.MINOR.PATCH`.
 
 Given a version string `1.2.3`:
 
-- **MAJOR** (1): increment when you make **incompatible API or protocol changes**.  
-- **MINOR** (2): increment when you add **new features** in a **backward‑compatible** way.  
-- **PATCH** (3): increment when you make **backward‑compatible bug fixes** [web:408][web:411].
+- **MAJOR** (1): increment when you make **incompatible API or protocol changes**.
+- **MINOR** (2): increment when you add **new features** in a **backward-compatible** way.
+- **PATCH** (3): increment when you make **backward-compatible bug fixes**.
 
 For example:
 
-- `1.2.3` → `1.2.4`: small bug‑fix; no breaking changes.  
-- `1.2.4` → `1.3.0`: added new features; existing clients still work.  
-- `1.3.0` → `2.0.0`: incompatible changes (e.g., removed fields, changed semantics).
+- `1.2.3` -> `1.2.4`: small bug-fix; no breaking changes.
+- `1.2.4` -> `1.3.0`: added new features; existing clients still work.
+- `1.3.0` -> `2.0.0`: incompatible changes (e.g., removed fields, changed semantics).
 
-In Flow‑style systems:
+In Flow-style systems:
 
-- use SemVer for **public contracts** (e.g., protocol APIs, event schemas).  
+- use SemVer for **public contracts** (e.g., protocol APIs, event schemas).
 - treat `MAJOR` bumps as **migration events** that require planning and communication.
 
 ---
 
 ## Common Versioning Patterns for APIs and Protocols
 
-### 1. URI‑Versioning
+### 1. URI-Versioning
 
 - Encode the version in the **URL path**:
 
-  - `/api/v1/users`  
-  - `/api/v2/users`  
+ - `/api/v1/users`
+ - `/api/v2/users`
 
 This pattern is:
 
-- highly visible to users and tools,  
-- and easy to cache and route, since each version has its own URI [web:403][web:407].
+- highly visible to users and tools,
+- and easy to cache and route, since each version has its own URI.
 
 It works well for **public APIs** but can create many URLs to manage.
 
-Flow‑style twist:
+Flow-style twist:
 
-- each major protocol revision (e.g., governance‑state machine changes) can live under a new `/vN/...` path.
+- each major protocol revision (e.g., governance-state machine changes) can live under a new `/vN/...` path.
 
-### 2. Header‑Based Versioning
+### 2. Header-Based Versioning
 
 - Pass the version in an HTTP header, such as:
 
-  - `Accept: application/vnd.myapi.v1+json`  
+ - `Accept: application/vnd.myapi.v1+json`
 
-This keeps the **URI clean** and moves the versioning decision to the client headers [web:403][web:410].
+This keeps the **URI clean** and moves the versioning decision to the client headers.
 
 Pros:
 
-- less noise in the URL.  
+- less noise in the URL.
 Cons:
 
-- harder to see which version is being used just from the URL, and less cache‑friendly.
+- harder to see which version is being used just from the URL, and less cache-friendly.
 
-Flow‑style twist:
+Flow-style twist:
 
 - useful when you want **one endpoint** but **multiple protocol variants** behind it.
 
-### 3. Query‑Parameter Versioning
+### 3. Query-Parameter Versioning
 
 - Put the version in a query string:
 
-  - `/api/users?version=2`  
+ - `/api/users?version=2`
 
 This is flexible but:
 
-- less REST‑like,  
-- and can create caching and bookmarking issues [web:403][web:407].
+- less REST-like,
+- and can create caching and bookmarking issues.
 
-Use this sparingly, and prefer **URI** or **header**‑based schemes for public protocols.
+Use this sparingly, and prefer **URI** or **header**-based schemes for public protocols.
 
 ---
 
@@ -136,27 +168,27 @@ Use this sparingly, and prefer **URI** or **header**‑based schemes for public 
 
 Protocols need versioning just like APIs:
 
-- **Message formats** must change gracefully.  
-- **State‑machine transitions** may be added or removed.  
+- **Message formats** must change gracefully.
+- **State-machine transitions** may be added or removed.
 - **event schemas** evolve over time.
 
 Good practices for protocol versioning include:
 
-- Define a **version field** in key messages or in the handshake (e.g., `protocol_version: 1` in an initial message).  
-- Use **semantic versioning semantics**: clearly document what counts as a breaking change for the protocol.  
-- Support **multiple versions** for a transition window, then **deprecate** and **retire** older ones [web:401][web:412].
+- Define a **version field** in key messages or in the handshake (e.g., `protocol_version: 1` in an initial message).
+- Use **semantic versioning semantics**: clearly document what counts as a breaking change for the protocol.
+- Support **multiple versions** for a transition window, then **deprecate** and **retire** older ones.
 
-In Flow‑style systems:
+In Flow-style systems:
 
 - a protocol version can correspond to:
 
-  - a **state‑machine definition**,  
-  - a **schema for events or proposals**,  
-  - and a **set of invariants** enforced by validators or nodes.
+ - a **state-machine definition**,
+ - a **schema for events or proposals**,
+ - and a **set of invariants** enforced by validators or nodes.
 
 ---
 
-## Breaking vs Non‑Breaking Changes
+## Breaking vs Non-Breaking Changes
 
 A key idea in versioning is to classify changes:
 
@@ -168,35 +200,35 @@ A **breaking change** is one that:
 
 Examples:
 
-- Removing or renaming required fields in requests or events.  
-- Changing the **meaning** of a field (e.g., `score` used to be 0–100, now 0–1).  
+- Removing or renaming required fields in requests or events.
+- Changing the **meaning** of a field (e.g., `score` used to be 0-100, now 0-1).
 - Removing a state or transition that clients relied on.
 
-These should trigger a **MAJOR** version bump under SemVer and careful migration planning [web:405][web:414].
+These should trigger a **MAJOR** version bump under SemVer and careful migration planning.
 
-### 2. Non‑Breaking Changes
+### 2. Non-Breaking Changes
 
-A **non‑breaking change** keeps existing clients working “as‑is.”
+A **non-breaking change** keeps existing clients working "as-is."
 
 Examples:
 
-- Adding optional fields.  
-- Adding new endpoints or events that old clients simply ignore.  
+- Adding optional fields.
+- Adding new endpoints or events that old clients simply ignore.
 - Fixing bugs in behavior that did not affect the contract.
 
 These can usually be handled with **MINOR** or **PATCH** bumps.
 
-In Flow‑style practice:
+In Flow-style practice:
 
-- the **spec** (from `01‑specification‑writing.md`) should classify which changes are breaking and which are not.
+- the **spec** (from `01-specification-writing.md`) should classify which changes are breaking and which are not.
 
 ---
 
-## How to Use Versioning in Flow‑Style Work
+## How to Use Versioning in Flow-Style Work
 
 ### 1. Plan Versioning Early
 
-- Decide on a **versioning scheme** (e.g., SemVer + URI‑based) **before** you publish the first protocol version.  
+- Decide on a **versioning scheme** (e.g., SemVer + URI-based) **before** you publish the first protocol version.
 - Document how you will **label** and **communicate** new versions.
 
 This avoids painful retrofits later.
@@ -205,87 +237,90 @@ This avoids painful retrofits later.
 
 - Publish **changelogs** that explain:
 
-  - what changed,  
-  - whether it is breaking,  
-  - and what clients must do.
+ - what changed,
+ - whether it is breaking,
+ - and what clients must do.
 
 - Give users **time to migrate** before retiring an old version.
 
-Clear communication is part of **trust‑engineering**.
+Clear communication is part of **trust-engineering**.
 
 ### 3. Keep Contract Versioning Separate from Implementation Versioning
 
-- An internal **implementation** (e.g., rewriting a service from Python to Rust) should not force a **protocol version bump** if the **contract** does not change [web:401].  
+- An internal **implementation** (e.g., rewriting a service from Python to Rust) should not force a **protocol version bump** if the **contract** does not change.
 - Separate implementation releases from **contract** releases.
 
-This keeps clients from needing to constantly update for non‑breaking internal changes.
+This keeps clients from needing to constantly update for non-breaking internal changes.
 
 ---
 
+## Implementation Sketch
+
+```yaml
+compatibility_policy:
+  patch: bug fixes only
+  minor: additive fields or endpoints
+  major: removed fields or changed meaning
+```
+
 ## Practical Exercises
 
-### Exercise 1: Version a Small Flow‑Style Protocol
+### Exercise 1: Version a Small Flow-Style Protocol
 
-Take a protocol you defined in `01‑specification‑writing.md`:
+Take a protocol you defined in `01-specification-writing.md`:
 
-- Assign it an initial version (e.g., `1.0.0`).  
-- Make a **small change** (e.g., add a new optional field or event) and decide whether it should be a `PATCH`, `MINOR`, or `MAJOR` change.  
+- Assign it an initial version (e.g., `1.0.0`).
+- Make a **small change** (e.g., add a new optional field or event) and decide whether it should be a `PATCH`, `MINOR`, or `MAJOR` change.
 - Write a short note explaining your reasoning.
 
 ### Exercise 2: Choose a Versioning Pattern for an API
 
 Design a small API that exposes your protocol (e.g., `/governance/v1/proposals`):
 
-- Decide whether you will use URI, header, or query‑parameter versioning.  
-- Write a short note explaining why that pattern suits your Flow‑style context.
+- Decide whether you will use URI, header, or query-parameter versioning.
+- Write a short note explaining why that pattern suits your Flow-style context.
 
 ### Exercise 3: Plan a Migration from v1 to v2
 
 Imagine your protocol needs a **breaking** change:
 
-- Rename a key field, or add a new state that changes the governance‑flow.  
+- Rename a key field, or add a new state that changes the governance-flow.
 - Sketch a **migration plan**:
 
-  - which version you keep live during transition,  
-  - how clients will be notified,  
-  - and how long old clients can still work.
+ - which version you keep live during transition,
+ - how clients will be notified,
+ - and how long old clients can still work.
 
-This trains you to think in **time‑boxed transitions**, not just “big‑bang” upgrades.
+This trains you to think in **time-boxed transitions**, not just "big-bang" upgrades.
 
 ---
 
-## Self‑Assessment
+## Self-Assessment
 
 Rate yourself from 1 to 5:
 
-- I can explain why versioning is important for protocols and APIs.  
-- I can describe semantic versioning (`MAJOR.MINOR.PATCH`) and what each part means.  
-- I can recognize breaking vs non‑breaking changes.  
-- I can choose a versioning pattern for a Flow‑style protocol or API.
+- I can explain why versioning is important for protocols and APIs.
+- I can describe semantic versioning (`MAJOR.MINOR.PATCH`) and what each part means.
+- I can recognize breaking vs non-breaking changes.
+- I can choose a versioning pattern for a Flow-style protocol or API.
 
-Action item: write a short note in your lab repo describing how you versioned a Flow‑style protocol and how you would handle a future breaking change.
-
-## Video
-
-<div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%'}}>
-  <iframe
-    src="https://www.youtube.com/embed/9QqjQm4Fq9w"
-    title="API Versioning Strategies and Best Practices"
-    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0}}
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-  />
-</div>
+Action item: write a short note in your lab repo describing how you versioned a Flow-style protocol and how you would handle a future breaking change.
 
 ---
+
+## Further Reading
+
+- [RFC 9110 HTTP semantics](https://www.rfc-editor.org/rfc/rfc9110)
+- [RFC 2119 keywords](https://www.rfc-editor.org/rfc/rfc2119)
+- [OpenAPI specification](https://spec.openapis.org/oas/latest.html)
+- [Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/)
 
 ## Next Steps
 
-- Read `03-protocol-lifecycle-and-governance.md` next to see how versioning connects to **deprecation, migration, and policy** over time.  
-- Treat versioning as **part of your protocol contract**, not an afterthought.  
-- When you release a Flow‑style protocol, include a **version**, clear **changelog**, and known **deprecation** schedule.
+- Read `03-protocol-lifecycle-and-governance.md` next to see how versioning connects to **deprecation, migration, and policy** over time.
+- Treat versioning as **part of your protocol contract**, not an afterthought.
+- When you release a Flow-style protocol, include a **version**, clear **changelog**, and known **deprecation** schedule.
 
 ---
 
-*This lesson gives Flow Initiative trainees a beginner‑level understanding of versioning strategies in protocol engineering, focusing on semantic versioning (`MAJOR.MINOR.PATCH`), common API‑style patterns (URI, header, query‑parameter), and how to classify and manage breaking vs non‑breaking changes in Flow‑style governance‑style and ML‑driven protocols.*
+*This lesson gives Flow Initiative trainees a beginner-level understanding of versioning strategies in protocol engineering, focusing on semantic versioning (`MAJOR.MINOR.PATCH`), common API-style patterns (URI, header, query-parameter), and how to classify and manage breaking vs non-breaking changes in Flow-style governance-style and ML-driven protocols.*
