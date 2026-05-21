@@ -4,10 +4,11 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import type {SidebarItem} from '@docusaurus/plugin-content-docs';
 
 const config: Config = {
   title: 'Flow Education Initiative',
-  tagline: 'Powering the next generation of African contributors',
+  tagline: 'Powering the next generation of open-source contributors',
   favicon: 'img/favicon.ico',
 
   // GitHub Pages URL setup for the Flow-Research organization.
@@ -53,6 +54,22 @@ const config: Config = {
           editUrl: 'https://github.com/Flow-Research/learn/tree/main/',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
+          sidebarItemsGenerator: async ({defaultSidebarItemsGenerator, ...args}) => {
+            const items = await defaultSidebarItemsGenerator(args);
+            const capitalize = (s: string) =>
+              s.split(' ').map(w =>
+                w.length > 0 && w !== w.toUpperCase()
+                  ? w.charAt(0).toUpperCase() + w.slice(1)
+                  : w
+              ).join(' ');
+            const processItems = (items: SidebarItem[]): SidebarItem[] =>
+              items.map(item =>
+                item.type === 'category'
+                  ? {...item, label: capitalize(item.label), items: processItems(item.items)}
+                  : item
+              );
+            return processItems(items);
+          },
         },
         blog: {
           path: '../knowledge-base/articles',

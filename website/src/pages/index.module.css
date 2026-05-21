@@ -127,13 +127,27 @@
   font-size: 0.9rem;
 }
 
-.tracksSection,
+.productsSection,
+.areasSection,
 .practiceSection,
 .ctaSection {
   padding: 5rem 0;
 }
 
-.tracksSection {
+.productsSection {
+  --landing-bg: #f0fdf4;
+  --landing-text: #111827;
+  --landing-muted: #4b5563;
+  --landing-card: #fff;
+  --landing-border: #e5e7eb;
+  --landing-link: #166534;
+  --landing-accent: #15803d;
+
+  background: var(--landing-bg);
+  color: var(--landing-text);
+}
+
+.areasSection {
   --landing-bg: #f8fafc;
   --landing-text: #111827;
   --landing-muted: #4b5563;
@@ -169,13 +183,46 @@
   line-height: 1.75;
 }
 
-.trackGrid {
+.productGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.trackCard {
+.productCard {
+  padding: 1.35rem;
+  border: 1px solid var(--landing-border);
+  border-top: 4px solid #22c55e;
+  border-radius: 8px;
+  background: var(--landing-card);
+}
+
+.productCard:nth-child(2) { border-top-color: #60a5fa; }
+.productCard:nth-child(3) { border-top-color: #f59e0b; }
+.productCard:nth-child(4) { border-top-color: #a78bfa; }
+.productCard:nth-child(5) { border-top-color: #f472b6; }
+
+.productLabel {
+  margin: 0 0 0.5rem;
+  color: var(--landing-accent);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.productCard p:last-child {
+  margin: 0.5rem 0 0;
+  color: var(--landing-muted);
+  line-height: 1.55;
+  font-size: 0.9rem;
+}
+
+.areaGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.areaCard {
   position: relative;
   min-height: 260px;
   padding: 1.35rem;
@@ -185,19 +232,19 @@
   background: var(--landing-card);
 }
 
-.trackCard:nth-child(2) {
+.areaCard:nth-child(2) {
   border-top-color: #60a5fa;
 }
 
-.trackCard:nth-child(3) {
+.areaCard:nth-child(3) {
   border-top-color: #f59e0b;
 }
 
-.trackCard:nth-child(4) {
+.areaCard:nth-child(4) {
   border-top-color: #a78bfa;
 }
 
-.trackMeta {
+.areaMeta {
   display: inline-flex;
   margin-bottom: 1.15rem;
   padding: 0.25rem 0.5rem;
@@ -208,20 +255,20 @@
   font-weight: 700;
 }
 
-.trackLabel {
+.areaLabel {
   margin: 0 0 0.5rem;
   color: var(--landing-accent);
   font-size: 0.85rem;
   font-weight: 800;
 }
 
-.trackCard h3 {
+.areaCard h3 {
   margin: 0;
   font-size: 1.28rem;
   line-height: 1.25;
 }
 
-.trackCard p:last-child {
+.areaCard p:last-child {
   margin: 0.9rem 0 0;
   color: var(--landing-muted);
   line-height: 1.62;
@@ -272,7 +319,17 @@
   line-height: 1.55;
 }
 
-[data-theme='dark'] .tracksSection {
+[data-theme='dark'] .productsSection {
+  --landing-bg: #0b1220;
+  --landing-text: #f8fafc;
+  --landing-muted: #cbd5e1;
+  --landing-card: #111827;
+  --landing-border: #263244;
+  --landing-link: #86efac;
+  --landing-accent: #86efac;
+}
+
+[data-theme='dark'] .areasSection {
   --landing-bg: #0b1220;
   --landing-text: #f8fafc;
   --landing-muted: #cbd5e1;
@@ -336,7 +393,11 @@
     font-size: 3.7rem;
   }
 
-  .trackGrid {
+  .productGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .areaGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -389,7 +450,8 @@
     display: none;
   }
 
-  .tracksSection,
+  .productsSection,
+  .areasSection,
   .practiceSection,
   .ctaSection {
     padding: 3.5rem 0;
@@ -401,11 +463,15 @@
     font-size: 2rem;
   }
 
-  .trackGrid {
+  .productGrid {
     grid-template-columns: 1fr;
   }
 
-  .trackCard {
+  .areaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .areaCard {
     min-height: auto;
   }
 

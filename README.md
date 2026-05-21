@@ -3,7 +3,7 @@
 Welcome to the **flow-learning**, the central nervous system for the **Flow Initiative**. This repository is a unified monorepo containing our specialized curriculum, research knowledge base, hands-on labs, and the AI-driven engine that keeps our content synchronized with the bleeding edge of Web3 and AI protocols.
 
 ## 🎯 Mission
-Flow is a non-profit talent pipeline. We identify mid-level African engineers (1-3 years experience) and move them from "Learners" to "Active Contributors" in decentralized infrastructure. We focus on public goods that distribute control, computation, and value.
+Flow is a non-profit talent pipeline. We identify mid-level engineers (1-3 years experience) and move them from "Learners" to "Active Contributors" in decentralized infrastructure. We focus on public goods that distribute control, computation, and value.
 
 ---
 
@@ -64,7 +64,7 @@ Our curriculum uses precise track-tier-section-lesson organization for clarity.
 ### 3. Voice & Tone
 *   **Audience:** Mid-level Software Engineers.
 *   **Tone:** Engineering-first, technical, concise. Avoid marketing fluff.
-*   **Context:** Use African-centric technical examples where possible (e.g., low-bandwidth optimization, local payment gateways).
+*   **Context:** Use globally relevant technical examples where possible (e.g., low-bandwidth optimization, local payment gateways).
 
 ### 4. Content Automation Loop
 The `scripts/` directory is designed to:
@@ -91,7 +91,7 @@ The `scripts/` directory is designed to:
 ## 📜 Contribution & Policy
 All lessons and research articles go through a **Human-in-the-Loop** review process. AI-generated content is staged in a Pull Request for review by the technical team. 
 
-**Flow Initiative is a Non-Profit. Our goal is to create sustainable income pathways for African engineers through global open-source public goods.**
+**Flow Initiative is a Non-Profit. Our goal is to create sustainable income pathways for engineers through global open-source public goods.**
 
 ***
 

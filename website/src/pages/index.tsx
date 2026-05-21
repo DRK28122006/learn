@@ -5,7 +5,7 @@ import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
-const TrackList = [
+const AreaList = [
   {
     label: 'Foundations',
     title: 'Engineering fluency',
@@ -36,6 +36,25 @@ const TrackList = [
   },
 ];
 
+const ProductList = [
+  {
+    label: 'Jarvis',
+    detail: 'Agent runtime that spawns, configures, and secures Personal Operators.',
+  },
+  {
+    label: 'Garden',
+    detail: 'Human-agent workspace with connected tools, workflows, and approvals.',
+  },
+  {
+    label: 'WorkStream',
+    detail: 'Task pipeline that distributes work, verifies output, and handles rewards.',
+  },
+  {
+    label: 'Harnessy',
+    detail: 'Reliability layer for testing, evaluating, and improving agent behavior.',
+  },
+];
+
 const PracticeList = [
   'Read technical material like an engineer, not a passive student.',
   'Move from concept notes into reproducible labs and visible artifacts.',
@@ -48,14 +67,13 @@ function HeroSection() {
     <header className={styles.heroBanner}>
       <div className="container">
         <div className={styles.heroContent}>
-          <p className={styles.heroEyebrow}>Flow Education Initiative</p>
+          <p className={styles.heroEyebrow}>Flow Research</p>
           <Heading as="h1" className={styles.heroTitle}>
             Build public good technology in the open.
           </Heading>
           <p className={styles.heroSubtitle}>
-            Structured tracks for developers contributing to AI/ML, blockchain,
-            and protocol infrastructure. Rooted in African talent pipelines;
-            open to builders everywhere.
+            Flow Research builds products and curriculum for engineers contributing to AI/ML, blockchain,
+            and protocol infrastructure. Open to builders everywhere.
           </p>
           <div className={styles.heroActions}>
             <Link className={styles.mainCta} to="/curriculum/curriculum-intro">
@@ -72,11 +90,11 @@ function HeroSection() {
             </div>
             <div>
               <dt>4</dt>
-              <dd>tracks</dd>
+              <dd>areas</dd>
             </div>
             <div>
-              <dt>3</dt>
-              <dd>skill levels</dd>
+              <dt>4</dt>
+              <dd>products</dd>
             </div>
           </dl>
         </div>
@@ -85,9 +103,35 @@ function HeroSection() {
   );
 }
 
-function TracksSection() {
+function ProductsSection() {
   return (
-    <section className={styles.tracksSection}>
+    <section className={styles.productsSection}>
+      <div className="container">
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionKicker}>Products</p>
+          <Heading as="h2">A system, not a collection</Heading>
+          <p>
+            The products work together as one value engine: Jarvis gives the agent life,
+            Garden gives it a workspace, WorkStream gives it valuable work, Harnessy makes it
+            reliable, and FlowLedger makes contribution visible.
+          </p>
+        </div>
+        <div className={styles.productGrid}>
+          {ProductList.map((product) => (
+            <article className={styles.productCard} key={product.label}>
+              <p className={styles.productLabel}>{product.label}</p>
+              <p>{product.detail}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function AreasSection() {
+  return (
+    <section className={styles.areasSection}>
       <div className="container">
         <div className={styles.sectionHeader}>
           <p className={styles.sectionKicker}>Curriculum</p>
@@ -97,13 +141,13 @@ function TracksSection() {
             to join serious open-source and infrastructure work.
           </p>
         </div>
-        <div className={styles.trackGrid}>
-          {TrackList.map((track) => (
-            <article className={styles.trackCard} key={track.label}>
-              <div className={styles.trackMeta}>{track.meta}</div>
-              <p className={styles.trackLabel}>{track.label}</p>
-              <h3>{track.title}</h3>
-              <p>{track.detail}</p>
+        <div className={styles.areaGrid}>
+          {AreaList.map((area) => (
+            <article className={styles.areaCard} key={area.label}>
+              <div className={styles.areaMeta}>{area.meta}</div>
+              <p className={styles.areaLabel}>{area.label}</p>
+              <h3>{area.title}</h3>
+              <p>{area.detail}</p>
             </article>
           ))}
         </div>
@@ -121,7 +165,7 @@ function PracticeSection() {
             <p className={styles.sectionKicker}>Learning model</p>
             <Heading as="h2">Built for engineers who learn by making things real</Heading>
             <p className={styles.practiceIntro}>
-              Flow is not a content library for passive reading. Each track is
+              Flow is not a content library for passive reading. Each area is
               designed to help learners turn concepts into notes, code,
               diagrams, experiments, and public contributions.
             </p>
@@ -162,10 +206,11 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Build Public-Good Technology"
-      description="Structured AI/ML, blockchain, and protocol engineering learning paths for contributors building practical public-good technology.">
+      description="Flow Research builds products and curriculum for engineers contributing to AI/ML, blockchain, and protocol infrastructure.">
       <HeroSection />
       <main>
-        <TracksSection />
+        <ProductsSection />
+        <AreasSection />
         <PracticeSection />
         <CtaSection />
       </main>
