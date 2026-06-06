@@ -105,6 +105,7 @@ As the Kernel slides across the image, it performs an element-wise multiplicatio
 -  **Pooling Layer :** This layers reduces the spatial size  of the feature maps, to cut-down computation costs of high-dimensional spatial features. *There are two methods of pooling*: **Average pooling & Max Pooling**,  What pooling does is that it moves a sliding window over the feature maps and perform either the average or maximum of the values within that window(pool).
 
 *Imagine a small patch of an Image **I** represented as 3 x 3 matrix, and a 3 x 3 kernel **K** :*
+
 $$
  I = 
 \begin{bmatrix}
@@ -138,11 +139,12 @@ products =
 \end{bmatrix}
 $$
 
-value of this position, on the feature map would be computed as :
+*value of this position, on the feature map would be computed as :*
 
 $$
 value = 4 +0 + 0 + 1 + 0 +(-1) + 0 + (-1) + 6 + 0 + (-5) = 4
 $$
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YGILT182T6w?si=5Hn9AtjiWSKjt7PA" title="CNN explained" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
