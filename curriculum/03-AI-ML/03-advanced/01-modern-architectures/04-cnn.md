@@ -26,11 +26,10 @@ A pin-hole camera is a lensless camera, that consists of a light-proof box and a
 In New and Advanced Cameras, They come with lenses, and advanced sensors that make image projected and colour mapping as close as possible to real-world scenarios, but they are all built upon the same core operating principles of a pin-hole camera.
 
 *A camera maps 3D world coordinates to 2D Planes, using the given mathematical relationship:*
+
 $$
-x = PX
-$$
-$$
-x = K[R|T]~X
+x = PX \\
+x = K[R|T] \ X
 $$
 
 ***where :***
@@ -45,9 +44,6 @@ T = Translation matrice of camera (3 x 1)
 
 X = 3D world coordinates (3 x 1)
 
-$$
-
-$$
 
 $$
 \begin{bmatrix}
@@ -143,7 +139,9 @@ products =
 6 & 0 & -5
 \end{bmatrix}
 $$
+
 value of this position, on the feature map would be computed as :
+
 $$
 value = 4 +0 + 0 + 1 + 0 +(-1) + 0 + (-1) + 6 + 0 + (-5) = 4
 $$
