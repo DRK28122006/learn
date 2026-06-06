@@ -32,7 +32,7 @@ x = PX \\
 x = K[R|T] \ X
 $$
 
-***where :***
+***where:***
 
 x = 2D coordinates of camera
 
@@ -75,14 +75,13 @@ where (u, v) represents 2d coordinates of a single pixel(RGB or grey scale) on a
 A linear Transformation is a function that maps **one vector space** to another, while preserving the operations of vector addition & scalary multiplication. 
 Geometrically, it only alters the lenght and rotation, but never alters the origin and linearity of the line.
 
-*A transformation **T** can only be called linear if :*
-
+*A transformation **T** can only be called linear if:*
 
 $$
 T(u+v) = T(u) + T(v)  \\ 
-\\
+\\\\
 and \\
-\\
+\\\\
 T(cu) =  cT(u) \\
 $$
 
@@ -99,11 +98,11 @@ While Linear Transformations can only solve direct linear problems i.e when the 
 **Convolutional Neural Networks** are special type of  neural networks that extract local features from an input  image or frames of videos by applying a fixed sliding matrix to extract important features from each pixel, Unlike standard neural networks that flatten an image into a single list of pixels, CNNs preserve the spatial relationships between pixels by using a mathematical operation called **convolution**.
 
 ### How it Works
-- **Feature Extraction :** This layer passes a small learnable square matrix called **kernels** across the input image. The kernel slides across each windows using a parameter called **strides**, the strides controls how much step the kernel takes from the previous window to the next window.
+- **Feature Extraction:** This layer passes a small learnable square matrix called **kernels** across the input image. The kernel slides across each windows using a parameter called **strides**, the strides controls how much step the kernel takes from the previous window to the next window.
 As the Kernel slides across the image, it performs an element-wise multiplication and sums the results. which produces a feature map that detects edges, textures and shapes in the image.
 
--  **Activation Layer :** This Layer adds a non-linear activation function to the feature maps, This replaces all negative  pixel values with 0, allowing the network to learn complex and non-linear patterns
--  **Pooling Layer : ** This layers reduces the spatial size  of the feature maps, to cut-down computation costs of high-dimensional spatial features. *There are two methods of pooling*: **Average pooling & Max Pooling**,  What pooling does is that it moves a sliding window over the feature maps and perform either the average or maximum of the values within that window(pool).
+-  **Activation Layer:** This Layer adds a non-linear activation function to the feature maps, This replaces all negative  pixel values with 0, allowing the network to learn complex and non-linear patterns
+-  **Pooling Layer :** This layers reduces the spatial size  of the feature maps, to cut-down computation costs of high-dimensional spatial features. *There are two methods of pooling*: **Average pooling & Max Pooling**,  What pooling does is that it moves a sliding window over the feature maps and perform either the average or maximum of the values within that window(pool).
 
 *Imagine a small patch of an Image **I** represented as 3 x 3 matrix  and a 3 x 3 kernel **K**:*
 
