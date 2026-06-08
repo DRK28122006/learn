@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Explain what a **state channel** is and how it differs from on-chain execution.
 - Recognize when state channels are a good fit (high-frequency, low-value, two-party or small-group flows).
 - Map state-channel concepts (off-chain state, on-chain settlement, dispute resolution) to real-world use cases.
-- Use this mental model when reading or designing Flow-style L1/L2 systems.
+- Use this mental model when reading or designing Flow Research-style L1/L2 systems.
 
 ## Concept Map
 
@@ -68,7 +68,7 @@ From an engineer's view, a state channel is:
 - A mini-consensus system for a small group of parties,
 - Backed by the **security of the underlying L1**.
 
-In Flow-style labs, you will not usually implement a full state-channel stack from scratch.
+In Flow Research-style labs, you will not usually implement a full state-channel stack from scratch.
 But you *will* benefit from understanding when a flow should live in a channel versus on-chain.
 
 ---
@@ -184,7 +184,7 @@ You can mentally place them like this:
 
 - **On-chain L1** -> **Rollups and sidechains** -> **State channels and channels**.
 
-Flow-style engineers can then choose:
+Flow Research-style engineers can then choose:
 
 - **What to put on-chain**,
 - **What to put in a rollup**,
@@ -192,7 +192,7 @@ Flow-style engineers can then choose:
 
 ---
 
-## Why This Matters for Flow Engineers
+## Why This Matters for Flow Research Engineers
 
 In public-good contexts:
 
@@ -200,7 +200,7 @@ In public-good contexts:
 - On-chain transaction costs can be a **serious UX and accessibility barrier**.
 - State channels offer a **middle ground** between on-chain and fully off-chain systems.
 
-As a Flow engineer, understanding state channels helps you:
+As a Flow Research engineer, understanding state channels helps you:
 
 - Design systems that **push low-value, high-frequency** flows off-chain.
 - Keep **settlement and security** anchored to the L1.
@@ -242,9 +242,9 @@ Find a real-world situation (e.g., freelancing, gaming, or data streaming):
 
 Write this as a markdown note.
 
-### Exercise 3: Relate to a Flow Lab
+### Exercise 3: Relate to a Flow Research Lab
 
-Look at a Flow-style lab that involves frequent interactions:
+Look at a Flow Research-style lab that involves frequent interactions:
 
 - Design a small state-channel model for it:
  - Who are the participants?
@@ -264,7 +264,7 @@ Rate yourself from 1 to 5:
 - I can map the pattern onto real-world use cases.
 - I can connect state channels to L1/L2 scaling.
 
-Action item: write a short note in your lab repo describing one Flow-style system where state channels would improve scalability.
+Action item: write a short note in your lab repo describing one Flow Research-style system where state channels would improve scalability.
 
 ## Further Reading
 
@@ -281,4 +281,4 @@ Action item: write a short note in your lab repo describing one Flow-style syste
 
 ---
 
-*This lesson gives Flow Initiative trainees an engineer-style understanding of state channels in blockchain systems, focusing on how to recognize, design, and use them as a scalable, low-cost alternative to on-chain transactions.*
+*This lesson gives Flow Research Initiative trainees an engineer-style understanding of state channels in blockchain systems, focusing on how to recognize, design, and use them as a scalable, low-cost alternative to on-chain transactions.*

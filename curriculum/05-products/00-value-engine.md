@@ -5,7 +5,7 @@ title: The Value Engine
 
 # The Value Engine
 
-Flow's four products are not standalone tools. They form one system — the value engine — that takes a Personal Operator from creation to reliable, rewarded work.
+Flow Research's four products are not standalone tools. They form one system — the value engine — that takes a Personal Operator from creation to reliable, rewarded work.
 
 ## How they connect
 

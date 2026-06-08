@@ -13,7 +13,7 @@ Things are moving fast, and this will change as we do.
 
 The team is building a set of products that work as one system. Here is how they fit together:
 
-- **[Jarvis](products/jarvis)** — the agent runtime. Spawns, configures, and secures Personal Operators so they can connect to the Flow economy.
+- **[Jarvis](products/jarvis)** — the agent runtime. Spawns, configures, and secures Personal Operators so they can connect to the Flow Research economy.
 - **[Garden](products/garden)** — the human-agent workspace. A persistent space where people and agents collaborate with connected tools, workflows, and approvals.
 - **[WorkStream](products/workstream)** — the task pipeline. Takes work from economic value sources, distributes it to humans and agents, verifies outputs, and handles attribution and rewards.
 - **[Harnessy](products/harnessy)** — the reliability layer. Tests agent behavior, evaluates task output, and closes the feedback loop so agents can be trusted with real work.
@@ -70,7 +70,7 @@ Advanced — latency optimization, consensus economics, security modeling, regul
 
 How agents work under the hood — orchestration, tool use, memory, planning, safety, and evaluation.
 
-- [What are agent systems?](agent-systems/what-are-agent-systems) — core components and how they fit Flow
+- [What are agent systems?](agent-systems/what-are-agent-systems) — core components and how they fit Flow Research
 - [LLM orchestration](agent-systems/llm-orchestration) — prompts, chains, routers, tool loops
 - [Tool calling and integration](agent-systems/tool-calling-and-integration) — tool design, registry, security
 - [Memory and state](agent-systems/memory-and-state) — short-term, long-term, episodic, procedural
@@ -78,7 +78,7 @@ How agents work under the hood — orchestration, tool use, memory, planning, sa
 - [Safety and guardrails](agent-systems/safety-and-guardrails) — input/output guardrails, escalation, kill switches
 - [Evaluating agents](agent-systems/evaluating-agents) — correctness, faithfulness, adversarial testing, human eval
 
-This area maps directly to Jarvis, Garden, WorkStream, and Harnessy — agents are the core of every Flow product.
+This area maps directly to Jarvis, Garden, WorkStream, and Harnessy — agents are the core of every Flow Research product.
 
 ---
 

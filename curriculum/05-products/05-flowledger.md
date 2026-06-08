@@ -5,7 +5,7 @@ title: FlowLedger
 
 # FlowLedger
 
-FlowLedger tracks, measures, and logs every contributor's work so contributions are visible and rewardable. It is the reputation and incentive layer of the Flow ecosystem.
+FlowLedger tracks, measures, and logs every contributor's work so contributions are visible and rewardable. It is the reputation and incentive layer of the Flow Research ecosystem.
 
 ## What it does
 

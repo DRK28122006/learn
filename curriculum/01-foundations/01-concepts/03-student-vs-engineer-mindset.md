@@ -55,7 +55,7 @@ $M$ is mastery, $U$ is understanding, $P$ is deliberate practice, and $F$ is fee
 
 A student is often evaluated by what they can recall, repeat, or submit on time. An engineer is evaluated by what they can understand, build, debug, and improve under real constraints.
 
-For the Flow Initiative, this distinction matters. Trainees are not only learning concepts - they are preparing to contribute to decentralized infrastructure, AI systems, and public goods projects where reliability, clarity, and ownership matter.
+For the Flow Research Initiative, this distinction matters. Trainees are not only learning concepts - they are preparing to contribute to decentralized infrastructure, AI systems, and public goods projects where reliability, clarity, and ownership matter.
 
 ## What a Student Mindset Looks Like
 
@@ -106,9 +106,9 @@ That shift matters because real engineering work rarely gives perfect instructio
 | Working in a team | Focuses on individual performance | Focuses on shared outcomes and code quality |
 | Dealing with uncertainty | Tries to avoid it | Breaks it into smaller questions and experiments |
 
-## Why This Matters in Flow
+## Why This Matters in Flow Research
 
-Flow trainees are being prepared for environments where:
+Flow Research trainees are being prepared for environments where:
 
 - documentation may be incomplete,
 - infrastructure may be unstable,
@@ -245,7 +245,7 @@ Action item: identify one habit you will change this week to move closer to an e
 ## Next Steps
 
 - Read `02-maieutics-and-flow-thinking.md` to strengthen your questioning and iteration process.
-- Apply this mindset to every lesson and lab in the Flow program.
+- Apply this mindset to every lesson and lab in the Flow Research program.
 - Begin treating your study work as preparation for contribution, not just completion.
 
 ## Resources
@@ -256,4 +256,4 @@ Action item: identify one habit you will change this week to move closer to an e
 
 ---
 
-*This lesson helps trainees move from passive learning to active engineering ownership inside the Flow Education Initiative.*
+*This lesson helps trainees move from passive learning to active engineering ownership inside the Flow Research Education Initiative.*

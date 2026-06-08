@@ -328,9 +328,9 @@ Practical defenses:
 - log every call,
 - test prompt injection cases against tool use.
 
-## Flow Context
+## Flow Research Context
 
-In Flow:
+In Flow Research:
 
 - Garden can act as a workspace-level tool registry.
 - Jarvis can enforce tool execution boundaries.

@@ -26,9 +26,9 @@ version: 1.1
 By the end of this lesson, you will be able to:
 
 - Explain what **regulatory compliance** means for software and protocol-style systems and why it matters beyond just "legal risk."
-- Identify **common regulatory domains** (e.g., data protection, financial compliance, governance-style rules) that may apply to Flow-style systems.
+- Identify **common regulatory domains** (e.g., data protection, financial compliance, governance-style rules) that may apply to Flow Research-style systems.
 - Map **regulatory requirements** (e.g., GDPR-style data rights, KYC, or sector-specific rules) into **design decisions** (e.g., logging, access control, data minimization) in your protocols.
-- Connect compliance discipline to **security-modeling**, **ethics-and-responsibility**, and **governance-style patterns** in the larger Flow-style stack.
+- Connect compliance discipline to **security-modeling**, **ethics-and-responsibility**, and **governance-style patterns** in the larger Flow Research-style stack.
 
 ## Concept Map
 
@@ -62,7 +62,7 @@ Now, at the **advanced** level, you must ask:
 
 This is **regulatory compliance** in software and protocol engineering. It is not a one-off legal "check"; it is an **ongoing technical and governance discipline**.
 
-For Flow-style systems, regulatory compliance is especially important because:
+For Flow Research-style systems, regulatory compliance is especially important because:
 
 - they may:
 
@@ -97,7 +97,7 @@ Core idea:
 
 - if a regulation says **"do X and not Y,"** your system must implement **controls that reflect X and prevent Y**.
 
-For Flow-style protocols:
+For Flow Research-style protocols:
 
 - compliance is not optional because:
 
@@ -119,7 +119,7 @@ Many jurisdictions regulate how you handle personal data:
  - **User rights** (e.g., access, correction, deletion, data-portability).
  - **Transparency** (e.g., clear privacy policy and consent flows).
 
-For Flow-style systems:
+For Flow Research-style systems:
 
 - this shapes how you:
 
@@ -129,7 +129,7 @@ For Flow-style systems:
 
 ### 2. Financial-Style and Anti-Money-Laundering (KYC/AML) Rules
 
-If your Flow-style protocol involves:
+If your Flow Research-style protocol involves:
 
 - token-receipts,
 - reward-payments, or
@@ -157,7 +157,7 @@ These often require:
 - **non-discrimination protections**,
 - and **accountability mechanisms** for automated decisions.
 
-Flow-style implication:
+Flow Research-style implication:
 
 - your **protocol-style governance-layers** must support these constraints, not just "operate fast."
 
@@ -194,7 +194,7 @@ This makes compliance **traceable** and **test-driven**.
 
 - baking privacy-style controls into the architecture from the start, not tacking them on later.
 
-For Flow-style protocols, this pushes you to:
+For Flow Research-style protocols, this pushes you to:
 
 - **minimize data collection**: only store what is strictly needed for the protocol.
 - **encrypt at rest and in transit**: learner-data, governance-state, and reward-logs.
@@ -209,7 +209,7 @@ In practice:
 
 ## Integrating Compliance Into Protocol Design
 
-When designing a Flow-style protocol, you can integrate compliance into several layers:
+When designing a Flow Research-style protocol, you can integrate compliance into several layers:
 
 ### 1. Identity and Access Control
 
@@ -231,7 +231,7 @@ This supports:
 - audit-style reviews,
 - and post-incident investigations.
 
-Flow-style benefit:
+Flow Research-style benefit:
 
 - regulators can "replay" governance-style history or ML-style reward-log history without needing deep technical insight.
 
@@ -319,7 +319,7 @@ control:
 
 ### Exercise 1: Build a Mini-Compliance Matrix
 
-- Pick one Flow-style protocol you designed (e.g., governance-proposal system or learner-reward-engine):
+- Pick one Flow Research-style protocol you designed (e.g., governance-proposal system or learner-reward-engine):
 
  - Sketch a **small compliance matrix**:
 
@@ -364,11 +364,11 @@ This ties **compliance** directly to **protocol mechanics**.
 Rate yourself from 1 to 5:
 
 - I can explain what regulatory compliance is and why it matters for protocols and ML-style systems.
-- I can identify common regulatory domains (e.g., data-protection, financial-style, sector-specific rules) that may apply to Flow-style systems.
+- I can identify common regulatory domains (e.g., data-protection, financial-style, sector-specific rules) that may apply to Flow Research-style systems.
 - I can map a few regulatory-style requirements into concrete design decisions (e.g., logging, access control, data minimization).
 - I can connect compliance to security-modeling, ethics-and-responsibility, and governance-style patterns.
 
-Action item: write a short note in your lab repo describing how regulations (e.g., data-protection-style or sector-specific rules) shape one Flow-style protocol you designed.
+Action item: write a short note in your lab repo describing how regulations (e.g., data-protection-style or sector-specific rules) shape one Flow Research-style protocol you designed.
 
 ---
 
@@ -383,8 +383,8 @@ Action item: write a short note in your lab repo describing how regulations (e.g
 
 - Read `02-governance-formal-models.md` next to see how to express governance-style rules and regulatory-style constraints in semi-formal or formal-style models.
 - Treat compliance as a **continuously updated** layer of your spec: every new feature should be checked against your **compliance matrix**.
-- When you design a Flow-style protocol, start by asking: "What regulations likely apply, and what design-style constraints do they impose on identity, logging, access, and data-retention?"
+- When you design a Flow Research-style protocol, start by asking: "What regulations likely apply, and what design-style constraints do they impose on identity, logging, access, and data-retention?"
 
 ---
 
-*This lesson gives Flow Initiative trainees an advanced-level understanding of regulatory compliance in protocol-style systems, focusing on data-protection-style and financial-style rules, how to map regulations into concrete design requirements (e.g., data minimization, audit trails, access control), and how to connect compliance to ethics-and-responsibility, security-modeling, and governance-style patterns in Flow-style governance-style and ML-driven protocols.*
+*This lesson gives Flow Research Initiative trainees an advanced-level understanding of regulatory compliance in protocol-style systems, focusing on data-protection-style and financial-style rules, how to map regulations into concrete design requirements (e.g., data minimization, audit trails, access control), and how to connect compliance to ethics-and-responsibility, security-modeling, and governance-style patterns in Flow Research-style governance-style and ML-driven protocols.*

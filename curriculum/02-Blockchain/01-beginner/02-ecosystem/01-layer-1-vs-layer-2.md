@@ -27,7 +27,7 @@ By the end of this lesson, you will be able to:
 
 - Explain the roles of L1 and L2 in a blockchain ecosystem.
 - Identify the trade-offs each layer brings (security, latency, cost, flexibility).
-- Map L1/L2 concepts onto real-world chains and Flow labs.
+- Map L1/L2 concepts onto real-world chains and Flow Research labs.
 - Decide, at a high level, where to place different kinds of logic (on-chain vs off-chain).
 
 ## Concept Map
@@ -58,7 +58,7 @@ The two most common layers are:
 - **Layer-1 (L1)** - the foundational chain that provides consensus and state.
 - **Layer-2 (L2)** - a secondary system that builds on top of an L1 to improve speed, cost, or features.
 
-In the Flow Initiative, you will encounter L1s and L2s in labs, tutorials, and protocol discussions.
+In the Flow Research Initiative, you will encounter L1s and L2s in labs, tutorials, and protocol discussions.
 This lesson treats L1/L2 as **system design patterns**, not buzzwords, so you can reason about them like an engineer.
 
 ## Why Layering Exists
@@ -177,9 +177,9 @@ As an engineer, you choose:
 - Put **core settlement and critical state on L1**.
 - Put **high-volume, user-facing interactions on L2**.
 
-## Why This Matters for Flow Engineers
+## Why This Matters for Flow Research Engineers
 
-Flow Initiative trainees will work across:
+Flow Research Initiative trainees will work across:
 
 - L1 ecosystems (e.g., Ethereum-compatible chains),
 - L2 solutions (rollups, sidechains, channels), and
@@ -203,7 +203,7 @@ In public-good contexts, this is especially relevant when:
 
 - L1: Ethereum-style chain that stores state roots and receives proofs.
 - L2: Rollup that batches thousands of user transactions per second.
-- Flow pattern:
+- Flow Research pattern:
  - Transactions are signed and sent to the L2.
  - The L2 submits state commitments to the L1 once in a while.
  - L1 ensures the L2 cannot cheat forever.
@@ -212,7 +212,7 @@ In public-good contexts, this is especially relevant when:
 
 - L1: Provides finality and anchors hashes.
 - L2/Sidechain: Handles fast, cheap writes for logs or sensor data.
-- Flow pattern:
+- Flow Research pattern:
  - Local nodes ingest data and seal it into bundles.
  - Commitments are sent to the L1 at intervals.
  - Users query the L2 for fresh data, L1 for proof.
@@ -221,11 +221,11 @@ In public-good contexts, this is especially relevant when:
 
 - L1: Governs disputes and settlements.
 - L2/Channels: Keep long-running sessions off-chain.
-- Flow pattern:
+- Flow Research pattern:
  - Users open channels and transact locally.
  - Only disputes or closes touch the L1.
 
-You will see simplified versions of these patterns in Flow labs and later protocol-engineering work.
+You will see simplified versions of these patterns in Flow Research labs and later protocol-engineering work.
 
 ## Implementation Sketch
 
@@ -267,9 +267,9 @@ Label each arrow with a short phrase (e.g., "submit tx", "send proof").
 
 This is a **concept map** for how the two layers coordinate.
 
-### Exercise 3: Relate to a Flow Lab
+### Exercise 3: Relate to a Flow Research Lab
 
-Look at a blockchain lab from the Flow curriculum that uses a real or local chain, and:
+Look at a blockchain lab from the Flow Research curriculum that uses a real or local chain, and:
 
 - Guess whether it targets an L1 or an L2 (or both).
 - Write one sentence describing why that layer is appropriate for the lab's goal.
@@ -301,4 +301,4 @@ Action item: write a short note in your lab repo describing one concrete example
 
 ---
 
-*This lesson gives Flow Initiative trainees a clear, engineering-style understanding of Layer-1 vs Layer-2 in blockchain ecosystems, emphasizing security, scalability, and how to reason about where to place logic in real-world systems.*
+*This lesson gives Flow Research Initiative trainees a clear, engineering-style understanding of Layer-1 vs Layer-2 in blockchain ecosystems, emphasizing security, scalability, and how to reason about where to place logic in real-world systems.*

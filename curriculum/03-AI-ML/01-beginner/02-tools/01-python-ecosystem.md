@@ -32,7 +32,7 @@ flowchart BT
 
 Python became the default ML language because it lets engineers move smoothly between data, math, experimentation, and deployment. The language is readable, the ecosystem is mature, and most ML libraries speak the same basic data structures.
 
-For Flow learners, the goal is not to memorize every library. The goal is to understand what each layer is responsible for, so you can choose the right tool without feeling lost.
+For Flow Research learners, the goal is not to memorize every library. The goal is to understand what each layer is responsible for, so you can choose the right tool without feeling lost.
 
 :::tip Practical Rule
 Treat every ML project as a small software project: isolate dependencies, document how to run it, and keep notebooks reproducible.
@@ -178,7 +178,7 @@ This makes notebooks excellent for exploration and teaching. They are less ideal
 
 ## A Minimal Project Shape
 
-For a beginner Flow ML lab, a clean structure could look like this:
+For a beginner Flow Research ML lab, a clean structure could look like this:
 
 ```text
 ai-ml-lab/

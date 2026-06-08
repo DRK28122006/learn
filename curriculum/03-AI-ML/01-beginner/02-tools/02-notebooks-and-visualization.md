@@ -199,7 +199,7 @@ This is a small example, but the habit scales: visualize what the model is doing
 
 ## Good Notebook Habits
 
-Use these habits in Flow labs:
+Use these habits in Flow Research labs:
 
 - Put a short goal at the top.
 - Run notebooks from top to bottom before sharing.

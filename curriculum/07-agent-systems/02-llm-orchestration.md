@@ -315,9 +315,9 @@ Minimum trace fields:
 
 Without traces, you will debug by guessing. That is not engineering.
 
-## Flow Context
+## Flow Research Context
 
-In Flow products, orchestration appears in several places:
+In Flow Research products, orchestration appears in several places:
 
 - Jarvis needs a runtime loop that can pause, resume, and recover.
 - Garden needs routers that understand workspace context and user intent.
@@ -328,7 +328,7 @@ The shared goal is to make agent behavior inspectable enough that a human can tr
 
 ## Exercises
 
-1. Choose a Flow task and decide whether it should use a single call, chain, router, parallel call, evaluator loop, or tool loop.
+1. Choose a Flow Research task and decide whether it should use a single call, chain, router, parallel call, evaluator loop, or tool loop.
 2. Write a JSON schema for the first model output in that orchestration.
 3. Define two validation rules that must run in code after the model output.
 4. Add one retry rule and one escalation rule.

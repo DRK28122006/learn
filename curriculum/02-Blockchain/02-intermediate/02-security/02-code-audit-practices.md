@@ -57,10 +57,10 @@ In blockchain, audits are especially important because:
 - Bugs can lead to irreversible loss of value.
 - Security is not just a "nice-to-have"; it is a core part of the product.
 
-In the Flow Initiative, you will not be expected to perform full-blown, professional-grade audits.
+In the Flow Research Initiative, you will not be expected to perform full-blown, professional-grade audits.
 You *are* expected to **read critically** and **ask the right questions** when you see a contract.
 
-This lesson teaches you lightweight **audit-style practices** that fit Flow-style labs and onboarding work.
+This lesson teaches you lightweight **audit-style practices** that fit Flow Research-style labs and onboarding work.
 
 ## What Is a Code Audit?
 
@@ -76,7 +76,7 @@ In practice, an audit:
 - Documents **assumptions** and **edge cases**.
 - Makes **recommendations** for fixes or improvements.
 
-For Flow engineers, the goal is **risk-aware review**, not theoretical completeness.
+For Flow Research engineers, the goal is **risk-aware review**, not theoretical completeness.
 You do not need to prove the contract is "perfect"; you need to reduce the chance of catastrophic failure.
 
 ## Core Principles of Auditing
@@ -100,7 +100,7 @@ Auditors usually prioritize:
 - Functions that control **access** (e.g., owner, admin, upgrade).
 - State-changing functions that interact with **external contracts**.
 
-You can copy this priority list in Flow labs:
+You can copy this priority list in Flow Research labs:
 Spend more time on **value- and access-sensitive** logic; less on read-only helpers.
 
 ### 3. Use Checklists and Heuristics
@@ -123,7 +123,7 @@ An audit is not just about syntax and style. It includes:
 - The **business logic** (how it enforces rules).
 - The **dependencies** (what other contracts or libraries it uses).
 
-This is where Flow-style systems benefit: you can reason about **incentives, tokens, and L1/L2** impacts, not just code.
+This is where Flow Research-style systems benefit: you can reason about **incentives, tokens, and L1/L2** impacts, not just code.
 
 ## How to Audit a Contract (Step-by-Step)
 
@@ -190,9 +190,9 @@ A good audit note includes:
 
 You do not need to prove every claim formally. You *do* need to be **clear and actionable**.
 
-## Lightweight Audit Checklist for Flow Labs
+## Lightweight Audit Checklist for Flow Research Labs
 
-You can use this as a template when reviewing any Flow-style contract:
+You can use this as a template when reviewing any Flow Research-style contract:
 
 - Is the **state layout** clear and protected?
 - Are **value-handling** functions safe from overflow and reentrancy?
@@ -203,9 +203,9 @@ You can use this as a template when reviewing any Flow-style contract:
 
 Score each item 1-5, and write a brief comment where you score low.
 
-## How This Fits Into the Flow Initiative
+## How This Fits Into the Flow Research Initiative
 
-In Flow labs:
+In Flow Research labs:
 
 - You will review and modify contracts written by others.
 - You will write your own simple contracts.
@@ -237,7 +237,7 @@ finding:
 
 ### Exercise 1: Perform a Mini-Audit
 
-Take a small contract from a Flow lab:
+Take a small contract from a Flow Research lab:
 
 - Follow the five-step audit process above.
 - Write a short audit note (no more than one page) describing:
@@ -277,7 +277,7 @@ Rate yourself from 1 to 5:
 - I can use a checklist to spot common issues.
 - I can write useful audit notes.
 
-Action item: write a short note in your lab repo describing one risk you would flag in a Flow-style contract and how you would reduce it.
+Action item: write a short note in your lab repo describing one risk you would flag in a Flow Research-style contract and how you would reduce it.
 
 ## Further Reading
 
@@ -294,4 +294,4 @@ Action item: write a short note in your lab repo describing one risk you would f
 
 ---
 
-*This lesson gives Flow Initiative trainees an engineer-style understanding of code audit practices, focusing on how to read, review, and document contracts for security and reliability, and how to build lightweight, repeatable audit workflows in Flow-style labs.*
+*This lesson gives Flow Research Initiative trainees an engineer-style understanding of code audit practices, focusing on how to read, review, and document contracts for security and reliability, and how to build lightweight, repeatable audit workflows in Flow Research-style labs.*

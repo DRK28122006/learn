@@ -6,7 +6,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Flow Education Initiative',
+  title: 'Flow Research Education Initiative',
   tagline: 'Powering the next generation of open-source contributors',
   favicon: 'img/favicon.ico',
 
@@ -71,9 +71,9 @@ const config: Config = {
   themeConfig: {
     image: 'img/flow_education_social_card.jpg',
     navbar: {
-      title: 'Flow Education',
+      title: 'Flow Research Education',
       logo: {
-        alt: 'Flow Logo',
+        alt: 'Flow Research Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -108,7 +108,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Flow Education Initiative.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Flow Research Education Initiative.`,
     },
     prism: {
       theme: prismThemes.github,

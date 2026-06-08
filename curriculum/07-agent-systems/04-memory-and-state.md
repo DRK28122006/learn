@@ -338,9 +338,9 @@ memory\ usefulness = task\ success\ with\ memory - task\ success\ without\ memor
 
 The second metric matters most. A memory system that retrieves plausible notes but does not improve outcomes is just cost.
 
-## Flow Context
+## Flow Research Context
 
-In Flow:
+In Flow Research:
 
 - Jarvis needs working state to pause and resume agent runs.
 - Garden needs workspace memory with clear ownership and access controls.

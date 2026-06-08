@@ -27,8 +27,8 @@ By the end of this lesson, you will be able to:
 
 - Explain the difference between a **protocol** and an **application** in software and network systems.
 - Recognize when you are designing a **protocol** and when you are building an **application** on top.
-- Connect protocol-application thinking to blockchain and ML-style systems in the Flow Initiative.
-- Sketch a simple protocol-application split for a Flow-style project.
+- Connect protocol-application thinking to blockchain and ML-style systems in the Flow Research Initiative.
+- Sketch a simple protocol-application split for a Flow Research-style project.
 
 ## Concept Map
 
@@ -61,7 +61,7 @@ In practice, the difference is about **rules vs. uses**:
 - **Protocols** define the **rules** of interaction.
 - **Applications** are **instances** of systems that **use** those rules.
 
-In the Flow Initiative, understanding this split matters because:
+In the Flow Research Initiative, understanding this split matters because:
 
 - blockchain-style systems are often **protocols** with **applications** on top.
 - ML-driven services are **applications** that may **interact** with underlying protocols.
@@ -95,7 +95,7 @@ Protocols are usually:
 - **Reusable**: many different applications can use the same protocol.
 - **State-constrained**: they govern how state changes over time (e.g., "you must send `ACK` after receiving `SYN`").
 
-In Flow-style thinking, a protocol is the **shared agreement layer** between actors, not the logic of a specific service.
+In Flow Research-style thinking, a protocol is the **shared agreement layer** between actors, not the logic of a specific service.
 
 ---
 
@@ -113,7 +113,7 @@ Examples:
 
 - A **web browser** is an application that uses **HTTP(S)** to fetch and display pages.
 - A **wallet app** is an application that uses **blockchain-style transaction-and-consensus protocols** to send and receive tokens.
-- A **Flow-style learning dashboard** is an application that uses **HTTP-style APIs** and **GraphQL** to show scores and interventions.
+- A **Flow Research-style learning dashboard** is an application that uses **HTTP-style APIs** and **GraphQL** to show scores and interventions.
 
 ### Key Properties of Applications
 
@@ -123,7 +123,7 @@ Applications are:
 - **Implementation-specific**: depend on chosen languages, frameworks, and platforms.
 - **Extensible**: you can add features, UIs, and business logic on top without changing the underlying protocol.
 
-In Flow-style thinking, an application is the **user-touchpoint** that runs on top of shared rules.
+In Flow Research-style thinking, an application is the **user-touchpoint** that runs on top of shared rules.
 
 ---
 
@@ -154,7 +154,7 @@ This helps you see where your design is **defining** shared rules and where it i
 
 ---
 
-## How This Fits Into Flow-Style Systems
+## How This Fits Into Flow Research-Style Systems
 
 ### 1. Blockchain-Style Systems
 
@@ -201,7 +201,7 @@ application:
 
 ### Exercise 1: Sketch a Protocol-Application Split
 
-Pick a Flow-style system you are designing or studying (e.g., a governance-dashboard or a learning-recommendation engine):
+Pick a Flow Research-style system you are designing or studying (e.g., a governance-dashboard or a learning-recommendation engine):
 
 - Circle the parts that define **how entities communicate** (message formats, sequences, constraints). Label them "protocol."
 - Circle the parts that provide **user-facing functionality** or **application logic**. Label them "application."
@@ -233,10 +233,10 @@ Rate yourself from 1 to 5:
 
 - I can explain the difference between a protocol and an application.
 - I can recognize when I am designing a protocol vs an application.
-- I can see how this split applies to blockchain-style or ML-style Flow projects.
-- I can sketch a simple protocol-application split for a Flow-style system.
+- I can see how this split applies to blockchain-style or ML-style Flow Research projects.
+- I can sketch a simple protocol-application split for a Flow Research-style system.
 
-Action item: write a short note in your lab repo describing one protocol-application boundary you identified in a Flow-style project and why it is useful to keep them separate.
+Action item: write a short note in your lab repo describing one protocol-application boundary you identified in a Flow Research-style project and why it is useful to keep them separate.
 
 ---
 
@@ -255,4 +255,4 @@ Action item: write a short note in your lab repo describing one protocol-applica
 
 ---
 
-*This lesson gives Flow Initiative trainees a beginner-level understanding of the difference between protocols and applications in software systems, focusing on how protocols define rules of interaction and how applications build on those rules to provide user-facing services in Flow-style contexts.*
+*This lesson gives Flow Research Initiative trainees a beginner-level understanding of the difference between protocols and applications in software systems, focusing on how protocols define rules of interaction and how applications build on those rules to provide user-facing services in Flow Research-style contexts.*

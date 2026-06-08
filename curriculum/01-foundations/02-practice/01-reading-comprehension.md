@@ -60,7 +60,7 @@ Reading technical documentation is a separate skill entirely from writing code. 
 
 But reading documentation is not like reading a novel. You read a novel from page one to the end to experience a story. **You read documentation like you use a map:** you drop in to figure out exactly where you are, find the route to your destination, and then you put the map away. You do not try to memorize the map.
 
-In the Flow Initiative, we treat reading as a core engineering practice. The way you read directly influences the quality of the code you write, the notes you take, and the pull requests you submit. Let's break down how to master this skill.
+In the Flow Research Initiative, we treat reading as a core engineering practice. The way you read directly influences the quality of the code you write, the notes you take, and the pull requests you submit. Let's break down how to master this skill.
 
 ## Stage 1: Identify Your Situation
 
@@ -194,4 +194,4 @@ Rate yourself from 1 to 5 on the following statements:
 - [Stack Overflow](https://stackoverflow.com/) - For when you hit those inevitable bugs.
 
 ---
-*This lesson equips Flow Initiative trainees to read technical documentation like engineers, not just like students, preparing them for effective, unblocked lab work.*
+*This lesson equips Flow Research Initiative trainees to read technical documentation like engineers, not just like students, preparing them for effective, unblocked lab work.*

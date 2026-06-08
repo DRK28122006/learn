@@ -27,8 +27,8 @@ By the end of this lesson, you will be able to:
 
 - Explain how **economic incentives** shape the behavior of participants in consensus protocols (e.g., PoW, PoS, BFT-style validators).
 - Describe the core "game" of consensus: **what validators are rewarded for, and what they are punished for**.
-- Sketch how to design **incentive-compatible** rewards and penalties for a Flow-style governance or reward-style consensus-like layer.
-- Connect consensus-style incentive design to **security, liveness, and cost** in the larger Flow-style stack.
+- Sketch how to design **incentive-compatible** rewards and penalties for a Flow Research-style governance or reward-style consensus-like layer.
+- Connect consensus-style incentive design to **security, liveness, and cost** in the larger Flow Research-style stack.
 
 ## Concept Map
 
@@ -66,7 +66,7 @@ This is **consensus economics**. In many protocols, consensus is not just a tech
 - participants (e.g., nodes, validators, solvers)
 - make choices based on **costs, rewards, and penalties**.
 
-For Flow-style systems, understanding this is crucial whenever:
+For Flow Research-style systems, understanding this is crucial whenever:
 
 - you design a **multi-agent coordination layer** (e.g., governance-style voting, reward-distribution, or learner-score aggregation)
 - that must be **secure, live, and robust to strategic behavior**.
@@ -92,7 +92,7 @@ Core idea:
 - good consensus-style systems are **incentive-compatible**:
  it is **rational** for participants to follow the protocol rather than deviate.
 
-For Flow-style protocols, you can think of:
+For Flow Research-style protocols, you can think of:
 
 - governance-style validators or committees as **economic agents**,
 - whose actions you shape via **rewards, penalties, and opportunity costs**.
@@ -116,7 +116,7 @@ Rewards accomplish several things:
 - cover the **cost of participation** (hardware, bandwidth, staked capital).
 - create **alignment**: honest behavior is more profitable than coordinated cheating.
 
-Flow-style view:
+Flow Research-style view:
 
 - you can reward:
 
@@ -137,7 +137,7 @@ Flow-style view:
 - attacking the network, or
 - simply being negligent.
 
-Flow-style view:
+Flow Research-style view:
 
 - penalties can apply to:
 
@@ -155,7 +155,7 @@ Flow-style view:
  - raise the bar to become a validator,
  - and increase the **reputation-style cost** of misbehavior.
 
-Flow-style motivation:
+Flow Research-style motivation:
 
 - you can use "stake-like" reputation (e.g., governance-tokens, learner-reputation scores)
 - to gate participation in sensitive flows.
@@ -188,7 +188,7 @@ PoS economics work because:
 - the validator's own wealth is at risk.
 - attacking is **financially self-destructive**.
 
-Flow-style twist:
+Flow Research-style twist:
 
 - you do not need "crypto-style" tokens;
 - you can mimic this with:
@@ -224,7 +224,7 @@ In practice, this is **game-theoretic** but not necessarily formal-theorem-style
 
 - an **engineering and modeling** exercise.
 
-For Flow-style protocols:
+For Flow Research-style protocols:
 
 - you can:
 
@@ -233,9 +233,9 @@ For Flow-style protocols:
 
 ---
 
-## How Consensus Economics Applies to Flow-Style Systems
+## How Consensus Economics Applies to Flow Research-Style Systems
 
-Even if your Flow-style system is not a full-blown blockchain, you can use **consensus-style economics** for:
+Even if your Flow Research-style system is not a full-blown blockchain, you can use **consensus-style economics** for:
 
 ### 1. Governance-Style Validators
 
@@ -277,7 +277,7 @@ This is a "lightweight consensus" layer on top of ML-style or governance-style d
 
 - In multi-chain or multi-ledger setups:
 
- - some Flow-style components may **share security** (e.g., a shared validator set, or shared staking).
+ - some Flow Research-style components may **share security** (e.g., a shared validator set, or shared staking).
 
 Consensus-economics principles apply there, too:
 
@@ -305,7 +305,7 @@ Best practice:
  - power concentrates,
  - and the protocol loses decentralization-style benefits.
 
-Flow-style mitigation:
+Flow Research-style mitigation:
 
 - use **layered participation**:
 
@@ -340,7 +340,7 @@ print(attack_ev(gain=100, detection_probability=0.8, slash=200))
 
 ### Exercise 1: Sketch a Consensus-Style Incentive Scheme
 
-Take a Flow-style protocol that uses some form of multi-agent coordination (e.g., governance-votes, learner-ratings, or reward-attestation):
+Take a Flow Research-style protocol that uses some form of multi-agent coordination (e.g., governance-votes, learner-ratings, or reward-attestation):
 
 - Design a **simple incentive scheme**:
 
@@ -378,10 +378,10 @@ Rate yourself from 1 to 5:
 
 - I can explain how consensus economics shapes validator behavior through rewards and penalties.
 - I can name at least two classic consensus-style incentive models (e.g., PoW, PoS) and their core ideas.
-- I can sketch an incentive-compatible reward-and-penalty scheme for a Flow-style governance or reward-style protocol.
+- I can sketch an incentive-compatible reward-and-penalty scheme for a Flow Research-style governance or reward-style protocol.
 - I can see the trade-offs between centralization, security, and cost in consensus-economics design.
 
-Action item: write a short note in your lab repo describing one consensus-economics-style incentive scheme you sketched for a Flow-style protocol and how it shapes participant behavior.
+Action item: write a short note in your lab repo describing one consensus-economics-style incentive scheme you sketched for a Flow Research-style protocol and how it shapes participant behavior.
 
 ---
 
@@ -395,9 +395,9 @@ Action item: write a short note in your lab repo describing one consensus-econom
 ## Next Steps
 
 - Read `03-incentive-alignment-and-governance-design.md` next to connect consensus-style incentives directly to governance-style models for protocol evolution.
-- Treat every multi-agent Flow-style protocol layer as something that must be **explicitly incentive-designed**, not just "everyone behaves honestly by default."
-- When you design a Flow-style protocol, start by asking: "What are the rewards and penalties for this node, and does honest behavior dominate the alternatives?"
+- Treat every multi-agent Flow Research-style protocol layer as something that must be **explicitly incentive-designed**, not just "everyone behaves honestly by default."
+- When you design a Flow Research-style protocol, start by asking: "What are the rewards and penalties for this node, and does honest behavior dominate the alternatives?"
 
 ---
 
-*This lesson gives Flow Initiative trainees an advanced-level understanding of consensus economics in protocol-style systems, focusing on how rewards, penalties, and opportunity-cost incentives shape validator behavior in mechanisms like PoW and PoS, and how to design incentive-compatible schemes for Flow-style governance-style and reward-style multi-agent coordination layers.*
+*This lesson gives Flow Research Initiative trainees an advanced-level understanding of consensus economics in protocol-style systems, focusing on how rewards, penalties, and opportunity-cost incentives shape validator behavior in mechanisms like PoW and PoS, and how to design incentive-compatible schemes for Flow Research-style governance-style and reward-style multi-agent coordination layers.*

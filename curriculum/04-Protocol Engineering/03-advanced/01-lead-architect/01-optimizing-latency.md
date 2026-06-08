@@ -27,8 +27,8 @@ By the end of this lesson, you will be able to:
 
 - Explain the difference between **average latency** and **tail latency** and why tail latency often dominates user experience.
 - Identify the main sources of latency in protocol-style systems (network, serialization, coordination, consensus, and computation).
-- Apply **measurable, budget-driven optimization patterns** (e.g., caching, batching, hedging, replication, edge-style placement, and efficient serialization) to a Flow-style protocol.
-- Connect latency optimization to **SLOs**, **observability**, and **deployment patterns** (e.g., geo-replication, multi-zone, and service-mesh) in the larger Flow-style stack.
+- Apply **measurable, budget-driven optimization patterns** (e.g., caching, batching, hedging, replication, edge-style placement, and efficient serialization) to a Flow Research-style protocol.
+- Connect latency optimization to **SLOs**, **observability**, and **deployment patterns** (e.g., geo-replication, multi-zone, and service-mesh) in the larger Flow Research-style stack.
 
 ## Concept Map
 
@@ -60,7 +60,7 @@ At the advanced level, you are not just asking "Does this protocol work?"; you a
 This is **latency optimization**.
 In distributed and protocol-style systems, latency is rarely a single number; it is a **distribution**, and the slowest tails often matter the most to users.
 
-For Flow-style systems, optimizing latency means:
+For Flow Research-style systems, optimizing latency means:
 
 - making governance flows, learner-on-ramp flows, and ML-style scoring feel **snappy and predictable**,
 - even when the system is under load or spread across nodes and regions.
@@ -174,7 +174,7 @@ Caching is one of the most powerful tools for reducing latency:
 - **Read-through**: the cache automatically hits the source and updates itself.
 - **Write-through / write-around** for writes, when you need stronger consistency.
 
-For Flow-style systems:
+For Flow Research-style systems:
 
 - cache:
 
@@ -218,7 +218,7 @@ Choosing the right format and compression level can dramatically reduce latency 
 - **Protobuf, FlatBuffers, or similar** for compact, fast-to-decode messages.
 - **Compression** (e.g., gzip or zstd) for text-based payloads when the cost of CPU is worth the bandwidth savings.
 
-For Flow-style protocols:
+For Flow Research-style protocols:
 
 - profile before compressing;
 - small payloads often don't benefit much, but large event lists or ML-batch messages do.
@@ -230,7 +230,7 @@ For global-style services, **placing data and compute closer to users** cuts RTT
 - **CDNs** and **edge caches** for static or semi-static governance or learning content.
 - **regional replicas** of governance-state read-nodes, routed via **locality-aware load-balancers** or service-mesh routing.
 
-This is especially important when your Flow-style system serves learners or governance bodies across regions.
+This is especially important when your Flow Research-style system serves learners or governance bodies across regions.
 
 ### 6. Tail-Latency Mitigation (Hedging and Replication)
 
@@ -243,9 +243,9 @@ These patterns trade **extra load** for **more predictable response times**, whi
 
 ---
 
-## How to Apply Latency Optimization to Flow-Style Protocols
+## How to Apply Latency Optimization to Flow Research-Style Protocols
 
-When optimizing a Flow-style protocol, follow a **measurement-driven loop**:
+When optimizing a Flow Research-style protocol, follow a **measurement-driven loop**:
 
 ### 1. Define SLOs
 
@@ -275,7 +275,7 @@ When optimizing a Flow-style protocol, follow a **measurement-driven loop**:
 
  - defer heavy work and batch where possible.
 
-Flow-style benefit:
+Flow Research-style benefit:
 
 - lets you choose which flows need **low-latency** (e.g., learner-on-ramp, governance-voting)
 - and which can be **event-driven or batched** (e.g., ML-based scoring, analytics).
@@ -295,9 +295,9 @@ print(percentile([80, 95, 120, 250, 400], 0.95))
 
 ## Practical Exercises
 
-### Exercise 1: Profile a Flow-Style Flow
+### Exercise 1: Profile a Flow Research-Style Flow
 
-Take a small Flow-style flow (e.g., "submit proposal -> get state confirmation"):
+Take a small Flow Research-style flow (e.g., "submit proposal -> get state confirmation"):
 
 - Sketch a **latency breakdown**:
 
@@ -319,7 +319,7 @@ This trains you to think in **distributions**, not averages.
 
 ### Exercise 3: Sketch a Latency-Budget SLO
 
-- Choose a user-facing Flow-style flow and design a **latency-budget SLO**:
+- Choose a user-facing Flow Research-style flow and design a **latency-budget SLO**:
 
  - end-to-end p95 and p99 targets,
  - plus per-hop budgets (e.g., client -> load-balancer -> API -> DB -> consensus).
@@ -334,10 +334,10 @@ Rate yourself from 1 to 5:
 
 - I can explain the difference between average and tail latency and why tail latency matters.
 - I can identify main latency sources (network, serialization, coordination, consensus, computation).
-- I can apply at least three optimization patterns (caching, batching, async, efficient serialization, geo-replication, hedging) to a Flow-style protocol.
+- I can apply at least three optimization patterns (caching, batching, async, efficient serialization, geo-replication, hedging) to a Flow Research-style protocol.
 - I can connect latency optimization to SLOs, observability, and deployment-pattern decisions.
 
-Action item: write a short note in your lab repo describing how you would optimize one Flow-style protocol flow for latency and what trade-offs you would accept.
+Action item: write a short note in your lab repo describing how you would optimize one Flow Research-style protocol flow for latency and what trade-offs you would accept.
 
 ---
 
@@ -352,8 +352,8 @@ Action item: write a short note in your lab repo describing how you would optimi
 
 - Read `02-optimizing-throughput-and-cost.md` next to learn how to balance latency against throughput and infra cost.
 - Treat every protocol release as something that must meet explicit latency-style SLOs, not just "faster than before."
-- When you design a Flow-style protocol, start by asking: "What is our latency SLO for this flow, and where are our hop-level budgets?".
+- When you design a Flow Research-style protocol, start by asking: "What is our latency SLO for this flow, and where are our hop-level budgets?".
 
 ---
 
-*This lesson gives Flow Initiative trainees an advanced-level understanding of latency optimization in protocol-style systems, focusing on tail latency, network RTT, serialization, coordination, and computation, and how to apply caching, batching, asynchronous design, efficient serialization, geo-replication, and tail-latency-mitigation patterns to Flow-style governance-style and ML-driven protocols.*
+*This lesson gives Flow Research Initiative trainees an advanced-level understanding of latency optimization in protocol-style systems, focusing on tail latency, network RTT, serialization, coordination, and computation, and how to apply caching, batching, asynchronous design, efficient serialization, geo-replication, and tail-latency-mitigation patterns to Flow Research-style governance-style and ML-driven protocols.*

@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Define **on-chain** and **off-chain** governance, and their trade-offs.
 - Recognize common governance models (token-based voting, delegates, DAOs, multisig, social-consensus).
 - Map governance choices to security, decentralization, and liveness properties.
-- Argue which governance style is appropriate for a Flow-style protocol in a given context.
+- Argue which governance style is appropriate for a Flow Research-style protocol in a given context.
 
 ## Concept Map
 
@@ -65,7 +65,7 @@ In blockchain systems, governance is **deeply entangled** with the technical des
 - Tokens can encode voting power.
 - On-chain state can record results.
 
-For Flow engineers, governance is not just "who votes"; it is a **system design problem** that shapes:
+For Flow Research engineers, governance is not just "who votes"; it is a **system design problem** that shapes:
 
 - how fast the protocol can adapt,
 - how much power is centralized, and
@@ -221,7 +221,7 @@ Your job is to **analyze governance design against the application's threat mode
 
 ---
 
-## Why Governance Matters for Flow Engineers
+## Why Governance Matters for Flow Research Engineers
 
 In public-good contexts:
 
@@ -229,7 +229,7 @@ In public-good contexts:
 - Communities must believe that no small group can silently hijack the protocol.
 - At the same time, the protocol must not be **stuck forever** because governance is too slow or rigid.
 
-As a Flow engineer, you should be able to:
+As a Flow Research engineer, you should be able to:
 
 - Clearly state what governance model a protocol uses.
 - Identify its **points of centralization** and **bottlenecks**.
@@ -264,9 +264,9 @@ Pick a well-known protocol (e.g., a DAO, a chain, or a popular L2):
  - How are results enforced?
 - Write a short note describing the **strengths and weaknesses** of this model.
 
-### Exercise 2: Design a Governance Mix for a Flow-Style Protocol
+### Exercise 2: Design a Governance Mix for a Flow Research-Style Protocol
 
-Imagine a Flow-style protocol that:
+Imagine a Flow Research-style protocol that:
 
 - Needs to be **decentralized**.
 - Must still be **responsive** to emergencies.
@@ -295,9 +295,9 @@ Rate yourself from 1 to 5:
 - I can explain the difference between on-chain and off-chain governance.
 - I can list common governance patterns (token-voting, delegates, DAO, multisig).
 - I can see how governance shapes security, liveness, and decentralization.
-- I can argue for or against a governance model in a Flow-style context.
+- I can argue for or against a governance model in a Flow Research-style context.
 
-Action item: write a short note in your lab repo describing the governance model of a Flow-style protocol you would like to build.
+Action item: write a short note in your lab repo describing the governance model of a Flow Research-style protocol you would like to build.
 
 ## Further Reading
 
@@ -314,4 +314,4 @@ Action item: write a short note in your lab repo describing the governance model
 
 ---
 
-*This lesson gives Flow Initiative trainees an engineer-style understanding of governance mechanisms in blockchain systems, focused on how to design, critique, and choose governance models that align with security, decentralization, and community needs.*
+*This lesson gives Flow Research Initiative trainees an engineer-style understanding of governance mechanisms in blockchain systems, focused on how to design, critique, and choose governance models that align with security, decentralization, and community needs.*

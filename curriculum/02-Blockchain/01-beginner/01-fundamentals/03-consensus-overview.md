@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Explain what "consensus" means for a blockchain system.
 - Distinguish the main goals of consensus (agreement, safety, liveness, fairness).
 - Recognize the outlines of PoW and PoS without getting lost in details.
-- Connect consensus concepts to real-world chains and Flow labs.
+- Connect consensus concepts to real-world chains and Flow Research labs.
 
 ## Concept Map
 
@@ -55,7 +55,7 @@ The useful question is always: who is allowed to change state, under which rules
 Consensus is the engine that makes a blockchain more than just a chain of blocks.
 It is the mechanism that ensures many nodes can agree on what the state of the system should be, even when some nodes are slow, failing, or actively misbehaving.
 
-In Flow Initiative, you do not need to implement a new consensus protocol from scratch.
+In Flow Research Initiative, you do not need to implement a new consensus protocol from scratch.
 But you do need to understand enough to:
 
 - reason about finality,
@@ -199,9 +199,9 @@ For the beginner level, treat PoW and PoS as the **conceptual anchors**. You can
 This table is a **first-order heuristic**, not a precise specification.
 In practice, each protocol adds its own tweaks and parameters.
 
-## Consensus and the Flow Initiative
+## Consensus and the Flow Research Initiative
 
-In Flow, you will see chains and systems that use:
+In Flow Research, you will see chains and systems that use:
 
 - **PoW-style roots** (e.g., Bitcoin-inspired ledgers).
 - **PoS-style L1s and L2s** (e.g., Ethereum-compatible ecosystems).
@@ -252,9 +252,9 @@ Pick a chain you know (e.g., Bitcoin, Ethereum, or a local testnet you've used) 
 
 Write a short note with your answers.
 
-### Exercise 3: Relate to a Flow Lab
+### Exercise 3: Relate to a Flow Research Lab
 
-Look at a blockchain lab from the Flow curriculum (even if you haven't implemented it yet) and:
+Look at a blockchain lab from the Flow Research curriculum (even if you haven't implemented it yet) and:
 
 - Identify the chain or network it targets.
 - Write one sentence describing what consensus model it likely uses.
@@ -269,7 +269,7 @@ Rate yourself from 1 to 5:
 - I can see that consensus affects latency and security.
 - I can map a simple chain to a consensus model.
 
-Action item: write a 3-sentence summary in your Flow lab notes of "why consensus matters for my code."
+Action item: write a 3-sentence summary in your Flow Research lab notes of "why consensus matters for my code."
 
 ## Further Reading
 
@@ -286,4 +286,4 @@ Action item: write a 3-sentence summary in your Flow lab notes of "why consensus
 
 ---
 
-*This lesson gives Flow Initiative trainees a grounded, engineering-style overview of consensus in blockchain systems, emphasizing goals, PoW vs PoS, and practical implications for latency, security, and incentive design.*
+*This lesson gives Flow Research Initiative trainees a grounded, engineering-style overview of consensus in blockchain systems, emphasizing goals, PoW vs PoS, and practical implications for latency, security, and incentive design.*

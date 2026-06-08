@@ -27,8 +27,8 @@ By the end of this lesson, you will be able to:
 
 - Explain what a **security model** is and how it differs from informal "security thinking."
 - Identify **core elements** of a protocol security model: trust boundaries, threat actors, attack surface, and security properties (e.g., confidentiality, integrity, availability, authenticity).
-- Apply **threat-modeling-style methods** (e.g., STRIDE-style breakdown or data-flow-style analysis) to a Flow-style protocol or multi-agent system.
-- Connect security modeling to **consensus-economics**, **MLOps**, and **deployment patterns** (e.g., identity, encryption, and access control) in the larger Flow-style stack.
+- Apply **threat-modeling-style methods** (e.g., STRIDE-style breakdown or data-flow-style analysis) to a Flow Research-style protocol or multi-agent system.
+- Connect security modeling to **consensus-economics**, **MLOps**, and **deployment patterns** (e.g., identity, encryption, and access control) in the larger Flow Research-style stack.
 
 ## Concept Map
 
@@ -56,7 +56,7 @@ At the advanced level, you are not just asking "Does this protocol work?" or "Is
 
 This is **security modeling**: a **structured, upfront way** to think about security in protocol design.
 
-In Flow-style systems, where protocols coordinate governance, learner behavior, and ML-style rewards, getting this wrong can:
+In Flow Research-style systems, where protocols coordinate governance, learner behavior, and ML-style rewards, getting this wrong can:
 
 - corrupt decisions,
 - leak sensitive data,
@@ -80,7 +80,7 @@ Loosely, a security model answers:
 - What **attacks are assumed possible** (e.g., man-in-the-middle, spoofing, tampering, denial of service).
 - What **conditions must hold** for the system to be considered secure (e.g., "no double-spend," "no forged governance-events").
 
-For Flow-style protocols, this is especially useful when you design:
+For Flow Research-style protocols, this is especially useful when you design:
 
 - governance-style multi-agent layers,
 - cross-ledger or interchain-style communication,
@@ -112,7 +112,7 @@ Examples:
 - "The network is untrusted; clients are partially untrusted."
 - "Validators are assumed rational and self-interested but not assumed always honest."
 
-Flow-style motivation:
+Flow Research-style motivation:
 
 - clarifying these assumptions helps you decide where to place encryption, signatures, and access controls.
 
@@ -156,7 +156,7 @@ A protocol should clearly state which **security properties** it gives up to and
 - **Authenticity**: we can identify who performed an action (e.g., which learner, which governance body).
 - **Non-repudiation**: actors cannot deny their actions (e.g., voters cannot later claim "I didn't vote").
 
-Flow-style customization:
+Flow Research-style customization:
 
 - you may not need **military-style** levels of all four; instead, you can **prioritize** based on the flow:
 
@@ -169,7 +169,7 @@ Flow-style customization:
 
 Security modeling is closely related to **threat modeling**, a technique that helps you systematically examine how attackers can compromise a system before implementation.
 
-A practical, Flow-style-compatible way to do it:
+A practical, Flow Research-style-compatible way to do it:
 
 ### 1. Identify Assets and Data Flows
 
@@ -200,7 +200,7 @@ For each flow in your diagram:
 - ask which of these threats apply,
 - and whether existing or planned controls stop them.
 
-Flow-style benefit:
+Flow Research-style benefit:
 
 - this discipline exposes risks you might otherwise miss in "happy-path" design documents.
 
@@ -213,7 +213,7 @@ Once you know plausible threats, map them to **controls**:
 - **Architectural**: isolation, sandboxing, or narrowing trust surfaces.
 - **Operational**: logging, monitoring, alerting on suspicious patterns.
 
-For Flow-style protocols:
+For Flow Research-style protocols:
 
 - these controls usually sit in the **protocol-style layer**, the **identity-style layer**, and the **deployment-style configuration**.
 
@@ -229,9 +229,9 @@ For Flow-style protocols:
 
 ---
 
-## Connecting Security Modeling to Flow-Style Systems
+## Connecting Security Modeling to Flow Research-Style Systems
 
-Flow-style protocols often combine:
+Flow Research-style protocols often combine:
 
 - **governance-style** and **reward-style** coordination,
 - with **ML-style data-flows** and **multiple trust domains**.
@@ -270,9 +270,9 @@ threat:
 
 ## Practical Exercises
 
-### Exercise 1: Sketch a Security Model for a Flow-Style Flow
+### Exercise 1: Sketch a Security Model for a Flow Research-Style Flow
 
-Take one Flow-style flow you designed (e.g., governance-proposal approval or learner-reward-distribution):
+Take one Flow Research-style flow you designed (e.g., governance-proposal approval or learner-reward-distribution):
 
 - Sketch:
 
@@ -292,11 +292,11 @@ Write it as a short text and, optionally, a small diagram.
 
  - propose at least one control (e.g., signature, rate-limit, role-based access).
 
-This is a lightweight way to practice **threat-modeling on real Flow-style protocols**.
+This is a lightweight way to practice **threat-modeling on real Flow Research-style protocols**.
 
 ### Exercise 3: Align with Consensus Economics
 
-- Take a Flow-style protocol that uses multi-agent coordination:
+- Take a Flow Research-style protocol that uses multi-agent coordination:
 
  - sketch where cryptographic security (e.g., signatures, proofs) and where **incentive-style security** (e.g., slashing, reputation-loss) complement each other.
 
@@ -310,10 +310,10 @@ Rate yourself from 1 to 5:
 
 - I can explain what a security model is and how it differs from informal "security thinking."
 - I can identify core elements: trust boundaries, threat actors, attack surface, and security properties.
-- I can apply a simple STRIDE-style or data-flow-style analysis to a Flow-style protocol.
+- I can apply a simple STRIDE-style or data-flow-style analysis to a Flow Research-style protocol.
 - I can connect security modeling to consensus-economics, MLOps, and deployment-pattern decisions.
 
-Action item: write a short note in your lab repo describing the security model you sketched for one Flow-style flow, and how you would enforce confidentiality, integrity, and availability there.
+Action item: write a short note in your lab repo describing the security model you sketched for one Flow Research-style flow, and how you would enforce confidentiality, integrity, and availability there.
 
 ---
 
@@ -327,9 +327,9 @@ Action item: write a short note in your lab repo describing the security model y
 ## Next Steps
 
 - Read `04-formal-modeling-and-verification.md` next to see how to move from semi-formal security-modeling to light-style formal-method-style checks.
-- Treat every new Flow-style protocol layer as something that must have an **explicit security model**, even if brief.
+- Treat every new Flow Research-style protocol layer as something that must have an **explicit security model**, even if brief.
 - When you design a protocol, start by asking: "What are the trust boundaries, assets, and security properties, and how will we defend against the main threats identified by a STRIDE-style pass?"
 
 ---
 
-*This lesson gives Flow Initiative trainees an advanced-level understanding of security modeling in protocol-style systems, focusing on trust boundaries, threat actors, attack surface, and security properties, and how to apply threat-modeling-style analysis (e.g., STRIDE) to Flow-style governance-style and ML-driven protocols to expose and mitigate risks early in the design process.*
+*This lesson gives Flow Research Initiative trainees an advanced-level understanding of security modeling in protocol-style systems, focusing on trust boundaries, threat actors, attack surface, and security properties, and how to apply threat-modeling-style analysis (e.g., STRIDE) to Flow Research-style governance-style and ML-driven protocols to expose and mitigate risks early in the design process.*

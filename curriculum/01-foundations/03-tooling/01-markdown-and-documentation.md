@@ -27,7 +27,7 @@ By the end of this lesson, you will be able to:
 
 - Use Markdown to write clear, structured, and maintainable technical documentation.
 - Write READMEs, lesson files, and lab notes using a consistent style.
-- Apply documentation best practices to your Flow Initiative work.
+- Apply documentation best practices to your Flow Research Initiative work.
 - Use documentation as a communication tool for teammates and reviewers.
 
 ## Concept Map
@@ -55,7 +55,7 @@ $M$ is mastery, $U$ is understanding, $P$ is deliberate practice, and $F$ is fee
 
 Markdown is the common language of modern technical documentation. It lets you write plain text that is easy to read on GitHub and easy to render on sites like Docusaurus.
 
-In the Flow Initiative, Markdown is not an optional formatting layer. It is the **primary medium** for:
+In the Flow Research Initiative, Markdown is not an optional formatting layer. It is the **primary medium** for:
 
 - curriculum lessons,
 - lab notes,
@@ -186,7 +186,7 @@ Put the most important information at the top, not buried in the middle.
 
 ### 2. Use a Consistent Style
 
-Across the Flow Initiative, aim for:
+Across the Flow Research Initiative, aim for:
 
 - Short, direct sentences.
 - Active voice.
@@ -218,9 +218,9 @@ This pattern helps readers understand the context before the details.
 
 This prevents confusion later.
 
-## How Flow Uses Markdown
+## How Flow Research Uses Markdown
 
-In the Flow Initiative monorepo, Markdown is used in:
+In the Flow Research Initiative monorepo, Markdown is used in:
 
 - **Curriculum** - lesson files in `curriculum/`.
 - **Knowledge-base** - articles and research summaries.
@@ -304,7 +304,7 @@ Rate yourself from 1 to 5:
 - I can use examples to explain ideas.
 - I can keep Markdown simple and focused on the reader.
 
-Action item: improve one README or lesson-style note this week and commit it to the Flow repo.
+Action item: improve one README or lesson-style note this week and commit it to the Flow Research repo.
 
 ## Further Reading
 
@@ -316,7 +316,7 @@ Action item: improve one README or lesson-style note this week and commit it to 
 ## Next Steps
 
 - Read `02-version-control.md` next to see how Markdown documentation lives alongside Git history.
-- Use Markdown for every lab, article, and contribution in the Flow Initiative.
+- Use Markdown for every lab, article, and contribution in the Flow Research Initiative.
 - Treat documentation as part of your engineering output, not an afterthought.
 
 ## Resources
@@ -327,4 +327,4 @@ Action item: improve one README or lesson-style note this week and commit it to 
 
 ---
 
-*This lesson teaches Flow Initiative trainees to use Markdown as a powerful, simple tool for writing and sharing engineering-grade documentation across the monorepo and beyond.*
+*This lesson teaches Flow Research Initiative trainees to use Markdown as a powerful, simple tool for writing and sharing engineering-grade documentation across the monorepo and beyond.*

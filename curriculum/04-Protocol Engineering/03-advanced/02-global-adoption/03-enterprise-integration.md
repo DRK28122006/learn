@@ -27,8 +27,8 @@ By the end of this lesson, you will be able to:
 
 - Explain what **enterprise integration** means and how it relates to **protocol-style glue layers** between internal systems.
 - Recognize **core integration styles and patterns** (e.g., file-based, shared-database, RPC, messaging, and event-driven meshes) and when each is appropriate.
-- Sketch how to **integrate a Flow-style protocol** (e.g., governance- or reward-style) into an existing enterprise stack (e.g., ERPs, CRMs, HR systems, identity providers) using integration-style patterns.
-- Connect enterprise-integration practices to **security-modeling**, **regulatory-style compliance**, and **MLOps** (e.g., data-synchronization, audit-style flows) in the larger Flow-style stack.
+- Sketch how to **integrate a Flow Research-style protocol** (e.g., governance- or reward-style) into an existing enterprise stack (e.g., ERPs, CRMs, HR systems, identity providers) using integration-style patterns.
+- Connect enterprise-integration practices to **security-modeling**, **regulatory-style compliance**, and **MLOps** (e.g., data-synchronization, audit-style flows) in the larger Flow Research-style stack.
 
 ## Concept Map
 
@@ -54,7 +54,7 @@ Adapters and canonical messages reduce that growth by standardizing the middle.
 
 You already know how to:
 
-- design, test, and optimize Flow-style protocols,
+- design, test, and optimize Flow Research-style protocols,
 - model security and incentives,
 - and audit performance.
 
@@ -67,7 +67,7 @@ In practice, it is the art of:
 
 - letting **many different systems communicate** safely, meaningfully, and maintainably, often via a **loosely-coupled protocol-style layer**.
 
-For Flow-style systems, this is especially important because:
+For Flow Research-style systems, this is especially important because:
 
 - your governance- or reward-style protocol may need to:
 
@@ -86,7 +86,7 @@ Enterprise-integration-style thinking helps you avoid:
 
 **Enterprise integration** is the practice of:
 
-- connecting **multiple, heterogeneous systems** (e.g., ERPs, CRMs, data warehouses, identity-providers, and Flow-style governance-services)
+- connecting **multiple, heterogeneous systems** (e.g., ERPs, CRMs, data warehouses, identity-providers, and Flow Research-style governance-services)
 - so they can **share data and coordinate actions** in a controlled way.
 
 In practice, it usually proceeds via:
@@ -104,9 +104,9 @@ Messaging-style and event-driven integration is often preferred because it:
 
 - **decouples** systems and improves resilience compared with shared-database or tight-API-style coupling.
 
-For Flow-style protocols, you can think of:
+For Flow Research-style protocols, you can think of:
 
-- your **event-driven Flow-stack** as the **modern integration layer** that sits between legacy-style systems and new-style governance or reward-logic.
+- your **event-driven Flow Research-stack** as the **modern integration layer** that sits between legacy-style systems and new-style governance or reward-logic.
 
 ---
 
@@ -122,7 +122,7 @@ You do not need to memorize every pattern; instead, learn the **families**:
 - **Message Translator**: converts between different data formats (e.g., HR-schema ↔ governance-schema).
 - **Publish-Subscribe**: many publishers send events to topics; many subscribers can react.
 
-Flow-style motivation:
+Flow Research-style motivation:
 
 - your governance-event or learner-activity streams can sit on such a message bus, and:
 
@@ -141,14 +141,14 @@ can all subscribe without tightly coupling to each other.
 
 These patterns are useful when you:
 
-- run Flow-style governance-services alongside ERPs or CRMs,
+- run Flow Research-style governance-services alongside ERPs or CRMs,
 - and want to keep them **loosely linked**.
 
 ---
 
-## Integrating Flow-Style Protocols into Enterprise Stacks
+## Integrating Flow Research-Style Protocols into Enterprise Stacks
 
-When you want to plug a Flow-style protocol into an existing enterprise stack, follow a **pattern-style approach**:
+When you want to plug a Flow Research-style protocol into an existing enterprise stack, follow a **pattern-style approach**:
 
 ### 1. Inventory and Map Existing Systems
 
@@ -169,19 +169,19 @@ This "inventory" is the starting point for your integration blueprint.
 
 - Prefer **messaging / event-driven** over tight-API-style coupling where possible:
 
- - e.g., "when a learner on-ramps in the CRM, fire an onramp-event to a central bus; your Flow-style governance-service subscribes."
+ - e.g., "when a learner on-ramps in the CRM, fire an onramp-event to a central bus; your Flow Research-style governance-service subscribes."
 
 - Reserve **shared-database** and **file-style** patterns for:
 
  - legacy-ish workflows that are hard or slow to change.
 
-Flow-style benefit:
+Flow Research-style benefit:
 
 - keeps your **governance-logic** independent of the internal implementation of HR or CRM.
 
 ### 3. Add API-Layer and Adapters
 
-- Expose your Flow-style protocol via **versioned REST-style APIs** or **event-streams**, and:
+- Expose your Flow Research-style protocol via **versioned REST-style APIs** or **event-streams**, and:
 
  - place an **API gateway** in front for:
 
@@ -191,7 +191,7 @@ Flow-style benefit:
 
 - For each legacy-style system that cannot talk modern-style protocols directly, write a small **adapter** that:
 
- - converts between its native format and your Flow-style schema.
+ - converts between its native format and your Flow Research-style schema.
 
 This adapter is the **"integration face"** of your protocol.
 
@@ -225,11 +225,11 @@ so that authorization is **consistent** across the stack.
 
 ---
 
-## How This Fits Into Flow-Style Systems
+## How This Fits Into Flow Research-Style Systems
 
 Enterprise-integration-style thinking is particularly powerful when:
 
-- your Flow-style stack:
+- your Flow Research-style stack:
 
  - runs **alongside** legacy-style governance, HR, or educational-systems,
  - but must **remain modular** and **evolvable**.
@@ -268,7 +268,7 @@ integration_contract:
 
 ### Exercise 1: Sketch an Integration Blueprint
 
-- Pick a Flow-style governance or reward-protocol you designed:
+- Pick a Flow Research-style governance or reward-protocol you designed:
 - Sketch a **simple integration blueprint** that shows:
 
  - which enterprise systems it must talk to (e.g., HR, CRM, identity),
@@ -279,7 +279,7 @@ This trains you to think in **integration-architecture diagrams**, not only code
 
 ### Exercise 2: Design a Message-Style Event Bridge
 
-- Choose one **enterprise-to-Flow** interaction (e.g., "new learner in HR -> governance on-boarding"):
+- Choose one **enterprise-to-Flow Research** interaction (e.g., "new learner in HR -> governance on-boarding"):
 
  - Design a **message-style event** (e.g., `learner.enrolled`) with a clear schema.
  - Describe:
@@ -288,7 +288,7 @@ This trains you to think in **integration-architecture diagrams**, not only code
  - what component consumes it,
  - and how format-translation happens.
 
-This is a small, concrete **Enterprise Integration Pattern** in Flow-style terms.
+This is a small, concrete **Enterprise Integration Pattern** in Flow Research-style terms.
 
 ### Exercise 3: Plan an Identity-Mapping Layer
 
@@ -297,11 +297,11 @@ This is a small, concrete **Enterprise Integration Pattern** in Flow-style terms
  - sketch an **identity-mapping layer** that:
 
  - links enterprise-style roles or groups (e.g., "HR-Admin", "Learner-Manager")
- - to Flow-style roles (e.g., "governance-admin", "learner-moderator").
+ - to Flow Research-style roles (e.g., "governance-admin", "learner-moderator").
 
 - Note how you would validate or keep this mapping updated over time.
 
-This connects **enterprise-style identity** directly to **Flow-style governance-style authorization**.
+This connects **enterprise-style identity** directly to **Flow Research-style governance-style authorization**.
 
 ---
 
@@ -311,10 +311,10 @@ Rate yourself from 1 to 5:
 
 - I can explain what enterprise-style integration is and how it relates to protocol-style glue layers.
 - I can identify core integration styles and patterns (e.g., file-based, shared-database, RPC, messaging, event-driven meshes).
-- I can sketch how to integrate a Flow-style protocol into an existing enterprise stack using integration-style patterns.
-- I can connect enterprise-integration to security-modeling, regulatory-style compliance, and MLOps-style data-synchronization in Flow-style systems.
+- I can sketch how to integrate a Flow Research-style protocol into an existing enterprise stack using integration-style patterns.
+- I can connect enterprise-integration to security-modeling, regulatory-style compliance, and MLOps-style data-synchronization in Flow Research-style systems.
 
-Action item: write a short note in your lab repo describing one integration-style design you sketched between a Flow-style protocol and a mock enterprise-style system (e.g., HR or CRM), and what integration pattern you chose and why.
+Action item: write a short note in your lab repo describing one integration-style design you sketched between a Flow Research-style protocol and a mock enterprise-style system (e.g., HR or CRM), and what integration pattern you chose and why.
 
 ---
 
@@ -328,9 +328,9 @@ Action item: write a short note in your lab repo describing one integration-styl
 ## Next Steps
 
 - Read `04-audit-compliance-and-traceability.md` next to see how to design **audit-style traceability** into your integration-style flows (e.g., logs, replay-style histories).
-- Treat every Flow-style protocol that touches enterprise-style systems as something that must have an **explicit integration-style architecture document**.
-- When you design a Flow-style system, start by asking: "Which enterprise systems must it integrate with, and which integration pattern (e.g., event-driven, API-gateway, adapter) best fits each?"
+- Treat every Flow Research-style protocol that touches enterprise-style systems as something that must have an **explicit integration-style architecture document**.
+- When you design a Flow Research-style system, start by asking: "Which enterprise systems must it integrate with, and which integration pattern (e.g., event-driven, API-gateway, adapter) best fits each?"
 
 ---
 
-*This lesson gives Flow Initiative trainees an advanced-level understanding of enterprise integration in protocol-style systems, focusing on integration styles and patterns (e.g., messaging, pub/sub, CDC, API-gateways), and how to plug Flow-style governance-style and reward-style protocols into existing enterprise stacks (e.g., ERPs, CRMs, HR systems, identity-providers) while preserving loose coupling, security, and auditability.*
+*This lesson gives Flow Research Initiative trainees an advanced-level understanding of enterprise integration in protocol-style systems, focusing on integration styles and patterns (e.g., messaging, pub/sub, CDC, API-gateways), and how to plug Flow Research-style governance-style and reward-style protocols into existing enterprise stacks (e.g., ERPs, CRMs, HR systems, identity-providers) while preserving loose coupling, security, and auditability.*

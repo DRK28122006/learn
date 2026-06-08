@@ -57,7 +57,7 @@ Maieutics comes from the Socratic tradition and refers to drawing out knowledge 
 
 Flow thinking is a practical build-measure-learn loop for engineering work: define a hypothesis, build a small test, measure what happened, learn from the result, and refine the next step. It is especially valuable in decentralized systems, where network conditions, resource constraints, and governance trade-offs change the shape of every decision.
 
-This lesson applies both methods to the Flow Initiative context: engineers building resilient systems under real-world constraints, not classroom conditions.
+This lesson applies both methods to the Flow Research Initiative context: engineers building resilient systems under real-world constraints, not classroom conditions.
 
 ## What Is Maieutics?
 

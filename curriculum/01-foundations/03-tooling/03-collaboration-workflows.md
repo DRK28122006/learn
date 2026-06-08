@@ -55,7 +55,7 @@ $M$ is mastery, $U$ is understanding, $P$ is deliberate practice, and $F$ is fee
 
 Coding is a solo activity only when you are prototyping. Real engineering happens in teams, in public repos, and in shared spaces where decisions are discussed, reviewed, and documented.
 
-In the Flow Initiative, collaboration is **baked into the infrastructure**:
+In the Flow Research Initiative, collaboration is **baked into the infrastructure**:
 
 - GitHub issues for planning and tracking.
 - Pull requests for code and content.
@@ -79,7 +79,7 @@ For engineering, good collaboration workflows matter especially when:
 - Sync time is limited,
 - And clarity of intent is critical for remote work.
 
-## Collaboration Inside the Flow Monorepo
+## Collaboration Inside the Flow Research Monorepo
 
 The `flow-hub` repo is your primary collaboration surface. It holds:
 
@@ -160,7 +160,7 @@ RFCs help the team align on direction before heavy implementation.
 
 ## Communication Channels
 
-Flow uses multiple channels:
+Flow Research uses multiple channels:
 
 - GitHub issues and PRs for **asynchronous, written** collaboration.
 - Chat or community channels for **quick questions and sync**.
@@ -224,9 +224,9 @@ If you open an issue or PR, you are responsible for:
 
 This is the "owner-style" mindset, not the "submit-and-forget" style.
 
-## Collaboration in the Flow Initiative
+## Collaboration in the Flow Research Initiative
 
-Inside Flow, collaboration workflows are used to:
+Inside Flow Research, collaboration workflows are used to:
 
 - **Design curriculum** - issues and PRs for lessons and exercises.
 - **Run labs** - shared instructions, feedback, and iterations.
@@ -256,7 +256,7 @@ Pick one small improvement you can suggest:
 - A missing example.
 - A missing explanation.
 
-Open a GitHub issue in the Flow repo and fill it in fully:
+Open a GitHub issue in the Flow Research repo and fill it in fully:
 
 - Title.
 - Problem.
@@ -293,7 +293,7 @@ Rate yourself from 1 to 5:
 - I can give and receive feedback constructively.
 - I can treat collaboration as part of the engineering process.
 
-Action item: complete at least one closed-loop collaboration cycle (issue -> PR -> review -> merge or close) in the Flow repo.
+Action item: complete at least one closed-loop collaboration cycle (issue -> PR -> review -> merge or close) in the Flow Research repo.
 
 ## Further Reading
 
@@ -306,8 +306,8 @@ Action item: complete at least one closed-loop collaboration cycle (issue -> PR 
 
 - Use collaboration workflows in every track you join (blockchain, AI/ML, protocol engineering).
 - Treat every issue and PR as a reflection of your engineer mindset.
-- Keep your communication clear, documented, and aligned with the Flow mission.
+- Keep your communication clear, documented, and aligned with the Flow Research mission.
 
 ---
 
-*This lesson teaches Flow Initiative trainees how to collaborate effectively across GitHub, chat, and Docusaurus, treating collaboration as an engineering-grade workflow, not just a social layer around the code.*
+*This lesson teaches Flow Research Initiative trainees how to collaborate effectively across GitHub, chat, and Docusaurus, treating collaboration as an engineering-grade workflow, not just a social layer around the code.*

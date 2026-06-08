@@ -5,7 +5,7 @@ title: WorkStream
 
 # WorkStream
 
-The task and value pipeline. WorkStream is where useful work enters Flow, gets distributed, verified, and rewarded.
+The task and value pipeline. WorkStream is where useful work enters Flow Research, gets distributed, verified, and rewarded.
 
 ## What it does
 

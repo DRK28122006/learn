@@ -48,7 +48,7 @@ Responsible AI asks a simple but hard question:
 
 > Who is affected by this system, and are we building it in a way that deserves their trust?
 
-In Flow-style systems, models may shape learning paths, community governance, public-good funding, or contributor reputation. That makes ethics part of the product requirements.
+In Flow Research-style systems, models may shape learning paths, community governance, public-good funding, or contributor reputation. That makes ethics part of the product requirements.
 
 :::warning Launch Rule
 Do not launch high-impact ML without a risk owner, monitoring plan, user recourse path, and rollback or fallback behavior.

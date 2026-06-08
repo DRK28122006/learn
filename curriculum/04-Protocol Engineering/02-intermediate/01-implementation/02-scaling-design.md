@@ -27,8 +27,8 @@ By the end of this lesson, you will be able to:
 
 - Explain the difference between **vertical** and **horizontal scaling** and why protocols are usually designed for the latter.
 - Identify common **scaling bottlenecks** in protocol-style systems (e.g., state, consensus, or event-processing).
-- Sketch simple **scaling patterns** (replication, partitioning, sharding, and batching) for Flow-style protocols.
-- Connect scaling design to **deployment-pattern** and **MLOps** concerns in the larger Flow-style stack.
+- Sketch simple **scaling patterns** (replication, partitioning, sharding, and batching) for Flow Research-style protocols.
+- Connect scaling design to **deployment-pattern** and **MLOps** concerns in the larger Flow Research-style stack.
 
 ## Concept Map
 
@@ -66,7 +66,7 @@ Now you must ask:
 
 This is **scaling design**. It is not about raw performance tuning; it is about **architectural choices** that determine how easily your protocol can grow.
 
-In Flow-style systems, good scaling design lets you:
+In Flow Research-style systems, good scaling design lets you:
 
 - add more learners, proposals, votes, or ML-based events
 - without collapsing the core protocol into a brittle, centralized bottleneck.
@@ -89,7 +89,7 @@ For protocols and distributed systems:
 
 Vertical scaling hits **physical limits** and can become a **single-point-of-failure**.
 
-Flow-style takeaway:
+Flow Research-style takeaway:
 
 - design your protocol to **assume multiple nodes** from the start, even if you deploy one node at first.
 
@@ -128,7 +128,7 @@ Challenges:
 - **cross-partition operations** (e.g., global statistics) become more complex.
 - you must carefully choose **keys** and **boundaries**.
 
-For Flow-style systems:
+For Flow Research-style systems:
 
 - you can shard by:
 
@@ -159,7 +159,7 @@ Trade-off:
 
 - introduces **latency**; events are not immediately visible.
 
-Flow-style balance:
+Flow Research-style balance:
 
 - use **batching** for cheaper, non-critical updates,
 - keep **immediate updates** for critical flows (e.g., proposal approval).
@@ -221,9 +221,9 @@ Mitigations:
 
 ---
 
-## How This Fits Into Flow-Style Systems
+## How This Fits Into Flow Research-Style Systems
 
-Flow-style systems often combine:
+Flow Research-style systems often combine:
 
 - **state-rich governance-style protocols**,
 - **high-volume learner-activity streams**, and
@@ -257,9 +257,9 @@ scaling_policy:
 
 ## Practical Exercises
 
-### Exercise 1: Sketch a Scaled-Out Flow-Style Protocol
+### Exercise 1: Sketch a Scaled-Out Flow Research-Style Protocol
 
-Take a Flow-style protocol you designed:
+Take a Flow Research-style protocol you designed:
 
 - Sketch how you would **horizontally scale** the core nodes:
 
@@ -301,10 +301,10 @@ Rate yourself from 1 to 5:
 
 - I can explain vertical vs horizontal scaling and why protocols usually favor horizontal scaling.
 - I can identify common bottlenecks (state sync, consensus, event-throughput) in a protocol-style system.
-- I can sketch replication, partitioning, batching, and state-minimization patterns for a Flow-style protocol.
+- I can sketch replication, partitioning, batching, and state-minimization patterns for a Flow Research-style protocol.
 - I can see how scaling design connects to deployment-pattern and MLOps choices.
 
-Action item: write a short note in your lab repo describing how you would scale one Flow-style protocol and what trade-offs that design introduces.
+Action item: write a short note in your lab repo describing how you would scale one Flow Research-style protocol and what trade-offs that design introduces.
 
 ---
 
@@ -319,8 +319,8 @@ Action item: write a short note in your lab repo describing how you would scale 
 
 - Read `03-load-and-stress-testing.md` next to learn how to empirically test whether your scaling design actually works under load.
 - Treat scaling as an **architectural constraint** during protocol design, not a performance-tuning exercise after the fact.
-- When you release a Flow-style protocol, include a **scaling-model sketch** (e.g., "supports up to N learners per shard") so future teams can plan capacity.
+- When you release a Flow Research-style protocol, include a **scaling-model sketch** (e.g., "supports up to N learners per shard") so future teams can plan capacity.
 
 ---
 
-*This lesson gives Flow Initiative trainees an intermediate-level understanding of scaling design for protocol-style systems, focusing on vertical vs horizontal scaling, replication, partitioning, batching, and state-minimization, and how to sketch scaled-out architectures for Flow-style governance-style and ML-driven protocols.*
+*This lesson gives Flow Research Initiative trainees an intermediate-level understanding of scaling design for protocol-style systems, focusing on vertical vs horizontal scaling, replication, partitioning, batching, and state-minimization, and how to sketch scaled-out architectures for Flow Research-style governance-style and ML-driven protocols.*

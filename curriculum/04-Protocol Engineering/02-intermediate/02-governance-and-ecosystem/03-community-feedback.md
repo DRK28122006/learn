@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Explain why **community feedback** is a core part of protocol design and evolution, not just marketing or support.
 - Identify **structured feedback mechanisms** you can use (e.g., RFCs, issue-based workflows, governance proposals, polls, working groups).
 - Sketch a **feedback loop** that connects community input to protocol change (idea -> discussion -> decision -> implementation -> follow-up).
-- Integrate **community-style governance** into your Flow-style protocol workflows, even when the protocol is not fully "on-chain."
+- Integrate **community-style governance** into your Flow Research-style protocol workflows, even when the protocol is not fully "on-chain."
 
 ## Concept Map
 
@@ -64,7 +64,7 @@ Now it is time to ask:
 
 This is **community feedback** in protocol engineering. In open, multi-stakeholder systems, protocols are not just technical specs; they are **social contracts**.
 
-For Flow-style systems, community feedback is especially important because:
+For Flow Research-style systems, community feedback is especially important because:
 
 - protocols may affect:
 
@@ -92,7 +92,7 @@ Key benefits of community feedback:
 - **Trust and legitimacy**: when people see their input used, they are more likely to adopt and defend the protocol.
 - **Sustainability**: a strong feedback culture helps maintain contributors, documentation, and tooling over time.
 
-In Flow-style thinking:
+In Flow Research-style thinking:
 
 - community feedback is **governance-style decision-making applied to protocol design**,
 - not just "bug reports" or support tickets.
@@ -127,7 +127,7 @@ Polls are especially useful before:
 - a v1 -> v2 upgrade,
 - or a major governance-rule change.
 
-Flow-style benefit:
+Flow Research-style benefit:
 
 - lets you see how different learner cohorts or governance bodies react before you commit code.
 
@@ -222,15 +222,15 @@ You can:
 - update the docs,
 - and adjust the protocol again if needed.
 
-Flow-style benefit:
+Flow Research-style benefit:
 
 - turns feedback into a **continuous improvement process**, not one-off sprints.
 
 ---
 
-## How This Fits Into Flow-Style Protocols
+## How This Fits Into Flow Research-Style Protocols
 
-In Flow-style systems, community feedback can be woven into:
+In Flow Research-style systems, community feedback can be woven into:
 
 ### 1. Governance-Style Workflows
 
@@ -250,7 +250,7 @@ participate in the discussion.
 
 ### 2. Developer Communities
 
-- For open-source-style Flow-style tooling:
+- For open-source-style Flow Research-style tooling:
 
  - use GitHub PRs, RFCs, and issue-based workflows as the **feedback engine** for protocol-style refinements.
 
@@ -286,7 +286,7 @@ To avoid these:
 - **Respond quickly and kindly**, even if you reject a proposal.
 - **Represent diverse groups** (e.g., quiet contributors, non-technical users, new learners).
 
-Flow-style best practice:
+Flow Research-style best practice:
 
 - treat feedback as **data**, not drama, and design explicit **feedback circuits** into your protocol-evolution process.
 
@@ -304,9 +304,9 @@ feedback_item:
 
 ## Practical Exercises
 
-### Exercise 1: Design a Feedback Flow for a Flow-Style Protocol
+### Exercise 1: Design a Feedback Flow for a Flow Research-Style Protocol
 
-Pick one Flow-style protocol you've designed:
+Pick one Flow Research-style protocol you've designed:
 
 - Sketch a **feedback loop**:
 
@@ -348,9 +348,9 @@ Rate yourself from 1 to 5:
 - I can explain why community feedback is important for protocol design and evolution.
 - I can identify at least three structured feedback mechanisms (e.g., RFCs, polls, working groups, governance proposals).
 - I can sketch a feedback loop that connects community input to protocol change.
-- I can see how to embed community feedback into Flow-style governance-style and ML-driven protocols.
+- I can see how to embed community feedback into Flow Research-style governance-style and ML-driven protocols.
 
-Action item: write a short note in your lab repo describing how you would redesign the feedback process around one Flow-style protocol and what you hope that would change in practice.
+Action item: write a short note in your lab repo describing how you would redesign the feedback process around one Flow Research-style protocol and what you hope that would change in practice.
 
 ---
 
@@ -365,8 +365,8 @@ Action item: write a short note in your lab repo describing how you would redesi
 
 - Read `04-governance-models-for-evolution.md` next to see how to turn community-feedback processes into **formal governance models** for your protocols.
 - Treat every protocol release as something that must pass through an **explicit feedback and decision-making loop**, not just a "push-to-prod" button.
-- When you design a Flow-style protocol, design its **feedback machinery** at the same time as its state-machine and versioning strategy.
+- When you design a Flow Research-style protocol, design its **feedback machinery** at the same time as its state-machine and versioning strategy.
 
 ---
 
-*This lesson gives Flow Initiative trainees an intermediate-level understanding of community feedback in protocol engineering, focusing on open channels, surveys, working groups, governance-style proposals, and structured feedback loops, and how to weave community input into the evolution of Flow-style governance-style and ML-driven protocols.*
+*This lesson gives Flow Research Initiative trainees an intermediate-level understanding of community feedback in protocol engineering, focusing on open channels, surveys, working groups, governance-style proposals, and structured feedback loops, and how to weave community input into the evolution of Flow Research-style governance-style and ML-driven protocols.*

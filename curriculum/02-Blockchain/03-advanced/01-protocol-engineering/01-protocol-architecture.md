@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Define **protocol architecture** as a specification of roles, rules, and guarantees.
 - Decompose a blockchain-style network into core architectural layers (p2p, state machine, economic layer, governance).
 - Analyze existing protocols (e.g., Ethereum-style L1s, rollups, validator sets) from an architecture perspective.
-- Use architectural reasoning to design or critique Flow-style protocols.
+- Use architectural reasoning to design or critique Flow Research-style protocols.
 
 ## Concept Map
 
@@ -63,7 +63,7 @@ You will practice:
 - specifying **invariants**, and
 - thinking about **failure modes** and **trust assumptions**.
 
-For Flow Initiative trainees, this is the bridge from "smart-contract engineer" to **protocol-level designer**.
+For Flow Research Initiative trainees, this is the bridge from "smart-contract engineer" to **protocol-level designer**.
 
 ---
 
@@ -242,13 +242,13 @@ Architecturally, you see:
 - **L1** as the **trust anchor** and dispute layer.
 - **L2** as the **scalability and UX layer**.
 
-This is how you reason about **layered architectures** in Flow-style systems.
+This is how you reason about **layered architectures** in Flow Research-style systems.
 
 ---
 
-## Why This Matters for Flow Engineers
+## Why This Matters for Flow Research Engineers
 
-Flow-style engineers will eventually:
+Flow Research-style engineers will eventually:
 
 - Design or critique **L1/L2 combinations**.
 - Explore **new consensus or governance models**.
@@ -283,7 +283,7 @@ type Transition<S, M> = {
 
 ### Exercise 1: Sketch a Protocol Layer Model
 
-Pick a chain or ecosystem you know (e.g., an L1, an L2, or a hypothetical Flow-style protocol):
+Pick a chain or ecosystem you know (e.g., an L1, an L2, or a hypothetical Flow Research-style protocol):
 
 - Draw a simple diagram with 4-5 boxes:
  - P2P, consensus, execution, economic, and governance.
@@ -304,9 +304,9 @@ Find a real-world protocol description (e.g., Ethereum, a popular rollup, or a l
  - What the L2 adds.
  - What economic incentives are in play.
 
-### Exercise 3: Design a Flow-Style Protocol
+### Exercise 3: Design a Flow Research-Style Protocol
 
-Imagine a Flow-style protocol that:
+Imagine a Flow Research-style protocol that:
 
 - Combines an L1 security layer,
 - With an L2 execution layer for high-throughput flows,
@@ -329,9 +329,9 @@ Rate yourself from 1 to 5:
 - I can explain what "protocol architecture" means.
 - I can decompose a blockchain system into conceptual layers.
 - I can map real-world systems (e.g., L1s, L2s) to these layers.
-- I can sketch a simple protocol architecture for a Flow-style system.
+- I can sketch a simple protocol architecture for a Flow Research-style system.
 
-Action item: write a short note in your lab repo describing the architecture of a Flow-style protocol you would like to build.
+Action item: write a short note in your lab repo describing the architecture of a Flow Research-style protocol you would like to build.
 
 ## Further Reading
 
@@ -348,4 +348,4 @@ Action item: write a short note in your lab repo describing the architecture of 
 
 ---
 
-*This lesson gives Flow Initiative trainees an engineer-style understanding of protocol architecture in blockchain systems, focusing on roles, layers, invariants, and how to decompose real-world protocols into conceptual components.*
+*This lesson gives Flow Research Initiative trainees an engineer-style understanding of protocol architecture in blockchain systems, focusing on roles, layers, invariants, and how to decompose real-world protocols into conceptual components.*

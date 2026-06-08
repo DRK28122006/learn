@@ -27,8 +27,8 @@ By the end of this lesson, you will be able to:
 
 - Recognize several common **communication patterns** in distributed systems and protocols.
 - Identify when to use **request-response**, **publish-subscribe**, and **message-queue**-style patterns.
-- Sketch how these patterns fit into Flow-style protocols (e.g., governance events, ML-driven alerts, or on-ramp flows).
-- Decide, at a high level, which pattern is right for a given Flow-style interaction.
+- Sketch how these patterns fit into Flow Research-style protocols (e.g., governance events, ML-driven alerts, or on-ramp flows).
+- Decide, at a high level, which pattern is right for a given Flow Research-style interaction.
 
 ## Concept Map
 
@@ -65,7 +65,7 @@ Now it is time to look at **how messages move** between components:
 
 These are **communication patterns**. They are not protocols by themselves, but they shape how protocols are structured.
 
-In Flow-style systems, choosing the right pattern affects:
+In Flow Research-style systems, choosing the right pattern affects:
 
 - responsiveness,
 - coupling,
@@ -108,7 +108,7 @@ Examples:
 - When you need **immediate answers** and it is okay to block while waiting.
 - When interactions are **point-to-point** (one sender talks to one known receiver).
 
-In Flow-style systems, this is natural for:
+In Flow Research-style systems, this is natural for:
 
 - dashboards asking for updated state,
 - or for on-ramp forms that must immediately validate.
@@ -133,7 +133,7 @@ Examples:
 - Event-driven systems (e.g., "proposal-created", "vote-received", "reward-processed").
 - Notification systems (e.g., "new learning path available", "governance-event scheduled").
 
-**When to use pub/sub in Flow-style contexts:**
+**When to use pub/sub in Flow Research-style contexts:**
 
 - You want **event-driven workflows** (e.g., governance-events, ML-driven alerts).
 - You want to avoid hard-coded dependencies between components (e.g., dashboard, analytics, rewards, and governance services).
@@ -181,7 +181,7 @@ You don't need to dive deep into all of these now; the key is to **recognize** t
 
 ---
 
-## Choosing a Pattern for Your Flow-Style Protocol
+## Choosing a Pattern for Your Flow Research-Style Protocol
 
 To decide which communication pattern to use, ask:
 
@@ -200,7 +200,7 @@ To decide which communication pattern to use, ask:
 - Yes -> **pub/sub** or **message queues**.
 - No (simple client-server interaction) -> **request-response**.
 
-In Flow-style thinking, a typical setup combines:
+In Flow Research-style thinking, a typical setup combines:
 
 - **request-response** for user-facing APIs (e.g., dashboard queries).
 - **pub/sub** (or event streams) for **protocol-level events** (e.g., governance-state changes, learner-activity events).
@@ -232,9 +232,9 @@ Pick two real-world systems you know (e.g., a web app, a learning platform, or a
 
 This trains you to see patterns instead of "just HTTP."
 
-### Exercise 2: Sketch a Flow-Style Event-Driven Flow
+### Exercise 2: Sketch a Flow Research-Style Event-Driven Flow
 
-Design a small Flow-style workflow (e.g., governance-proposal approval):
+Design a small Flow Research-style workflow (e.g., governance-proposal approval):
 
 - Decide which parts should use **request-response** (e.g., user submits a proposal).
 - Decide which parts should use **pub/sub** (e.g., "proposal-submitted" event that triggers notifications, analytics, and governance-dashboard updates).
@@ -259,10 +259,10 @@ Rate yourself from 1 to 5:
 
 - I can explain request-response, pub/sub, and message queues at a high level.
 - I can say when each pattern is appropriate for a given interaction.
-- I can sketch which pattern to use for Flow-style use-cases like governance-events or ML-driven alerts.
+- I can sketch which pattern to use for Flow Research-style use-cases like governance-events or ML-driven alerts.
 - I can see how communication patterns sit under protocol design.
 
-Action item: write a short note in your lab repo describing one Flow-style interaction you reframed using a better communication pattern and why that improved the design.
+Action item: write a short note in your lab repo describing one Flow Research-style interaction you reframed using a better communication pattern and why that improved the design.
 
 ---
 
@@ -281,4 +281,4 @@ Action item: write a short note in your lab repo describing one Flow-style inter
 
 ---
 
-*This lesson gives Flow Initiative trainees a beginner-level understanding of communication patterns in distributed systems and protocols, focusing on request-response, publish-subscribe (pub/sub), and message-queue styles, and how to choose the right pattern for Flow-style governance-event, ML-driven, and on-ramp flows.*
+*This lesson gives Flow Research Initiative trainees a beginner-level understanding of communication patterns in distributed systems and protocols, focusing on request-response, publish-subscribe (pub/sub), and message-queue styles, and how to choose the right pattern for Flow Research-style governance-event, ML-driven, and on-ramp flows.*

@@ -5,7 +5,7 @@ title: Economic and Incentive Design
 
 # Economic and Incentive Design
 
-Flow's value engine depends on incentives that align contributor behavior with system health. WorkStream handles task distribution and rewards. FlowLedger tracks contributions. Understanding how incentives work helps you design better attribution, reward, and reputation mechanisms.
+Flow Research's value engine depends on incentives that align contributor behavior with system health. WorkStream handles task distribution and rewards. FlowLedger tracks contributions. Understanding how incentives work helps you design better attribution, reward, and reputation mechanisms.
 
 ## Key concepts
 

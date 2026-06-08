@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Identify common on-chain design patterns (modular, upgradeable, token-like contracts).
 - Recognize standard patterns such as ERC-20, ERC-721, and basic access control.
 - Map patterns to trade-offs in security, upgradeability, and composability.
-- Use this pattern sense when you read or write contracts in Flow labs.
+- Use this pattern sense when you read or write contracts in Flow Research labs.
 
 ## Concept Map
 
@@ -58,7 +58,7 @@ The same business logic can be written in many ways, with very different consequ
 - gas cost, and
 - how easy it is to compose with other contracts.
 
-In the Flow Initiative, you will see many contracts that reuse well-known patterns.
+In the Flow Research Initiative, you will see many contracts that reuse well-known patterns.
 This lesson teaches you to **recognize** those patterns, not just write them from scratch.
 
 You do not need to memorize every line. You need to develop **pattern-level intuition** so that when you open a contract, you can quickly answer:
@@ -79,7 +79,7 @@ In smart contracts, the problems are:
 
 A pattern is **not** a piece of code you copy-paste blindly. It is a **concept** that you adapt to your context.
 
-For Flow trainees, this is especially important because:
+For Flow Research trainees, this is especially important because:
 
 - You will read and modify many contracts.
 - You will mix them with L1/L2 and token-based incentives.
@@ -100,7 +100,7 @@ Key traits:
 From an engineer's view:
 
 - The pattern defines **who can move value** and **how transparency works**.
-- You can specialize it for Flow-internal tokens, governance tokens, or local lab currencies.
+- You can specialize it for Flow Research-internal tokens, governance tokens, or local lab currencies.
 
 ### 2. Modular Contracts (Libraries and Interfaces)
 
@@ -136,7 +136,7 @@ From an engineer's view:
 - This pattern trades **trust** (who controls the admin?) for **flexibility**.
 - It is common in production protocols but riskier for trustless systems.
 
-In Flow labs, you may see simplified proxies for experimentation, without deploying them to real funds.
+In Flow Research labs, you may see simplified proxies for experimentation, without deploying them to real funds.
 
 ### 4. Access Control (Ownable, Roles)
 
@@ -152,7 +152,7 @@ You will see:
 - Events that log role changes.
 
 This is basic **on-chain authorization**.
-For Flow engineers, it is important to ask:
+For Flow Research engineers, it is important to ask:
 
 - Who controlled the initial role assignments?
 - How can those roles change over time?
@@ -203,9 +203,9 @@ As an engineer, you should:
 
 You will not prevent all bugs, but you can avoid repeating well-known mistakes.
 
-## How This Fits Into the Flow Initiative
+## How This Fits Into the Flow Research Initiative
 
-In Flow labs:
+In Flow Research labs:
 
 - You will see **ERC-20-style tokens** for internal use or examples.
 - You will see **modular contracts** that reuse logic.
@@ -214,7 +214,7 @@ In Flow labs:
 Your job is:
 
 - To read contracts and identify the patterns.
-- To tweak them to suit Flow-specific use cases.
+- To tweak them to suit Flow Research-specific use cases.
 - To document the assumptions and trade-offs clearly.
 
 In public-good contexts, this is especially important when:
@@ -236,7 +236,7 @@ contract Counter {
 
 ### Exercise 1: Identify Patterns in a Contract
 
-Take a small contract from a Flow lab (or an example in docs):
+Take a small contract from a Flow Research lab (or an example in docs):
 
 - Write a short note identifying:
  - Whether it looks like a token-like pattern.
@@ -256,9 +256,9 @@ Without writing real Solidity/Vyper, sketch a **conceptual token pattern**:
 Diagram this as a **mental model**, not code.
 Then, list one potential security issue (e.g., overflow, approval misuse).
 
-### Exercise 3: Relate to a Flow Use Case
+### Exercise 3: Relate to a Flow Research Use Case
 
-Imagine a Flow system that:
+Imagine a Flow Research system that:
 
 - Issues tokens to trainees.
 - Lets them transfer tokens to each other.
@@ -279,7 +279,7 @@ Rate yourself from 1 to 5:
 - I can recognize common contract patterns (tokens, modular, upgradeable, state machine).
 - I can explain what each pattern is trying to solve.
 - I can point to one security or limitation trade-off per pattern.
-- I can connect patterns to real-world Flow-style use cases.
+- I can connect patterns to real-world Flow Research-style use cases.
 
 Action item: write a short note in your lab repo describing which pattern you would use for a "trainee-reward token" and why.
 
@@ -298,4 +298,4 @@ Action item: write a short note in your lab repo describing which pattern you wo
 
 ---
 
-*This lesson gives Flow Initiative trainees an engineer-style understanding of common smart-contract design patterns, focusing on tokens, modularity, upgradeability, and state-machine structures, and how they shape security and composability on the blockchain.*
+*This lesson gives Flow Research Initiative trainees an engineer-style understanding of common smart-contract design patterns, focusing on tokens, modularity, upgradeability, and state-machine structures, and how they shape security and composability on the blockchain.*

@@ -175,7 +175,7 @@ Deployment adds software concerns:
 - logging,
 - rollback.
 
-For a Flow learning platform, a safe fallback might be a rule-based recommendation if the model API is unavailable.
+For a Flow Research learning platform, a safe fallback might be a rule-based recommendation if the model API is unavailable.
 
 ## Stage 6: Monitor
 
@@ -225,7 +225,7 @@ The model is deployed, then silently degrades as the data changes.
 
 The model influences users, but there is no escalation, appeal, or override process.
 
-## Flow-Style Example
+## Flow Research-Style Example
 
 Use case: predict learners who may need mentor support.
 

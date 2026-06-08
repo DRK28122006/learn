@@ -5,9 +5,9 @@ title: What is a Personal Operator?
 
 # What is a Personal Operator?
 
-A Personal Operator is your agent in the Flow system. It is a persistent, configurable, and secure entity that works alongside you — executing tasks, interfacing with tools, and acting on your behalf within the boundaries you set.
+A Personal Operator is your agent in the Flow Research system. It is a persistent, configurable, and secure entity that works alongside you — executing tasks, interfacing with tools, and acting on your behalf within the boundaries you set.
 
-The four Flow products exist to make the Personal Operator possible:
+The four Flow Research products exist to make the Personal Operator possible:
 
 - **Jarvis** gives it life — the runtime that spawns, configures, and secures it.
 - **Garden** gives it a workspace — where you and your operator collaborate.

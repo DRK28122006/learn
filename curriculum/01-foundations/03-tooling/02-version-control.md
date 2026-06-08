@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Explain why version control matters in real engineering work.
 - Use Git to track changes, review history, and recover from mistakes.
 - Collaborate safely with others using branches and pull requests.
-- Apply version-control practices to your Flow Initiative curriculum and labs.
+- Apply version-control practices to your Flow Research Initiative curriculum and labs.
 
 ## Concept Map
 
@@ -59,7 +59,7 @@ Version control is the backbone of collaborative engineering. Without it:
 - Multiple people cannot work on the same code safely.
 - Recovering from a bad change or experiment becomes risky.
 
-In the Flow Initiative, every lesson, lab, and contribution lives in a version-controlled repository. Git is the tool that lets you:
+In the Flow Research Initiative, every lesson, lab, and contribution lives in a version-controlled repository. Git is the tool that lets you:
 
 - Commit your work,
 - Review changes,
@@ -110,7 +110,7 @@ A **repository** (or "repo") is a project's version-controlled space. It contain
 - Configuration, and
 - The history of changes.
 
-The Flow Initiative monorepo is a Git repository.
+The Flow Research Initiative monorepo is a Git repository.
 
 ### 2. Commit
 
@@ -130,7 +130,7 @@ A **branch** is a line of development. It lets you:
 - Experiment safely.
 - Submit changes for review without affecting everyone immediately.
 
-In Flow, you will often work on a branch before opening a pull request.
+In Flow Research, you will often work on a branch before opening a pull request.
 
 ### 4. Pull Request (PR)
 
@@ -140,7 +140,7 @@ A **pull request** is a proposal to merge changes from one branch into another. 
 - Discussion, and
 - Documentation of changes.
 
-In the Flow program, every curriculum update, lab, or contribution should be reviewed via a PR.
+In the Flow Research program, every curriculum update, lab, or contribution should be reviewed via a PR.
 
 ### 5. Conflict and Merge
 
@@ -150,7 +150,7 @@ A **merge** combines the changes from one branch into another after conflicts ar
 
 ## Using Git in Practice
 
-For Flow trainees, Git is used to:
+For Flow Research trainees, Git is used to:
 
 - Contribute lessons to `curriculum/`.
 - Submit lab implementations to `labs/`.
@@ -227,7 +227,7 @@ Git encourages experimentation:
 - Break things, then decide whether to keep or discard the changes.
 - If the experiment fails, you can always return to a stable state.
 
-In Flow, this is crucial for:
+In Flow Research, this is crucial for:
 
 - Trying aggressive optimizations.
 - Testing new learning patterns.
@@ -263,9 +263,9 @@ Working directly on `main` is risky because mistakes affect everyone.
 **Solution:**
 Use feature branches for every new change.
 
-## Version Control and Flow Initiative Workflow
+## Version Control and Flow Research Initiative Workflow
 
-In Flow, the version-control workflow supports:
+In Flow Research, the version-control workflow supports:
 
 - Human-in-the-loop review of AI-generated content.
 - Iterative refinement of lessons and labs.
@@ -304,7 +304,7 @@ Practice this until it feels natural.
 
 ### Exercise 2: Review a Pull Request
 
-Find a pull request in the Flow repo (or simulate one with a teammate):
+Find a pull request in the Flow Research repo (or simulate one with a teammate):
 
 - Read the diff.
 - Ask clarifying questions.
@@ -328,7 +328,7 @@ Rate yourself from 1 to 5:
 - I can make clear, small commits.
 - I can open and review a pull request.
 
-Action item: complete at least one end-to-end Git workflow (branch -> commit -> push -> PR -> review) in the Flow repo.
+Action item: complete at least one end-to-end Git workflow (branch -> commit -> push -> PR -> review) in the Flow Research repo.
 
 ## Further Reading
 
@@ -340,9 +340,9 @@ Action item: complete at least one end-to-end Git workflow (branch -> commit -> 
 ## Next Steps
 
 - Read `03-collaboration-workflows.md` next to see how version control integrates with communication and collaboration.
-- Treat every change in the Flow monorepo as a practice opportunity with Git.
+- Treat every change in the Flow Research monorepo as a practice opportunity with Git.
 - View your Git history as a record of your engineering growth.
 
 ---
 
-*This lesson teaches Flow Initiative trainees to use Git and version control as core engineering practices that support collaboration, experimentation, and safe iteration across the monorepo and beyond.*
+*This lesson teaches Flow Research Initiative trainees to use Git and version control as core engineering practices that support collaboration, experimentation, and safe iteration across the monorepo and beyond.*

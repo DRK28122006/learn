@@ -26,7 +26,7 @@ version: 1.1
 By the end of this lesson, you will be able to:
 
 - Explain the difference between **conformance**, **compatibility**, and **interoperability testing** for protocols.
-- Design simple **compatibility test cases** for a Flow-style protocol (e.g., governance-state updates, reward-events, learner-onboarding flows).
+- Design simple **compatibility test cases** for a Flow Research-style protocol (e.g., governance-state updates, reward-events, learner-onboarding flows).
 - Use **test clients** and **mocked services** to verify that multiple implementations of the same protocol can talk to each other.
 - Apply **environment-based testing** (e.g., network conditions, version mixes) to uncover hidden protocol bugs.
 
@@ -66,7 +66,7 @@ This is **protocol compatibility testing**. It sits at the intersection of:
 - **compatibility** (do A and B run together without breaking?), and
 - **interoperability** (do they behave meaningfully when talking to each other?).
 
-For Flow-style systems, this is essential because:
+For Flow Research-style systems, this is essential because:
 
 - protocols may be implemented by different teams or languages,
 - and you cannot afford to discover incompatibilities in production.
@@ -92,7 +92,7 @@ In practice, you often:
 - start with **conformance tests** on a single implementation,
 - then move to **interoperability tests** between two or more implementations.
 
-For Flow-style protocols, this is what guarantees that:
+For Flow Research-style protocols, this is what guarantees that:
 
 - a governance-node, a dashboard, and an ML-scoring service
 - can all agree on the meaning of events and state.
@@ -161,7 +161,7 @@ A good compatibility test for a protocol typically has:
 
 ### Example Test Case Template
 
-For a Flow-style governance-proposal protocol:
+For a Flow Research-style governance-proposal protocol:
 
 1. **Setup**:
 
@@ -245,7 +245,7 @@ This is where **interoperability** really shows its value.
 
 ## How to Test with Mocks and Stubs
 
-For end-to-end Flow-style flows, you often need to:
+For end-to-end Flow Research-style flows, you often need to:
 
 - **mock downstream services** (e.g., governance-node, scoring engine),
 - or **stub event-emitters**.
@@ -278,9 +278,9 @@ Mocking helps you:
 
 ## Practical Exercises
 
-### Exercise 1: Write a Conformance Test for a Flow-Style Protocol
+### Exercise 1: Write a Conformance Test for a Flow Research-Style Protocol
 
-Take a Flow-style governance- or reward-style protocol you already specified:
+Take a Flow Research-style governance- or reward-style protocol you already specified:
 
 - Write a **single test case** that:
 
@@ -327,7 +327,7 @@ Rate yourself from 1 to 5:
 - I can set up a basic interop-style test between two implementations of the same protocol.
 - I can see how to test across environments (network, version, platform) to uncover hidden bugs.
 
-Action item: write a short note in your lab repo describing one protocol compatibility test you wrote for a Flow-style protocol and what it revealed about the design.
+Action item: write a short note in your lab repo describing one protocol compatibility test you wrote for a Flow Research-style protocol and what it revealed about the design.
 
 ---
 
@@ -346,4 +346,4 @@ Action item: write a short note in your lab repo describing one protocol compati
 
 ---
 
-*This lesson gives Flow Initiative trainees an intermediate-level understanding of protocol compatibility testing, focusing on conformance, interoperability, and compatibility between multiple implementations, and how to design test cases and environments that expose hidden protocol bugs in Flow-style governance-style and ML-driven systems.*
+*This lesson gives Flow Research Initiative trainees an intermediate-level understanding of protocol compatibility testing, focusing on conformance, interoperability, and compatibility between multiple implementations, and how to design test cases and environments that expose hidden protocol bugs in Flow Research-style governance-style and ML-driven systems.*

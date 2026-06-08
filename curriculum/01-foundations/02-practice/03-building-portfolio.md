@@ -27,7 +27,7 @@ By the end of this lesson, you will be able to:
 
 - Explain why a portfolio matters more than certificates alone.
 - Structure a portfolio around real, reusable artifacts, not screenshots.
-- Use Flow Initiative labs and contributions as portfolio pieces.
+- Use Flow Research Initiative labs and contributions as portfolio pieces.
 - Present your work in a way that reflects an engineer's mindset, not a student's.
 
 ## Concept Map
@@ -55,7 +55,7 @@ $M$ is mastery, $U$ is understanding, $P$ is deliberate practice, and $F$ is fee
 
 A portfolio is not just a list of projects. It is a **curated collection of your engineering decisions** - how you framed problems, chose constraints, and improved systems over time.
 
-In the Flow Initiative, your portfolio is built from:
+In the Flow Research Initiative, your portfolio is built from:
 
 - curriculum labs,
 - contributions to knowledge-base articles,
@@ -110,11 +110,11 @@ An engineer portfolio looks like:
 - Code that follows basic conventions and is documented.
 - Notes, diagrams, or short write-ups explaining decisions.
 
-Flow trains you to build portfolios that sit in the second category.
+Flow Research trains you to build portfolios that sit in the second category.
 
 ## Components of a Strong Technical Portfolio
 
-For Flow trainees, a strong portfolio includes:
+For Flow Research trainees, a strong portfolio includes:
 
 - **Lab artifacts** - projects from the curriculum, especially those that show iteration.
 - **Open-source contributions** - PRs, issues, RFCs, or docs that you authored or co-authored.
@@ -127,7 +127,7 @@ You do not need 20 projects. You need a few deeply documented ones that demonstr
 - your ability to implement, and
 - your ability to reflect.
 
-## How to Turn Flow Labs into Portfolio Pieces
+## How to Turn Flow Research Labs into Portfolio Pieces
 
 Every lab you complete can become a portfolio artifact if you treat it with intention.
 
@@ -173,7 +173,7 @@ This reflection becomes part of your portfolio narrative.
 
 ## Open-Source and Public-Goods Contributions
 
-Flow is built around public-goods work. You should treat every contribution as a portfolio piece:
+Flow Research is built around public-goods work. You should treat every contribution as a portfolio piece:
 
 - Code PRs,
 - Documentation or lesson contributions,
@@ -260,7 +260,7 @@ Pick one completed lab or project:
 
 ### Exercise 2: Document an Open-Source Contribution
 
-Pick one Flow-related contribution you have made:
+Pick one Flow Research-related contribution you have made:
 
 - Write a short caption explaining the contribution.
 - Link to the GitHub PR or issue.
@@ -297,7 +297,7 @@ Action item: publish at least one clearly documented portfolio entry this week, 
 ## Next Steps
 
 - Read `01-markdown-and-documentation.md` next to strengthen your ability to write clear READMEs and notes.
-- Use every lab, article, and contribution in the Flow program as a candidate portfolio piece.
+- Use every lab, article, and contribution in the Flow Research program as a candidate portfolio piece.
 - Treat your portfolio as a living document that evolves with your track-level work.
 
 ## Resources
@@ -308,4 +308,4 @@ Action item: publish at least one clearly documented portfolio entry this week, 
 
 ---
 
-*This lesson teaches Flow Initiative trainees to treat labs and contributions as portfolio pieces that demonstrate real engineering practice, not just completed assignments.*
+*This lesson teaches Flow Research Initiative trainees to treat labs and contributions as portfolio pieces that demonstrate real engineering practice, not just completed assignments.*

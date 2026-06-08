@@ -5,7 +5,7 @@ title: Writing Design Docs and Specifications
 
 # Writing Design Docs and Specifications
 
-Every product change at Flow starts with a clear design document. Writing one forces clarity before code and leaves a record others can review, challenge, and build on.
+Every product change at Flow Research starts with a clear design document. Writing one forces clarity before code and leaves a record others can review, challenge, and build on.
 
 ## Why design docs matter
 

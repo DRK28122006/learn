@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Explain what a **state machine** is and why it is useful for specifying protocols.
 - Define the core components: **states, transitions, events, and actions**.
 - Draw a simple **state diagram** for a small protocol-like system (e.g., on-ramp flow, request-response, governance vote).
-- Connect state-machines to **smart-contract-like** and **distributed** systems in Flow-style contexts.
+- Connect state-machines to **smart-contract-like** and **distributed** systems in Flow Research-style contexts.
 
 ## Concept Map
 
@@ -57,7 +57,7 @@ A **state machine** is one of the cleanest ways to model this:
 
 - It tracks a **current state** of the system and defines rules for **how that state changes** when events or messages arrive.
 
-For Flow-style systems, this is especially useful for:
+For Flow Research-style systems, this is especially useful for:
 
 - governance-workflow protocols,
 - on-boarding flows,
@@ -108,7 +108,7 @@ Examples of systems that are naturally viewed as state machines:
 - **Smart contracts** and **blockchain-style ledgers**, where the chain state evolves via transactions.
 - **IoT / device control systems**, where devices move between states like `OFF`, `STANDBY`, `RUNNING`, `FAULT`.
 
-In Flow-style thinking:
+In Flow Research-style thinking:
 
 - a **state machine** is a **formal sketch** of your protocol's behavior.
 - once you specify it clearly, you can:
@@ -216,7 +216,7 @@ More advanced patterns (e.g., state-pattern in OOP, or dedicated FSM libraries) 
 
 ---
 
-## How This Fits Into Flow-Style Systems
+## How This Fits Into Flow Research-Style Systems
 
 ### 1. Governance-Style Protocols
 
@@ -242,7 +242,7 @@ Smart contracts are essentially **state machines on the blockchain**:
 - transactions are inputs that trigger state transitions.
 - the blockchain itself is a **global state machine** that evolves via transactions.
 
-In Flow-style thinking, you can design your **on-chain logic** as a small state machine and then:
+In Flow Research-style thinking, you can design your **on-chain logic** as a small state machine and then:
 
 - verify it mentally or with tests,
 - and keep it as simple as possible.
@@ -272,7 +272,7 @@ const transitions = {
 
 ### Exercise 1: Draw a State Diagram
 
-Pick a Flow-style workflow (e.g., learner on-ramp, governance-proposal, or reward-application):
+Pick a Flow Research-style workflow (e.g., learner on-ramp, governance-proposal, or reward-application):
 
 - List all meaningful **states** the system can be in.
 - List all meaningful **events** that can arrive (e.g., `submit`, `approve`, `reject`, `execute`).
@@ -308,10 +308,10 @@ Rate yourself from 1 to 5:
 
 - I can explain what a state machine is and why it is useful.
 - I can define states, transitions, events, and actions clearly.
-- I can draw a simple state diagram for a Flow-style workflow.
+- I can draw a simple state diagram for a Flow Research-style workflow.
 - I can see how state machines relate to smart-contract-like and distributed systems.
 
-Action item: write a short note in your lab repo describing one Flow-style workflow you modeled as a state machine and how that improved your understanding of the protocol rules.
+Action item: write a short note in your lab repo describing one Flow Research-style workflow you modeled as a state machine and how that improved your understanding of the protocol rules.
 
 ---
 
@@ -330,4 +330,4 @@ Action item: write a short note in your lab repo describing one Flow-style workf
 
 ---
 
-*This lesson gives Flow Initiative trainees a beginner-level understanding of state machines, focusing on how to model protocols as combinations of states, transitions, events, and actions, and how that fits into governance-style, smart-contract-like, and distributed systems in Flow-style contexts.*
+*This lesson gives Flow Research Initiative trainees a beginner-level understanding of state machines, focusing on how to model protocols as combinations of states, transitions, events, and actions, and how that fits into governance-style, smart-contract-like, and distributed systems in Flow Research-style contexts.*

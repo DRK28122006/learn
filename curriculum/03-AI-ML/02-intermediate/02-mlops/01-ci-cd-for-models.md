@@ -15,7 +15,7 @@ By the end of this lesson, you will be able to:
 - Explain how CI/CD changes when the artifact is a model, not only application code.
 - Identify model pipeline stages: code checks, data validation, training, evaluation, registry, and deployment gates.
 - Write a local model-quality gate that can fail a build.
-- Sketch a lightweight CI/CD workflow for a Flow-style ML service.
+- Sketch a lightweight CI/CD workflow for a Flow Research-style ML service.
 
 ## Watch First
 

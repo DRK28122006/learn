@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Explain how **rollups** and **sharding** scale blockchain throughput without sacrificing security.
 - Distinguish between **validity-proof rollups**, **fraud-proof rollups**, and **sharded L1s**.
 - Map rollup and sharding patterns to trade-offs in latency, security, and decentralization.
-- Use these patterns strategically in Flow-style L1/L2 designs.
+- Use these patterns strategically in Flow Research-style L1/L2 designs.
 
 ## Concept Map
 
@@ -148,7 +148,7 @@ Each layer is optimized for different workloads:
 - **Rollups**: frequent, high-volume transactions and computations.
 - **State channels**: very frequent, low-value, small-group interactions.
 
-For Flow-style engineers, this is a **tiered scaling model**: you choose where to put each flow based on value, frequency, and trust requirements.
+For Flow Research-style engineers, this is a **tiered scaling model**: you choose where to put each flow based on value, frequency, and trust requirements.
 
 ---
 
@@ -191,9 +191,9 @@ You choose:
 
 ---
 
-## Why This Matters for Flow Engineers
+## Why This Matters for Flow Research Engineers
 
-Flow-style engineers will:
+Flow Research-style engineers will:
 
 - Encounter rollups and sharded L1s in many ecosystems.
 - Design or critique systems that must balance **speed, security, and cost**.
@@ -229,7 +229,7 @@ In public-good contexts, this is especially important when:
 
 ### Exercise 1: Sketch a Rollup Architecture
 
-Take a simple Flow-style app:
+Take a simple Flow Research-style app:
 
 - Draw a diagram showing:
  - The L1.
@@ -247,9 +247,9 @@ Find a real-world sharded L1 (e.g., a popular chain or research project):
 - Describe how validators rotate or coordinate across shards.
 - Write a short note explaining the **trade-offs** of this design.
 
-### Exercise 3: Relate to a Flow Lab
+### Exercise 3: Relate to a Flow Research Lab
 
-Look at a Flow-style lab that involves frequent transactions:
+Look at a Flow Research-style lab that involves frequent transactions:
 
 - Design a small **rollup-style** model for it:
  - Who are the sequencers?
@@ -267,9 +267,9 @@ Rate yourself from 1 to 5:
 - I can explain what a rollup is.
 - I can distinguish between validity-proof and fraud-proof rollups.
 - I can explain what sharding is.
-- I can see how these patterns fit into a Flow-style system.
+- I can see how these patterns fit into a Flow Research-style system.
 
-Action item: write a short note in your lab repo describing one Flow-style system where rollups or sharding would improve scalability.
+Action item: write a short note in your lab repo describing one Flow Research-style system where rollups or sharding would improve scalability.
 
 ## Further Reading
 
@@ -286,4 +286,4 @@ Action item: write a short note in your lab repo describing one Flow-style syste
 
 ---
 
-*This lesson gives Flow Initiative trainees an engineer-style understanding of rollups and sharding in blockchain systems, focusing on how to recognize, design, and use them as scalable, secure alternatives to on-chain transactions.*
+*This lesson gives Flow Research Initiative trainees an engineer-style understanding of rollups and sharding in blockchain systems, focusing on how to recognize, design, and use them as scalable, secure alternatives to on-chain transactions.*

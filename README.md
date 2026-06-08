@@ -1,6 +1,6 @@
-# Flow Education Initiative
+# Flow Research Education Initiative
 
-Learning resource for engineers who want to contribute to building Flow's products — Personal Operators for people and enterprises.
+Learning resource for engineers who want to contribute to building Flow Research's products — Personal Operators for people and enterprises.
 
 ## Repo structure
 

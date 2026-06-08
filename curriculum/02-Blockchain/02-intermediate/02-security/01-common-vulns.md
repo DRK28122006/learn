@@ -53,14 +53,14 @@ $$
 Smart contracts are powerful because they are **public, persistent, and executable**.
 But this same power makes them a target for **very specific, very predictable** vulnerabilities.
 
-In the Flow Initiative, you will not be expected to discover new classes of bugs.
+In the Flow Research Initiative, you will not be expected to discover new classes of bugs.
 You *are* expected to **avoid the common ones** and to **recognize them quickly** when you see them in code.
 
 This lesson focuses on:
 
 - High-impact, well-known vulnerabilities,
 - How they appear in real-world contracts, and
-- Simple engineering rules you can follow in Flow-style labs.
+- Simple engineering rules you can follow in Flow Research-style labs.
 
 You will practice **reading for danger**, not just reading for correctness.
 
@@ -94,7 +94,7 @@ This can allow the attacker to:
 
 **Defensive rule:**
 - Update state **before** making external calls (the **checks-effects-interactions** pattern).
-- In Flow-style contracts, prefer simple, non-reentrant designs.
+- In Flow Research-style contracts, prefer simple, non-reentrant designs.
 
 ### 2. Integer Overflow / Underflow
 
@@ -192,9 +192,9 @@ This can lead to:
 - Test the **deploy-init-use** flow end-to-end.
 - Never assume default values are safe.
 
-## Why These Patterns Matter for Flow Engineers
+## Why These Patterns Matter for Flow Research Engineers
 
-Flow Initiative trainees will work on:
+Flow Research Initiative trainees will work on:
 
 - **Token-style contracts** (balances, allowances),
 - **Upgradeable patterns**,
@@ -216,7 +216,7 @@ In public-good contexts, this is especially important when:
 
 ## How to Practice "Reading for Danger"
 
-When you open a contract (Flow lab or example):
+When you open a contract (Flow Research lab or example):
 
 1. **Check state**
  - Where is the critical data (balances, ownership, configuration)?
@@ -275,9 +275,9 @@ Then, annotate:
 
 This is a **design sketch**, not a full implementation.
 
-### Exercise 3: Relate to a Flow Lab
+### Exercise 3: Relate to a Flow Research Lab
 
-Look at a Flow-style blockchain lab that uses a contract:
+Look at a Flow Research-style blockchain lab that uses a contract:
 
 - Identify one place where a common vulnerability *could* appear (e.g., unbounded loop, external call, missing access control).
 - Write a short note describing how you would change the design to make it safer.
@@ -309,4 +309,4 @@ Action item: write a short note in your lab repo describing which vulnerability 
 
 ---
 
-*This lesson gives Flow Initiative trainees an engineer-style understanding of the most common smart-contract vulnerabilities, focusing on reentrancy, overflow, access control, gas-related issues, front-running, and misconfigured state, and how to read and avoid them in practical labs.*
+*This lesson gives Flow Research Initiative trainees an engineer-style understanding of the most common smart-contract vulnerabilities, focusing on reentrancy, overflow, access control, gas-related issues, front-running, and misconfigured state, and how to read and avoid them in practical labs.*

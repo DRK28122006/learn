@@ -353,9 +353,9 @@ step\ efficiency = \frac{minimum\ necessary\ steps}{actual\ executed\ steps}
 
 Efficiency should never be the only metric. A short unsafe plan is worse than a longer safe one.
 
-## Flow Context
+## Flow Research Context
 
-In Flow:
+In Flow Research:
 
 - WorkStream needs plans that can be assigned, paused, resumed, and reviewed.
 - Jarvis needs reasoning traces that explain why a tool was selected.

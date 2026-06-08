@@ -1,6 +1,6 @@
 # ============================================================
 # scripts/config.yml
-# Flow Education Initiative — Article Generator Configuration
+# Flow Research Education Initiative — Article Generator Configuration
 # ============================================================
 # Edit this file to control what gets discovered and generated.
 # Run: python gen_article.py

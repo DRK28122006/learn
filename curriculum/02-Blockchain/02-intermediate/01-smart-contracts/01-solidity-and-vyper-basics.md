@@ -58,7 +58,7 @@ They let you write logic that:
 - Enforces business rules, and
 - Interacts with users through transactions.
 
-In the Flow Initiative, you will not need to become an expert in every language detail.
+In the Flow Research Initiative, you will not need to become an expert in every language detail.
 Instead, you need an **engineering-grade intuition** for:
 
 - what these languages *are for*,
@@ -213,9 +213,9 @@ Instead, you compose logic by:
 
 This is not a "better vs worse" table. It is a **trade-off map** that helps you choose the right language for the kind of system you are designing.
 
-## How This Fits into the Flow Initiative
+## How This Fits into the Flow Research Initiative
 
-In Flow labs and tracks, you will soon:
+In Flow Research labs and tracks, you will soon:
 
 - Read and write **simple contracts** in Solidity or Vyper.
 - See how **state and functions** correspond to on-chain behavior.
@@ -226,7 +226,7 @@ The key is:
 - Use Solidity when you need rich abstractions and ecosystem support.
 - Use Vyper when you want maximum clarity and are willing to trade some tooling.
 
-As a Flow engineer, your goal is **understanding, not mastery**. You should be able to:
+As a Flow Research engineer, your goal is **understanding, not mastery**. You should be able to:
 
 - Read a contract and point to the state, the functions, and the events.
 - Map those pieces onto the blockchain model you already know.
@@ -245,7 +245,7 @@ contract Counter {
 
 ### Exercise 1: Sketch a Simple Contract Model
 
-Pick a small contract you will see in a Flow lab (e.g., a balance-tracking contract):
+Pick a small contract you will see in a Flow Research lab (e.g., a balance-tracking contract):
 
 - Write a short note describing:
  - What state it stores.
@@ -264,7 +264,7 @@ Find two tiny examples (one in Solidity, one in Vyper):
  - How easy each is for you to read.
  - Where Solidity's features might help or hurt.
 
-### Exercise 3: Relate to a Flow Lab
+### Exercise 3: Relate to a Flow Research Lab
 
 Look at a blockchain lab that mentions or uses Solidity or Vyper:
 
@@ -300,4 +300,4 @@ Action item: write a short note in your lab repo describing which language (Soli
 
 ---
 
-*This lesson gives Flow Initiative trainees an engineer-style overview of Solidity and Vyper, focusing on their design philosophies, trade-offs, and how they fit into blockchain-based smart-contract development.*
+*This lesson gives Flow Research Initiative trainees an engineer-style overview of Solidity and Vyper, focusing on their design philosophies, trade-offs, and how they fit into blockchain-based smart-contract development.*

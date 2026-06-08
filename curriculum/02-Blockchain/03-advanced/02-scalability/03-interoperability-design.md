@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Explain what **interoperability** means in blockchain systems (beyond "token bridges").
 - Recognize common interoperability patterns: bridges, oracles, light-client-style verification, and shared state-channels.
 - Map interoperability choices to trade-offs in security, latency, and decentralization.
-- Design simple interoperability flows for Flow-style multi-chain or multi-protocol systems.
+- Design simple interoperability flows for Flow Research-style multi-chain or multi-protocol systems.
 
 ## Concept Map
 
@@ -62,10 +62,10 @@ An L1 interacts with:
 
 **Interoperability** is the design of **how information and value move safely and predictably** across these boundaries.
 
-For Flow engineers, this is where you move from "single-chain thinking" to **system-of-systems thinking**.
+For Flow Research engineers, this is where you move from "single-chain thinking" to **system-of-systems thinking**.
 
 This lesson focuses on **patterns and mental models**, not low-level specs.
-You will learn how to design, critique, and reason about interoperability in Flow-style labs.
+You will learn how to design, critique, and reason about interoperability in Flow Research-style labs.
 
 ---
 
@@ -187,19 +187,19 @@ Your job is to **choose the right interoperability pattern** for each flow:
 - **High-security, low-frequency** -> **Light-client-style verification** or **strongly-secured bridges**.
 - **High-throughput, low-security** -> **Efficient token bridges or oracles**.
 
-In Flow-style systems, this often means:
+In Flow Research-style systems, this often means:
 
 - Moving **settlement** and **critical verification** on-chain.
 - Pushing **high-volume** flows to bridges or channels.
 
 ---
 
-## Why Interoperability Matters for Flow Engineers
+## Why Interoperability Matters for Flow Research Engineers
 
-Flow-style engineers will:
+Flow Research-style engineers will:
 
 - Design or critique **multi-chain** or **multi-protocol** systems.
-- Build **bridges** or **oracles** for Flow-style apps.
+- Build **bridges** or **oracles** for Flow Research-style apps.
 - Need to **balance** security, latency, and cost.
 
 Understanding interoperability helps you:
@@ -250,9 +250,9 @@ Find a real-world interoperability system (e.g., a popular bridge, oracle, or li
 - Describe the **trust model** and **latency**.
 - Write a short note explaining the **trade-offs**.
 
-### Exercise 3: Relate to a Flow Lab
+### Exercise 3: Relate to a Flow Research Lab
 
-Look at a Flow-style lab that involves multiple chains or services:
+Look at a Flow Research-style lab that involves multiple chains or services:
 
 - Design a small **interoperability** model for it:
  - What data or value moves between systems?
@@ -269,10 +269,10 @@ Rate yourself from 1 to 5:
 
 - I can explain what interoperability is.
 - I can identify common patterns (bridges, oracles, light-client verification).
-- I can see how they fit into a Flow-style system.
+- I can see how they fit into a Flow Research-style system.
 - I can design a simple interoperability flow.
 
-Action item: write a short note in your lab repo describing one Flow-style system where interoperability would improve scalability or security.
+Action item: write a short note in your lab repo describing one Flow Research-style system where interoperability would improve scalability or security.
 
 ## Further Reading
 
@@ -289,4 +289,4 @@ Action item: write a short note in your lab repo describing one Flow-style syste
 
 ---
 
-*This lesson gives Flow Initiative trainees an engineer-style understanding of interoperability design in blockchain systems, focusing on how to recognize, design, and use bridges, oracles, and light-client-style verification to move data and value between chains safely and predictably.*
+*This lesson gives Flow Research Initiative trainees an engineer-style understanding of interoperability design in blockchain systems, focusing on how to recognize, design, and use bridges, oracles, and light-client-style verification to move data and value between chains safely and predictably.*

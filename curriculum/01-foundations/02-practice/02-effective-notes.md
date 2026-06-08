@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Take notes that support active learning and long-term retention.
 - Use Markdown to structure and reuse notes across lessons and labs.
 - Turn notes into study tools (e.g., summaries, questions, flashcards).
-- Apply notes to your Flow labs, PRs, and project documentation.
+- Apply notes to your Flow Research labs, PRs, and project documentation.
 
 ## Concept Map
 
@@ -55,7 +55,7 @@ $M$ is mastery, $U$ is understanding, $P$ is deliberate practice, and $F$ is fee
 
 Note-taking is not just about writing down what you read. It is a way to **process, test, and store** your understanding so that you can recall it later when building, debugging, or reviewing code.
 
-For the Flow Initiative, notes connect reading to practice. They help you:
+For the Flow Research Initiative, notes connect reading to practice. They help you:
 
 - Remember key concepts from documentation and research articles.
 - Record how you solved a lab problem.
@@ -96,7 +96,7 @@ You can write notes in many places:
 - Wikis or internal docs,
 - Markdown-based note-taking apps.
 
-Across the Flow program, **Markdown is the standard** because it is:
+Across the Flow Research program, **Markdown is the standard** because it is:
 
 - Version-controllable,
 - Portable,
@@ -193,7 +193,7 @@ Use them to:
 - **Track gotchas** - edge cases and bugs you discovered.
 - **Prepare for PRs** - write brief explanations that you can paste into PR descriptions or comments.
 
-Your lab notes should grow into a **knowledge base** for the Flow Initiative, not just a personal scratchpad.
+Your lab notes should grow into a **knowledge base** for the Flow Research Initiative, not just a personal scratchpad.
 
 ## Common Note-Taking Mistakes
 
@@ -287,4 +287,4 @@ Action item: build a "lessons learned" note for your first lab in the current tr
 
 ---
 
-*This lesson teaches Flow Initiative trainees to write engineering-grade notes that support learning, retention, and contribution across all tracks.*
+*This lesson teaches Flow Research Initiative trainees to write engineering-grade notes that support learning, retention, and contribution across all tracks.*

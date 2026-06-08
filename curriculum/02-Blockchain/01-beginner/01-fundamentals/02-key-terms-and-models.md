@@ -27,7 +27,7 @@ By the end of this lesson, you will be able to:
 
 - Recognize and define core blockchain terms (node, block, transaction, address, gas, etc.).
 - Distinguish between common blockchain models (public, private, consortium, L1, L2).
-- Map these terms and models onto real-world examples from the Flow Initiative curriculum.
+- Map these terms and models onto real-world examples from the Flow Research Initiative curriculum.
 - Use this vocabulary to read Ethereum-style documents and protocol docs with confidence.
 
 ## Concept Map
@@ -55,7 +55,7 @@ The useful question is always: who is allowed to change state, under which rules
 Blockchain systems are full of jargon. Some terms are marketing noise; others are actual technical primitives.
 In this lesson you will learn the **essential, engineering-grade vocabulary** of blockchain and a few **simple models** that help you reason about how different systems work.
 
-For Flow Initiative trainees, this is not a "dictionary" drill. It is a **concept map** that connects terminology to:
+For Flow Research Initiative trainees, this is not a "dictionary" drill. It is a **concept map** that connects terminology to:
 
 - decentralized ledgers,
 - smart contracts, and
@@ -264,9 +264,9 @@ Knowing the model helps you:
 - choose the right place to compute (on-chain vs off-chain).
 - design smart contracts that respect the network's constraints.
 
-## Relating Terms to the Flow Initiative
+## Relating Terms to the Flow Research Initiative
 
-In the Flow curriculum, you will soon see these terms and models in:
+In the Flow Research curriculum, you will soon see these terms and models in:
 
 - **`blockchain` track labs** - where you call contracts, read state, and send transactions.
 - **`protocol-eng` track** - where you reason about consensus, nodes, and network behavior.
@@ -334,7 +334,7 @@ Rate yourself from 1 to 5:
 - I can differentiate L1 and L2 roles.
 - I can connect these terms to simple labs or examples.
 
-Action item: update your Flow lab notes with a short glossary section using these terms.
+Action item: update your Flow Research lab notes with a short glossary section using these terms.
 
 ## Further Reading
 
@@ -351,4 +351,4 @@ Action item: update your Flow lab notes with a short glossary section using thes
 
 ---
 
-*This lesson gives Flow Initiative trainees a clear, engineer-friendly set of definitions and models for blockchain, laying the groundwork for more advanced work in the beginner, intermediate, and advanced tracks.*
+*This lesson gives Flow Research Initiative trainees a clear, engineer-friendly set of definitions and models for blockchain, laying the groundwork for more advanced work in the beginner, intermediate, and advanced tracks.*

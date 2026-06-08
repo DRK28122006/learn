@@ -56,7 +56,7 @@ That inequality is the heart of tokenomics: the design should make useful behavi
 
 Tokens are not just "digital money." In blockchain systems, they are **economic instruments** that encode value, rights, and constraints into the protocol itself.
 
-In the Flow Initiative, you will see tokens used to:
+In the Flow Research Initiative, you will see tokens used to:
 
 - Pay for gas and execution,
 - Reward validators and stakers,
@@ -196,9 +196,9 @@ For example:
 
 In engineering terms, incentive design is about **choosing the right price signals and penalties** so that the system behaves well under real-world use.
 
-## Why This Matters for Flow Engineers
+## Why This Matters for Flow Research Engineers
 
-In the Flow Initiative, you will encounter:
+In the Flow Research Initiative, you will encounter:
 
 - L1/L2 systems where **gas and staking tokens** shape performance.
 - Token-based incentives for **protocol contributors, node operators, or lab participants**.
@@ -285,9 +285,9 @@ Sketch or describe:
 
 This is a **first-order attack analysis** using incentives.
 
-### Exercise 3: Relate to a Flow Lab
+### Exercise 3: Relate to a Flow Research Lab
 
-Look at a blockchain lab from the Flow curriculum that uses real or mock transactions:
+Look at a blockchain lab from the Flow Research curriculum that uses real or mock transactions:
 
 - Identify where a token is used (e.g., gas, staking, rewards).
 - Write one sentence describing what that token pays for.
@@ -302,7 +302,7 @@ Rate yourself from 1 to 5:
 - I can see how incentives shape validator and user behavior.
 - I can connect token design to L1/L2 security and performance.
 
-Action item: write a short note in your lab repo about one incentive pattern you would want to see in a Flow-style L1/L2 ecosystem.
+Action item: write a short note in your lab repo about one incentive pattern you would want to see in a Flow Research-style L1/L2 ecosystem.
 
 ## Further Reading
 
@@ -319,4 +319,4 @@ Action item: write a short note in your lab repo about one incentive pattern you
 
 ---
 
-*This lesson equips Flow Initiative trainees with an engineering-style understanding of tokens and economic incentives, showing how they shape security, latency, and participation in L1/L2 blockchain ecosystems.*
+*This lesson equips Flow Research Initiative trainees with an engineering-style understanding of tokens and economic incentives, showing how they shape security, latency, and participation in L1/L2 blockchain ecosystems.*

@@ -88,7 +88,7 @@ An agent starts to make sense when:
 
 The runtime owns the loop. It decides when to call the model, which context to include, how tool results are returned, when to retry, when to stop, and when to escalate to a human.
 
-In Flow terms, Jarvis is a runtime surface: it gives agents a place to execute, observe, and interact with user work.
+In Flow Research terms, Jarvis is a runtime surface: it gives agents a place to execute, observe, and interact with user work.
 
 ### Model
 
@@ -259,9 +259,9 @@ Before building an agent, answer these questions:
 | How does it know it is done? | Prevents loops and premature completion. |
 | How will you evaluate it? | Turns demos into engineering. |
 
-## Flow Context
+## Flow Research Context
 
-Every Flow product touches agent systems:
+Every Flow Research product touches agent systems:
 
 - Jarvis provides runtime and operator surfaces.
 - Garden is the workspace where humans and agents coordinate.

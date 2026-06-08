@@ -15,7 +15,7 @@ Personal Operators run with access to tools, data, and compute. Securing them re
 - **Access control** — who or what can start, stop, configure, or communicate with an operator.
 - **Audit trails** — recording every action an operator takes so behavior can be reviewed after the fact.
 
-## Flow context
+## Flow Research context
 
 Jarvis includes the security and sentinel systems that enforce these boundaries. The Jarvis Gateway controls agent access, the sandboxed VM isolates compute, and the control layer manages lifecycle permissions. WorkStream verification and Harnessy evaluation depend on these guarantees — you cannot trust an operator's output if you cannot trust its runtime.
 

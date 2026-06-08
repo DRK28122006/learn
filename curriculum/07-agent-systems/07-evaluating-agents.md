@@ -383,9 +383,9 @@ Monitor:
 
 Turn production failures into new eval cases. That is how the suite becomes more valuable over time.
 
-## Flow Context
+## Flow Research Context
 
-Harnessy is Flow's evaluation layer. It should evaluate:
+Harnessy is Flow Research's evaluation layer. It should evaluate:
 
 - final artifacts,
 - route decisions,

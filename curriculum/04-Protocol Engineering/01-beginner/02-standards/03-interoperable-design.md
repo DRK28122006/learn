@@ -27,7 +27,7 @@ By the end of this lesson, you will be able to:
 
 - Explain what **interoperable design** means for protocols and applications.
 - Identify key principles: **standardization, loose coupling, clear interfaces, and data-format clarity**.
-- Sketch how to make a Flow-style protocol **easy to plug into** other systems (e.g., dashboards, governance tools, ML services).
+- Sketch how to make a Flow Research-style protocol **easy to plug into** other systems (e.g., dashboards, governance tools, ML services).
 - Use **versioning**, **API-first thinking**, and **simple data formats** to support interoperability from the start.
 
 ## Concept Map
@@ -63,7 +63,7 @@ Now it is time to ask a broader question:
 
 This is **interoperable design**. Interoperability means that different systems can **exchange data and coordinate actions in a meaningful way**, even if they are built by different teams or use different technologies.
 
-In Flow-style thinking:
+In Flow Research-style thinking:
 
 - interoperable design is **minimum-viable-plumbing**:
  - define a clean contract,
@@ -122,7 +122,7 @@ Design **explicit interfaces** between components:
 Avoid "one big endpoint that does everything."
 Instead, expose **multiple focused endpoints** that each do one thing well.
 
-In Flow-style work:
+In Flow Research-style work:
 
 - a protocol can expose separate:
 
@@ -142,7 +142,7 @@ To achieve this:
 - Use **mediators** (e.g., message brokers, API gateways) when you need to connect heterogeneous systems.
 - Keep each protocol or service **self-contained**; it should know only what it needs from others.
 
-In Flow-style contexts, this lets you:
+In Flow Research-style contexts, this lets you:
 
 - swap out one governance-tool without breaking the other,
 - or swap out a dashboard without changing the core protocol.
@@ -189,7 +189,7 @@ Good practice:
 
 ---
 
-## Practical Patterns for Interoperable Flow-Style Systems
+## Practical Patterns for Interoperable Flow Research-Style Systems
 
 ### 1. Use Versioned, REST-Style APIs
 
@@ -254,7 +254,7 @@ If the answer to the first two is **yes** and to the third is **no**, you are on
 
 Good practice:
 
-- add **interoperability checks** to your Flow-style labs:
+- add **interoperability checks** to your Flow Research-style labs:
 
  - write a **test client** that talks to your protocol without using in-process libraries (e.g., plain HTTP calls).
  - ask a peer to **implement a small service** or dashboard using only your spec and docs.
@@ -288,9 +288,9 @@ Take a protocol you designed in earlier lessons:
 
 Write a short note explaining how this change improves interoperability.
 
-### Exercise 2: Design a Simple API for a Flow-Style Service
+### Exercise 2: Design a Simple API for a Flow Research-Style Service
 
-Design a small API for a Flow-style service (e.g., governance-proposals or learner-rewards) using:
+Design a small API for a Flow Research-style service (e.g., governance-proposals or learner-rewards) using:
 
 - versioned paths (e.g., `/v1/...`),
 - JSON-style payloads,
@@ -300,7 +300,7 @@ Sketch the routes and request/response shapes as if you were writing an OpenAPI 
 
 ### Exercise 3: Sketch an Event-Driven Layer
 
-Given the same Flow-style service:
+Given the same Flow Research-style service:
 
 - Sketch a small **event-driven** layer on top:
 
@@ -317,10 +317,10 @@ Rate yourself from 1 to 5:
 
 - I can explain what interoperable design means for protocols and applications.
 - I can name core principles (standard formats, clear interfaces, loose coupling).
-- I can sketch how to make a Flow-style protocol easy to plug into other systems.
+- I can sketch how to make a Flow Research-style protocol easy to plug into other systems.
 - I can see how versioning, API-first design, and schema-first thinking support interoperability.
 
-Action item: write a short note in your lab repo describing one Flow-style protocol you made more interoperable and how that changed its design.
+Action item: write a short note in your lab repo describing one Flow Research-style protocol you made more interoperable and how that changed its design.
 
 ---
 
@@ -335,8 +335,8 @@ Action item: write a short note in your lab repo describing one Flow-style proto
 
 - Read `04-protocol-testing-and-simulation.md` next to learn how to verify that your protocol is truly interoperable.
 - Treat interoperability as a **design constraint**, not a "nice-to-have."
-- When you design a Flow-style protocol, ask: "Who else should be able to plug into this, and how can I make it easy for them?"
+- When you design a Flow Research-style protocol, ask: "Who else should be able to plug into this, and how can I make it easy for them?"
 
 ---
 
-*This lesson gives Flow Initiative trainees a beginner-level understanding of interoperable design in protocol engineering, focusing on standard data formats, clear interfaces, loose coupling, API-first and schema-first thinking, and how to use versioned HTTP-style APIs and event-driven layers to make Flow-style governance-style and ML-driven protocols easy to plug into other systems.*
+*This lesson gives Flow Research Initiative trainees a beginner-level understanding of interoperable design in protocol engineering, focusing on standard data formats, clear interfaces, loose coupling, API-first and schema-first thinking, and how to use versioned HTTP-style APIs and event-driven layers to make Flow Research-style governance-style and ML-driven protocols easy to plug into other systems.*

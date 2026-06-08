@@ -5,7 +5,7 @@ title: Jarvis
 
 # Jarvis
 
-The agent runtime. Jarvis spawns, configures, secures, and connects Personal Operators to the Flow economy.
+The agent runtime. Jarvis spawns, configures, secures, and connects Personal Operators to the Flow Research economy.
 
 ## What it does
 
@@ -19,4 +19,4 @@ Jarvis is the base protocol that lets a Personal Operator exist. It includes:
 
 ## How it fits
 
-Jarvis gives the agent life. Without it, there is no compatible agent in the Flow system.
+Jarvis gives the agent life. Without it, there is no compatible agent in the Flow Research system.

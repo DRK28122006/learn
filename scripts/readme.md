@@ -1,4 +1,4 @@
-# Scripts — Flow Education AI Content Pipeline
+# Scripts — Flow Research Education AI Content Pipeline
 
 Automated article and lesson generation powered by DeepSeek.
 

@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Explain why **versioning** is critical for evolving protocols and APIs.
 - Describe common **versioning schemes** (e.g., semantic versioning, URIs, headers).
 - Classify **breaking vs non-breaking changes** and how they affect version numbers.
-- Choose a versioning strategy for a Flow-style protocol or API.
+- Choose a versioning strategy for a Flow Research-style protocol or API.
 
 ## Concept Map
 
@@ -59,7 +59,7 @@ New features, bug fixes, and security updates inevitably change how systems talk
 - tagging each released form of a protocol or API with a **version identifier**,
 - and using that tag to control **breaking** versus **non-breaking** evolution.
 
-In Flow-style systems, versioning keeps:
+In Flow Research-style systems, versioning keeps:
 
 - different implementations (e.g., clients, dashboards, governance tools)
 - able to **interoperate** even as the protocol changes over time.
@@ -80,7 +80,7 @@ Versioning gives you:
 - **upgrade paths** for implementers,
 - and a way to **support multiple versions** while evolving forward.
 
-In Flow-style thinking:
+In Flow Research-style thinking:
 
 - a protocol is a **shared contract** between actors.
 - **versioning** is how you manage that contract over time without losing trust.
@@ -103,7 +103,7 @@ For example:
 - `1.2.4` -> `1.3.0`: added new features; existing clients still work.
 - `1.3.0` -> `2.0.0`: incompatible changes (e.g., removed fields, changed semantics).
 
-In Flow-style systems:
+In Flow Research-style systems:
 
 - use SemVer for **public contracts** (e.g., protocol APIs, event schemas).
 - treat `MAJOR` bumps as **migration events** that require planning and communication.
@@ -126,7 +126,7 @@ This pattern is:
 
 It works well for **public APIs** but can create many URLs to manage.
 
-Flow-style twist:
+Flow Research-style twist:
 
 - each major protocol revision (e.g., governance-state machine changes) can live under a new `/vN/...` path.
 
@@ -145,7 +145,7 @@ Cons:
 
 - harder to see which version is being used just from the URL, and less cache-friendly.
 
-Flow-style twist:
+Flow Research-style twist:
 
 - useful when you want **one endpoint** but **multiple protocol variants** behind it.
 
@@ -178,7 +178,7 @@ Good practices for protocol versioning include:
 - Use **semantic versioning semantics**: clearly document what counts as a breaking change for the protocol.
 - Support **multiple versions** for a transition window, then **deprecate** and **retire** older ones.
 
-In Flow-style systems:
+In Flow Research-style systems:
 
 - a protocol version can correspond to:
 
@@ -218,13 +218,13 @@ Examples:
 
 These can usually be handled with **MINOR** or **PATCH** bumps.
 
-In Flow-style practice:
+In Flow Research-style practice:
 
 - the **spec** (from `01-specification-writing.md`) should classify which changes are breaking and which are not.
 
 ---
 
-## How to Use Versioning in Flow-Style Work
+## How to Use Versioning in Flow Research-Style Work
 
 ### 1. Plan Versioning Early
 
@@ -265,7 +265,7 @@ compatibility_policy:
 
 ## Practical Exercises
 
-### Exercise 1: Version a Small Flow-Style Protocol
+### Exercise 1: Version a Small Flow Research-Style Protocol
 
 Take a protocol you defined in `01-specification-writing.md`:
 
@@ -278,7 +278,7 @@ Take a protocol you defined in `01-specification-writing.md`:
 Design a small API that exposes your protocol (e.g., `/governance/v1/proposals`):
 
 - Decide whether you will use URI, header, or query-parameter versioning.
-- Write a short note explaining why that pattern suits your Flow-style context.
+- Write a short note explaining why that pattern suits your Flow Research-style context.
 
 ### Exercise 3: Plan a Migration from v1 to v2
 
@@ -302,9 +302,9 @@ Rate yourself from 1 to 5:
 - I can explain why versioning is important for protocols and APIs.
 - I can describe semantic versioning (`MAJOR.MINOR.PATCH`) and what each part means.
 - I can recognize breaking vs non-breaking changes.
-- I can choose a versioning pattern for a Flow-style protocol or API.
+- I can choose a versioning pattern for a Flow Research-style protocol or API.
 
-Action item: write a short note in your lab repo describing how you versioned a Flow-style protocol and how you would handle a future breaking change.
+Action item: write a short note in your lab repo describing how you versioned a Flow Research-style protocol and how you would handle a future breaking change.
 
 ---
 
@@ -319,8 +319,8 @@ Action item: write a short note in your lab repo describing how you versioned a 
 
 - Read `03-protocol-lifecycle-and-governance.md` next to see how versioning connects to **deprecation, migration, and policy** over time.
 - Treat versioning as **part of your protocol contract**, not an afterthought.
-- When you release a Flow-style protocol, include a **version**, clear **changelog**, and known **deprecation** schedule.
+- When you release a Flow Research-style protocol, include a **version**, clear **changelog**, and known **deprecation** schedule.
 
 ---
 
-*This lesson gives Flow Initiative trainees a beginner-level understanding of versioning strategies in protocol engineering, focusing on semantic versioning (`MAJOR.MINOR.PATCH`), common API-style patterns (URI, header, query-parameter), and how to classify and manage breaking vs non-breaking changes in Flow-style governance-style and ML-driven protocols.*
+*This lesson gives Flow Research Initiative trainees a beginner-level understanding of versioning strategies in protocol engineering, focusing on semantic versioning (`MAJOR.MINOR.PATCH`), common API-style patterns (URI, header, query-parameter), and how to classify and manage breaking vs non-breaking changes in Flow Research-style governance-style and ML-driven protocols.*

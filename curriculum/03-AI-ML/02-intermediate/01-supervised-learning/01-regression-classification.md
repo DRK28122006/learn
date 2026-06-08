@@ -48,7 +48,7 @@ flowchart TD
 
 Regression and classification are not just algorithm categories. They are ways of translating a real product question into a target a model can learn.
 
-In a Flow-style AI product, you might ask:
+In a Flow Research-style AI product, you might ask:
 
 - Which learners may need mentor support?
 - What completion score should we expect next week?
@@ -293,7 +293,7 @@ False positives and false negatives have different costs. Make the tradeoff expl
 
 ### Exercise 1: Frame the Same Problem Twice
 
-Choose a Flow-style problem and write:
+Choose a Flow Research-style problem and write:
 
 - one regression framing,
 - one classification framing,

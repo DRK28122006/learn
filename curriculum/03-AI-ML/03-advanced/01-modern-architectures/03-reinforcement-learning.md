@@ -52,7 +52,7 @@ Do not test risky RL behavior directly on real users. Start with simulation, off
 
 ## Core Concepts
 
-| Concept | Meaning | Flow-style example |
+| Concept | Meaning | Flow Research-style example |
 | --- | --- | --- |
 | Agent | Learner that chooses actions | recommendation policy |
 | Environment | System the agent interacts with | learning platform |
@@ -206,7 +206,7 @@ Avoid RL when:
 - the environment is too expensive or unsafe to simulate,
 - a rule-based policy is easier and more reliable.
 
-## Flow-Style Use Cases
+## Flow Research-Style Use Cases
 
 | Use case | Agent | State | Action | Reward |
 | --- | --- | --- | --- | --- |

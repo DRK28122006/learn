@@ -296,9 +296,9 @@ unsafe\ action\ rate = \frac{executed\ prohibited\ actions}{total\ prohibited\ a
 
 For high-risk actions, the target unsafe action rate is zero. A model that is "usually safe" is not safe enough for irreversible operations.
 
-## Flow Context
+## Flow Research Context
 
-In Flow:
+In Flow Research:
 
 - Jarvis should enforce runtime and tool boundaries.
 - Garden should isolate workspace data and permissions.

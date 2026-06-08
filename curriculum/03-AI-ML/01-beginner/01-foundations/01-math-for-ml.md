@@ -210,9 +210,9 @@ print("mean squared error:", loss)
 
 This is the whole beginner story in miniature: represent data, compute predictions, measure error.
 
-## Why This Matters for Flow Engineers
+## Why This Matters for Flow Research Engineers
 
-Flow engineers will often work in environments where data is incomplete, infrastructure is uneven, and stakeholders need clear explanations. Math gives you the language to explain model behavior without hiding behind "the AI said so."
+Flow Research engineers will often work in environments where data is incomplete, infrastructure is uneven, and stakeholders need clear explanations. Math gives you the language to explain model behavior without hiding behind "the AI said so."
 
 Use math to answer practical engineering questions:
 

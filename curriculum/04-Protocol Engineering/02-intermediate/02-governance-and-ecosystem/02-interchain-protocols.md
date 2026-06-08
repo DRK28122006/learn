@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Explain what **interchain protocols** (cross-chain / interoperability protocols) are and why they matter in multi-chain ecosystems.
 - Describe the core problem they solve: **secure, reliable communication and asset-transfer between independent ledgers**.
 - Name at least two concrete interchain-style designs (e.g., Cosmos IBC, Polkadot XCM, or other cross-chain message protocols).
-- Sketch how an **interchain** pattern could appear in a Flow-style governance or reward-style system that spans multiple chains or ledgers.
+- Sketch how an **interchain** pattern could appear in a Flow Research-style governance or reward-style system that spans multiple chains or ledgers.
 
 ## Concept Map
 
@@ -70,7 +70,7 @@ They are sometimes called:
 
 but the core idea is the same: **connect separate ledgers without centralizing trust**.
 
-In Flow-style thinking, interchain-style design is useful when:
+In Flow Research-style thinking, interchain-style design is useful when:
 
 - you want to link:
 
@@ -119,7 +119,7 @@ Key benefits they provide:
 - **Cross-chain governance and data**: proposals or votes on one chain can influence state or rewards on another.
 - **Shared security and composable services**: protocols like Cosmos IBC and similar standards let many chains form a **loosely coupled ecosystem**, like "an internet of blockchains".
 
-For Flow-style systems, interchain-style patterns are attractive when you:
+For Flow Research-style systems, interchain-style patterns are attractive when you:
 
 - want **different communities** to live on different chains,
 - or **different layers** (e.g., governance vs rewards) to live on separate ledgers,
@@ -155,7 +155,7 @@ This lets the destination chain:
 - verify that a message such as `proposal.approved` actually appeared in the source chain's state,
 - without syncing the full chain history.
 
-In Flow-style systems, you can think of this as a **"foreign state verifier"** that trusts the source chain's consensus but not individual relayers.
+In Flow Research-style systems, you can think of this as a **"foreign state verifier"** that trusts the source chain's consensus but not individual relayers.
 
 ### 3. Ports, Channels, and Standard Messages
 
@@ -193,7 +193,7 @@ Key ideas:
 - **Channels**: define application-specific flows (e.g., tokens, governance, or custom messages).
 - **ICS-* standards**: e.g., **ICS-20** for fungible tokens, **ICS-27** for interchain accounts.
 
-For Flow-style thinking:
+For Flow Research-style thinking:
 
 - you can imagine:
 
@@ -216,7 +216,7 @@ XCM focuses on **shared consensus safety** and allows:
 
 - relatively safe, trust-minimized communication within a shared security umbrella.
 
-Flow-style motivation:
+Flow Research-style motivation:
 
 - XCM-style messaging can inspire how you connect:
 
@@ -235,15 +235,15 @@ These differ in:
 - latency, and
 - the kinds of "apps" they support (e.g., intents-based swaps, governance-style notifications).
 
-Flow-style takeaway:
+Flow Research-style takeaway:
 
 - you do not need to invent a cross-chain design from scratch; you can **adapt** these ideas into your own **inter-ledger governance or reward protocol**.
 
 ---
 
-## How to Think About Interchain-Style in Flow-Style Systems
+## How to Think About Interchain-Style in Flow Research-Style Systems
 
-Even if your Flow-style system is not strictly blockchain-based, the **interchain pattern** is useful:
+Even if your Flow Research-style system is not strictly blockchain-based, the **interchain pattern** is useful:
 
 - **Multiple ledgers**: e.g., an on-chain governance ledger, an off-chain ML-reward-ledger, and a learner-profile store.
 - **Multiple chains**: e.g., one governance chain for a global cohort, another chain for a regional community.
@@ -290,7 +290,7 @@ This lets you:
 
  - you must decide how much you trust bridges, relayers, or validators.
 
-Flow-style design implication:
+Flow Research-style design implication:
 
 - treat interchain protocols as **specialized, high-risk subsystems** that justify extra attention in:
 
@@ -315,7 +315,7 @@ Flow-style design implication:
 
 ### Exercise 1: Sketch an Interchain-Style Flow
 
-Pick a Flow-style workflow (e.g., governance-proposals and reward-distribution):
+Pick a Flow Research-style workflow (e.g., governance-proposals and reward-distribution):
 
 - Imagine:
 
@@ -349,7 +349,7 @@ This trains you to see design choices behind the stacks.
 
 ### Exercise 3: Design a "Light-Client-Style" Authenticator
 
-For a non-blockchain Flow-style ledger (e.g., a governance-event log), design a **simple authenticator**:
+For a non-blockchain Flow Research-style ledger (e.g., a governance-event log), design a **simple authenticator**:
 
 - describes how a second ledger could:
 
@@ -367,9 +367,9 @@ Rate yourself from 1 to 5:
 - I can explain what interchain (cross-chain) protocols are and why they matter.
 - I can describe core elements: relayers, light-clients, channels/ports, and proofs.
 - I can name at least two concrete interchain designs (e.g., Cosmos IBC, Polkadot XCM, or a bridge-style protocol).
-- I can sketch how an interchain-style pattern might appear in a Flow-style governance or reward-style system.
+- I can sketch how an interchain-style pattern might appear in a Flow Research-style governance or reward-style system.
 
-Action item: write a short note in your lab repo describing one interchain-style connection you sketched between two Flow-style ledgers and how you would verify the messages across them.
+Action item: write a short note in your lab repo describing one interchain-style connection you sketched between two Flow Research-style ledgers and how you would verify the messages across them.
 
 ---
 
@@ -384,8 +384,8 @@ Action item: write a short note in your lab repo describing one interchain-style
 
 - Read `03-governance-models-for-evolution.md` next to see how interchain-style protocols interact with **on-chain and off-chain governance bodies**.
 - Treat interchain protocols as **specialized, high-risk subsystems** that deserve explicit upgrade-paths, security analysis, and clear communication.
-- When you design a Flow-style system that spans multiple ledgers, first ask: "What light-client-style authenticator or cross-ledger message layer do we need?"
+- When you design a Flow Research-style system that spans multiple ledgers, first ask: "What light-client-style authenticator or cross-ledger message layer do we need?"
 
 ---
 
-*This lesson gives Flow Initiative trainees an intermediate-level understanding of interchain protocols (cross-chain / interoperability protocols), focusing on secure messaging, proofs, and relayer-style architectures, and how to adapt interchain-style patterns to Flow-style governance-style and ML-driven systems that span multiple chains or ledgers.*
+*This lesson gives Flow Research Initiative trainees an intermediate-level understanding of interchain protocols (cross-chain / interoperability protocols), focusing on secure messaging, proofs, and relayer-style architectures, and how to adapt interchain-style patterns to Flow Research-style governance-style and ML-driven systems that span multiple chains or ledgers.*

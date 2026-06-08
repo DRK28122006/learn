@@ -27,7 +27,7 @@ By the end of this lesson, you will be able to:
 
 - Explain what an **upgrade path** is and why it matters for evolving protocols and APIs.
 - Describe common **migration strategies** for moving from one protocol version to another (e.g., side-by-side, gradual cutover, migration tools).
-- Design a **clear, safe migration plan** for a Flow-style protocol (e.g., governance-state machine, reward-calculation) from v1 to v2.
+- Design a **clear, safe migration plan** for a Flow Research-style protocol (e.g., governance-state machine, reward-calculation) from v1 to v2.
 - Communicate **deprecation timelines** and **backwards-compatibility policies** to other teams and users.
 
 ## Concept Map
@@ -58,7 +58,7 @@ An **upgrade path** is the **planned route** from an older version of a protocol
 - existing clients can **migrate safely**, and
 - the system can **evolve without breaking everyone at once**.
 
-In Flow-style systems, this is especially important because:
+In Flow Research-style systems, this is especially important because:
 
 - protocols may be used by:
 
@@ -96,7 +96,7 @@ In practice, an upgrade path usually includes:
 - **Tooling**: migration scripts, converters, or bridges.
 - **Escalation plan**: what to do if something goes wrong (e.g., rollback, feature flags).
 
-For Flow-style protocols, this is a **governance and engineering concern**, not just an infra detail.
+For Flow Research-style protocols, this is a **governance and engineering concern**, not just an infra detail.
 
 ---
 
@@ -124,7 +124,7 @@ Disadvantages:
 - requires **running two stacks** for a time,
 - and careful **state-synchronization** if they share underlying data.
 
-Flow-style motivation:
+Flow Research-style motivation:
 
 - lets governance-tools and dashboards migrate at their own pace.
 
@@ -147,7 +147,7 @@ Benefits:
 - if v2 has bugs, you can **pause or roll back**.
 - reduces risk of massive disruption.
 
-Flow-style use-case:
+Flow Research-style use-case:
 
 - shifting governance-proposal traffic from v1 to v2 while monitoring for state-consistency issues.
 
@@ -170,9 +170,9 @@ How this works in practice:
 
 This is powerful when v2 has a **changed state-machine** or schema.
 
-Flow-style twist:
+Flow Research-style twist:
 
-- you can design similar **"state-converter"** binaries that translate Flow-style learner-or-governance state across versions.
+- you can design similar **"state-converter"** binaries that translate Flow Research-style learner-or-governance state across versions.
 
 ### 4. Optional vs Mandatory Migration
 
@@ -187,7 +187,7 @@ Best practice:
 
 This gives teams time to plan, test, and train.
 
-Flow-style motivation:
+Flow Research-style motivation:
 
 - lets slower-moving governance communities or dashboards avoid forced rush-upgrades.
 
@@ -195,7 +195,7 @@ Flow-style motivation:
 
 ## How to Design a Concrete Upgrade Path
 
-For a Flow-style protocol, a good upgrade-path design usually includes these steps:
+For a Flow Research-style protocol, a good upgrade-path design usually includes these steps:
 
 ### 1. Assess the Change
 
@@ -219,7 +219,7 @@ For a Flow-style protocol, a good upgrade-path design usually includes these ste
 
 Clear deprecation dates prevent **accidental lock-in** to old versions.
 
-Flow-style best practice:
+Flow Research-style best practice:
 
 - keep the deprecation window **long enough** for governance bodies and dashboards to coordinate.
 
@@ -265,15 +265,15 @@ Clear communication reduces:
 - confusion,
 - and the risk of "someone forgot to upgrade."
 
-Flow-style style:
+Flow Research-style style:
 
 - treat upgrade communication as part of **governance and on-boarding**, not just ops.
 
 ---
 
-## How This Fits Into Flow-Style Systems
+## How This Fits Into Flow Research-Style Systems
 
-In Flow-style protocols you can:
+In Flow Research-style protocols you can:
 
 - plan upgrades around **versioned specs** (from `01-specification-writing.md`) and **semantic versioning** (from `02-versioning-strategies.md`).
 - use **migration-style thinking** not just for protocols, but for:
@@ -303,7 +303,7 @@ Upgrade-path design connects directly to:
 
 ## Practical Exercises
 
-### Exercise 1: Sketch an Upgrade Path for a Flow-Style Protocol
+### Exercise 1: Sketch an Upgrade Path for a Flow Research-Style Protocol
 
 Take a protocol you have designed (e.g., governance-state machine or reward-calculation):
 
@@ -344,10 +344,10 @@ Rate yourself from 1 to 5:
 
 - I can explain what an upgrade path is and why it matters for protocols and APIs.
 - I can describe common patterns (side-by-side, gradual cutover, migration tools, optional vs mandatory).
-- I can sketch a concrete upgrade path for a Flow-style protocol.
+- I can sketch a concrete upgrade path for a Flow Research-style protocol.
 - I can connect upgrade paths to deployment patterns and governance decisions.
 
-Action item: write a short note in your lab repo describing one upgrade path you designed for a Flow-style protocol and how it balances safety, risk, and coordination across teams.
+Action item: write a short note in your lab repo describing one upgrade path you designed for a Flow Research-style protocol and how it balances safety, risk, and coordination across teams.
 
 ---
 
@@ -362,8 +362,8 @@ Action item: write a short note in your lab repo describing one upgrade path you
 
 - Read `02-governance-models-for-evolution.md` next to see how to align upgrade paths with **on-chain or off-chain governance bodies**.
 - Treat every major protocol release as something that must have a **written upgrade path and deprecation schedule**.
-- When you release a Flow-style protocol, document not only the v2 design, but **how v1 clients will move into it safely**.
+- When you release a Flow Research-style protocol, document not only the v2 design, but **how v1 clients will move into it safely**.
 
 ---
 
-*This lesson gives Flow Initiative trainees an intermediate-level understanding of upgrade paths in protocol engineering, focusing on side-by-side deployment, gradual cutover, migration tools, and deprecation timelines, and how to design safe, communicated paths from v1 to v2 for Flow-style governance-style and ML-driven protocols.*
+*This lesson gives Flow Research Initiative trainees an intermediate-level understanding of upgrade paths in protocol engineering, focusing on side-by-side deployment, gradual cutover, migration tools, and deprecation timelines, and how to design safe, communicated paths from v1 to v2 for Flow Research-style governance-style and ML-driven protocols.*

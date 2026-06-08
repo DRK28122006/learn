@@ -235,7 +235,7 @@ model_name = "distilbert-base-uncased"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModel.from_pretrained(model_name)
 
-text = "Flow builders learn machine learning in public."
+text = "Flow Research builders learn machine learning in public."
 inputs = tokenizer(text, return_tensors="pt")
 
 with torch.no_grad():

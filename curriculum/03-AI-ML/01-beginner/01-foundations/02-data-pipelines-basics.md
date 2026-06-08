@@ -14,7 +14,7 @@ By the end of this lesson, you will be able to:
 
 - Explain what a data pipeline is and why it matters before model training begins.
 - Identify the core stages: ingestion, validation, cleaning, transformation, storage, and monitoring.
-- Sketch a pipeline for a Flow-style ML product.
+- Sketch a pipeline for a Flow Research-style ML product.
 - Write small pandas checks that catch broken or suspicious data early.
 
 ## Watch First
@@ -63,7 +63,7 @@ A good ML pipeline should:
 - store outputs in a versioned and accessible way,
 - monitor changes after deployment.
 
-In Flow projects, sources might include:
+In Flow Research projects, sources might include:
 
 - learner activity from a web app,
 - quiz attempts from a mobile client,
@@ -200,7 +200,7 @@ If you trust incoming data blindly, one changed column name can break training s
 
 Every launch-ready pipeline needs an owner. Someone must know where failures appear, how to retry, and when to alert the team.
 
-## Flow-Style Example
+## Flow Research-Style Example
 
 Imagine a learning platform that recommends the next lesson.
 
@@ -220,7 +220,7 @@ This is not glamorous work, but it is the work that lets ML survive contact with
 
 ### Exercise 1: Sketch a Pipeline
 
-Choose one Flow-style use case:
+Choose one Flow Research-style use case:
 
 - next lesson recommendation,
 - quiz risk detection,

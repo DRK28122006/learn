@@ -45,7 +45,7 @@ flowchart LR
 
 Large models are capable before they are reliable. Alignment is the work of shaping model behavior so it is useful, honest, safe, and appropriate for a specific context.
 
-For Flow-style systems, this matters when a model guides learning, writes educational feedback, supports governance workflows, or influences incentives.
+For Flow Research-style systems, this matters when a model guides learning, writes educational feedback, supports governance workflows, or influences incentives.
 
 :::warning Launch Rule
 Alignment is not a one-time patch. Treat it as an ongoing loop: collect feedback, update behavior, evaluate risk, and monitor production.
@@ -222,7 +222,7 @@ An evaluation set might include:
 - domain-specific misuse attempts,
 - unclear prompts requiring clarification.
 
-## Alignment for Flow-Style Systems
+## Alignment for Flow Research-Style Systems
 
 For a learning assistant:
 
@@ -251,7 +251,7 @@ For a developer assistant:
 
 ### Exercise 1: Build Preference Pairs
 
-Write ten prompt/chosen/rejected examples for a Flow-style assistant. Include the reason each chosen response is better.
+Write ten prompt/chosen/rejected examples for a Flow Research-style assistant. Include the reason each chosen response is better.
 
 ### Exercise 2: Define an Alignment Rubric
 

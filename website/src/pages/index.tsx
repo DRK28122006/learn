@@ -86,7 +86,7 @@ function HeroSection() {
               Start learning
             </Link>
             <Link className={styles.secondaryCta} to="https://github.com/Flow-Research">
-              Explore Flow
+               Explore Flow Research
             </Link>
           </div>
           <dl className={styles.heroStats} aria-label="Key features">
@@ -114,7 +114,7 @@ function ProductsSection() {
           <div className={styles.sectionKicker}>Products</div>
           <Heading as="h2">A system, not a collection</Heading>
           <p>
-            Flow's products form one system: Jarvis gives the agent life, Garden gives
+            Flow Research's products form one system: Jarvis gives the agent life, Garden gives
             it a workspace, WorkStream gives it valuable work, and Harnessy makes it
             reliable. Contributors help build every layer.
           </p>
@@ -142,7 +142,7 @@ function AreasSection() {
           <Heading as="h2">A clear path from fundamentals to contribution</Heading>
           <p>
             The curriculum is organized around the capabilities you need to
-            contribute to building Flow's products — from foundations through
+            contribute to building Flow Research's products — from foundations through
             production-ready systems.
           </p>
         </div>
@@ -170,7 +170,7 @@ function PracticeSection() {
             <div className={styles.sectionKicker}>Learning model</div>
             <Heading as="h2">Built for builders who learn by making things real</Heading>
             <p className={styles.practiceIntro}>
-              Flow is not a content library for passive reading. Each area is
+              Flow Research is not a content library for passive reading. Each area is
               designed to help learners turn concepts into notes, code,
               diagrams, experiments, and public contributions.
             </p>

@@ -53,7 +53,7 @@ $$
 
 Traditional identity systems are usually **centralized**: governments, corporations, or platforms issue and control your digital identity. In decentralized systems, the goal is different: identity should be **user-controlled, portable, and verifiable without a central authority**.
 
-In the Flow Initiative, you will see **decentralized identity** as one way to:
+In the Flow Research Initiative, you will see **decentralized identity** as one way to:
 
 - Represent users across protocols,
 - Anchor trust to cryptographic proofs, and
@@ -155,9 +155,9 @@ A typical flow for decentralized identity looks like this:
 
 At no point is the user forced to share a full "profile." Only the required attributes are revealed.
 
-## Why This Matters for Flow Engineers
+## Why This Matters for Flow Research Engineers
 
-Flow Initiative trainees will work on systems that need:
+Flow Research Initiative trainees will work on systems that need:
 
 - **Cross-protocol identities** - the same person or node appearing in multiple chains and tools.
 - **Trust-minimized verification** - confirming claims without calling a central authority for every check.
@@ -199,10 +199,10 @@ From an engineering standpoint, the chain is often the **issuance or verificatio
 - Students store them in **identity wallets**.
 - Employers act as **verifiers** and can instantly confirm authenticity without calling the registrar's office every time.
 
-In Flow, this could become:
+In Flow Research, this could become:
 
 - A credential system for **completion of lessons or tracks**.
-- A wallet-style interface for **trainees** where they collect Flow-issued credentials.
+- A wallet-style interface for **trainees** where they collect Flow Research-issued credentials.
 
 ### Example 2: Node or Contributor Identity
 
@@ -236,7 +236,7 @@ This is how you can reduce **authentication friction** while preserving control.
 On paper or in a text editor, sketch a simple flow with three roles:
 
 - **Holder** (user),
-- **Issuer** (e.g., a "Flow Education" issuer),
+- **Issuer** (e.g., a "Flow Research Education" issuer),
 - **Verifier** (e.g., a protocol or service).
 
 For each step:
@@ -258,9 +258,9 @@ Pick a real-world identity-heavy system you know (e.g., school ID, national ID, 
 
 Write a short note with your answers.
 
-### Exercise 3: Relate to a Flow Lab
+### Exercise 3: Relate to a Flow Research Lab
 
-Imagine a Flow lab or future project that uses:
+Imagine a Flow Research lab or future project that uses:
 
 - User accounts,
 - Reputation, or
@@ -283,7 +283,7 @@ Rate yourself from 1 to 5:
 - I can connect decentralized identity to real-world use cases (e.g., education, access control).
 - I can imagine how DIDs and credentials might sit on top of an L1/L2 stack.
 
-Action item: write a short note in your Flow lab repo describing one concrete place where DIDs and verifiable credentials could improve privacy or trust.
+Action item: write a short note in your Flow Research lab repo describing one concrete place where DIDs and verifiable credentials could improve privacy or trust.
 
 ## Further Reading
 

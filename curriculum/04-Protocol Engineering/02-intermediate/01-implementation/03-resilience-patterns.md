@@ -27,8 +27,8 @@ By the end of this lesson, you will be able to:
 
 - Explain what **resilience** means in distributed and protocol-style systems.
 - Identify common **resilience patterns**: **timeouts, retries, circuit breakers, bulkheads, idempotency, fallbacks, and load-aware design**.
-- Sketch how to apply at least three of these patterns to a Flow-style protocol (e.g., governance-voting, learner-on-ramp, reward-flow).
-- Connect resilience patterns to **MLOps** and **deployment-pattern** decisions in the larger Flow-style stack.
+- Sketch how to apply at least three of these patterns to a Flow Research-style protocol (e.g., governance-voting, learner-on-ramp, reward-flow).
+- Connect resilience patterns to **MLOps** and **deployment-pattern** decisions in the larger Flow Research-style stack.
 
 ## Concept Map
 
@@ -71,7 +71,7 @@ Resilience patterns are **reusable design ideas** that let your protocol:
 - **recover**,
 - and keep providing **some useful behavior** instead of simply crashing.
 
-For Flow-style systems, resilience is especially important because:
+For Flow Research-style systems, resilience is especially important because:
 
 - your protocol may sit under dashboards, governance tools, and ML-style scoring,
 - and it must not poison those layers with cascading failures.
@@ -115,7 +115,7 @@ Without timeouts:
 
 - failing nodes or slow networks can cause **hung clients** and resource exhaustion.
 
-Flow-style motivation:
+Flow Research-style motivation:
 
 - users on learner-on-ramp flows should not sit forever because one governance node is slow.
 
@@ -135,7 +135,7 @@ Use these:
 - only for **idempotent** operations (same message twice has the same effect).
 - always with **maximum retry limits** to avoid infinite loops.
 
-In Flow-style protocols:
+In Flow Research-style protocols:
 
 - retries can be used for:
 
@@ -158,7 +158,7 @@ This protects:
 - upstream clients from waiting on slow or failing nodes,
 - and downstream services from being overwhelmed by retries.
 
-Flow-style use-case:
+Flow Research-style use-case:
 
 - if a reward-calculation service is unhealthy, a circuit breaker can prevent the governance-protocol from stalling every time a reward is needed.
 
@@ -175,7 +175,7 @@ This way:
 
 - a slow governance-node cannot exhaust all connections needed by the on-ramp protocol.
 
-Flow-style benefit:
+Flow Research-style benefit:
 
 - keeps **critical flows** (e.g., learner-on-ramp) responsive even when secondary flows (e.g., analytics) are under load.
 
@@ -194,7 +194,7 @@ Examples:
 
 Without idempotency, retries become dangerous.
 
-Flow-style example:
+Flow Research-style example:
 
 - a "mark learner complete" event should not grant a reward twice if it is resent due to a network glitch.
 
@@ -211,7 +211,7 @@ Examples:
 
 - providing **limited but still useful** functionality when the system is under stress or partial failure.
 
-For Flow-style protocols:
+For Flow Research-style protocols:
 
 - a dashboard can:
 
@@ -227,14 +227,14 @@ To avoid overload and cascading failures, design your protocol with **load aware
 - **Rate limiting** and **throttling** can cap the number of requests or events from a given source.
 - **Queue-based back-pressure** can smooth out bursts (e.g., bursts of learner registrations or governance-events).
 
-Flow-style benefits:
+Flow Research-style benefits:
 
 - protect governance nodes and ML-scoring services from being swamped by traffic spikes.
 - allow the system to trade latency for stability.
 
 ---
 
-## How to Apply Resilience Patterns to Flow-Style Protocols
+## How to Apply Resilience Patterns to Flow Research-Style Protocols
 
 When designing a protocol, ask:
 
@@ -256,7 +256,7 @@ Then, for each critical path, decide:
 - **Idempotency**: how to make retried events safe.
 - **Fallbacks**: what to do when the primary path is unavailable.
 
-In Flow-style thinking:
+In Flow Research-style thinking:
 
 - you can **"bullet-proof"** the most critical flows (e.g., governance-proposal approval, learner-on-ramp)
 - while leaving non-critical flows (e.g., analytics, optional notifications) to fail more gracefully.
@@ -274,9 +274,9 @@ if (failureRate > threshold) {
 
 ## Practical Exercises
 
-### Exercise 1: Add Resilience to a Flow-Style Flow
+### Exercise 1: Add Resilience to a Flow Research-Style Flow
 
-Take a small Flow-style protocol you designed (e.g., proposal approval, reward-flow):
+Take a small Flow Research-style protocol you designed (e.g., proposal approval, reward-flow):
 
 - Sketch where you would add:
 
@@ -312,10 +312,10 @@ Rate yourself from 1 to 5:
 
 - I can explain what resilience means in distributed and protocol-style systems.
 - I can describe at least five resilience patterns (timeouts, retries, circuit breakers, bulkheads, idempotency, fallbacks).
-- I can sketch how to apply several of these to a Flow-style protocol.
+- I can sketch how to apply several of these to a Flow Research-style protocol.
 - I can connect resilience patterns to deployment-pattern and MLOps decisions.
 
-Action item: write a short note in your lab repo describing how you would apply resilience patterns to one Flow-style protocol and what trade-offs that introduces.
+Action item: write a short note in your lab repo describing how you would apply resilience patterns to one Flow Research-style protocol and what trade-offs that introduces.
 
 ---
 
@@ -330,8 +330,8 @@ Action item: write a short note in your lab repo describing how you would apply 
 
 - Read `04-chaos-and-failure-testing.md` next to learn how to deliberately **break** your protocol in a controlled way and see if your resilience patterns hold.
 - Treat resilience as a **first-class design requirement**, not an afterthought.
-- When you design a Flow-style protocol, document your chosen resilience patterns (e.g., "all writes are idempotent; retries use exponential backoff with a max of 3 attempts").
+- When you design a Flow Research-style protocol, document your chosen resilience patterns (e.g., "all writes are idempotent; retries use exponential backoff with a max of 3 attempts").
 
 ---
 
-*This lesson gives Flow Initiative trainees an intermediate-level understanding of resilience patterns in distributed and protocol-style systems, focusing on timeouts, retries, circuit breakers, bulkheads, idempotency, fallbacks, and load-aware design, and how to apply them to Flow-style governance-style and ML-driven protocols to tolerate failures and partial outages.*
+*This lesson gives Flow Research Initiative trainees an intermediate-level understanding of resilience patterns in distributed and protocol-style systems, focusing on timeouts, retries, circuit breakers, bulkheads, idempotency, fallbacks, and load-aware design, and how to apply them to Flow Research-style governance-style and ML-driven protocols to tolerate failures and partial outages.*

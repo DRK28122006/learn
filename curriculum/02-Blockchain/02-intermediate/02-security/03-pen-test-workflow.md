@@ -26,7 +26,7 @@ version: 1.1
 By the end of this lesson, you will be able to:
 
 - Describe the core phases of a blockchain-oriented penetration-testing workflow.
-- Apply a simple pen-test checklist to a Flow-style contract or lab.
+- Apply a simple pen-test checklist to a Flow Research-style contract or lab.
 - Use pen-testing thinking to design more robust systems (not just "break them").
 - Distinguish between **manual testing**, **automated tools**, and **real-world engagements**.
 
@@ -57,14 +57,14 @@ In blockchain, this usually means:
 - Their surrounding infrastructure (nodes, wallets, APIs),
 - And the **economic and governance** rules that drive them.
 
-For Flow Initiative trainees, you will not usually be hired as full-time penetration testers.
+For Flow Research Initiative trainees, you will not usually be hired as full-time penetration testers.
 But you *will* benefit from learning a **pen-tester-style mindset** so you can:
 
 - design systems that are harder to abuse,
 - spot exploitable patterns in labs, and
 - understand what "we tested this" actually means.
 
-This lesson focuses on a **workflow** you can mentally apply to any Flow-style contract or ecosystem.
+This lesson focuses on a **workflow** you can mentally apply to any Flow Research-style contract or ecosystem.
 
 ## What Penetration Testing Is (and Isn't)
 
@@ -103,7 +103,7 @@ Before you touch the code:
  - Understand the ecosystem (tokens, oracles, governance, L2s).
  - Collect public docs, ABI, and any known usage patterns.
 
-In Flow-style contexts, this usually means:
+In Flow Research-style contexts, this usually means:
 
 - Reading the lab instructions and context,
 - Mapping which contracts you are allowed to "attack,"
@@ -160,7 +160,7 @@ In this phase, you **simulate an attack**:
  - Overflow: push arithmetic beyond safe limits.
  - Access-control bypass: try calling admin-only functions with a non-admin account.
 
-In Flow-style labs, you should:
+In Flow Research-style labs, you should:
 
 - Do this **only in local or testnet environments**.
 - Clearly distinguish between **learning** and **real-world** engagements.
@@ -193,9 +193,9 @@ Finally:
 
 This closes the loop and shows that the fix is effective.
 
-## Why This Matters for Flow Engineers
+## Why This Matters for Flow Research Engineers
 
-In Flow-style labs:
+In Flow Research-style labs:
 
 - You will design and modify contracts that resemble real-world systems.
 - You may later work on projects that **actually** pay money or govern communities.
@@ -213,7 +213,7 @@ In public-good contexts, this is especially important when:
 - Communities must trust the system without a central watchdog.
 - Mistakes can have real-life consequences.
 
-## How to Apply This in a Flow-Style Lab
+## How to Apply This in a Flow Research-Style Lab
 
 You do not need a full-scale pen-test every time.
 But you *can* apply the **mental workflow**:
@@ -226,7 +226,7 @@ But you *can* apply the **mental workflow**:
 6. **Reporting**: Write a short note describing findings and suggested fixes.
 7. **Retest**: Confirm changes work.
 
-This is a **lightweight pen-testing practice** that fits Flow-style exploration.
+This is a **lightweight pen-testing practice** that fits Flow Research-style exploration.
 
 ## Implementation Sketch
 
@@ -242,7 +242,7 @@ finding:
 
 ### Exercise 1: Sketch a Simple Pen-Test
 
-Take a small Flow-style contract:
+Take a small Flow Research-style contract:
 
 - Sketch a pen-test workflow for it:
  - Scope and recon.
@@ -266,7 +266,7 @@ Keep this in your lab repo and update it as you learn more.
 
 In a local or testnet environment:
 
-- Attempt to exploit a known vulnerability (e.g., reentrancy) in a Flow-style contract.
+- Attempt to exploit a known vulnerability (e.g., reentrancy) in a Flow Research-style contract.
 - Document the steps and the outcome.
 - Note how you would fix it.
 
@@ -277,11 +277,11 @@ This is a **hands-on⁠-in-a-safe-environment** exercise.
 Rate yourself from 1 to 5:
 
 - I can list the main phases of a pen-test workflow.
-- I can apply this workflow to a Flow-style contract.
+- I can apply this workflow to a Flow Research-style contract.
 - I can see how pen-testing thinking helps design safer systems.
 - I can distinguish between learning and real-world engagements.
 
-Action item: write a short note in your lab repo describing one vulnerability you would test in a Flow-style contract and how you would test it.
+Action item: write a short note in your lab repo describing one vulnerability you would test in a Flow Research-style contract and how you would test it.
 
 ## Further Reading
 
@@ -298,4 +298,4 @@ Action item: write a short note in your lab repo describing one vulnerability yo
 
 ---
 
-*This lesson gives Flow Initiative trainees an engineer-style understanding of a penetration testing workflow for blockchain systems, focusing on how to think like an attacker, apply structured testing, and integrate this mindset into Flow-style labs.*
+*This lesson gives Flow Research Initiative trainees an engineer-style understanding of a penetration testing workflow for blockchain systems, focusing on how to think like an attacker, apply structured testing, and integrate this mindset into Flow Research-style labs.*

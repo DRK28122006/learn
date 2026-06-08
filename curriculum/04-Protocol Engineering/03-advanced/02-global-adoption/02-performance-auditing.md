@@ -26,8 +26,8 @@ version: 1.1
 By the end of this lesson, you will be able to:
 
 - Explain what a **performance audit** is and how it differs from normal "monitoring" or "tuning."
-- Map **performance-style Key Performance Indicators (KPIs)** for Flow-style protocols (e.g., latency, p95, throughput, resource-utilization) into a structured audit process.
-- Conduct a **mini-performance audit** of a Flow-style flow by:
+- Map **performance-style Key Performance Indicators (KPIs)** for Flow Research-style protocols (e.g., latency, p95, throughput, resource-utilization) into a structured audit process.
+- Conduct a **mini-performance audit** of a Flow Research-style flow by:
 
  - mapping user journeys,
  - collecting and baselining metrics,
@@ -74,7 +74,7 @@ A performance audit is a **structured, cross-functional examination** of an IT s
 - where bottlenecks are, and
 - what can be improved to meet business or user-experience goals.
 
-For Flow-style systems, performance audits matter because:
+For Flow Research-style systems, performance audits matter because:
 
 - slow governance flows, learner-on-ramp flakiness, or reward-delays
 - can erode trust, even if everything is technically "working."
@@ -104,7 +104,7 @@ Contrast with "monitoring":
 - **Monitoring** is ongoing telemetry (e.g., dashboards, alerts).
 - **Auditing** is periodic, deep-dive reviews that diagnose root causes and formalize improvement plans.
 
-For Flow-style protocols, auditing is useful before:
+For Flow Research-style protocols, auditing is useful before:
 
 - big releases,
 - traffic spikes, or
@@ -192,13 +192,13 @@ Prioritize:
  - data grows,
  - and new bottlenecks emerge.
 
-For Flow-style systems, this turns performance from "magic tuning" into a **continuous, documented discipline**.
+For Flow Research-style systems, this turns performance from "magic tuning" into a **continuous, documented discipline**.
 
 ---
 
-## How to Run a Performance Audit on a Flow-Style Flow
+## How to Run a Performance Audit on a Flow Research-Style Flow
 
-To apply this to Flow-style protocols, follow a concrete pattern on a chosen flow (e.g., "learner-on-ramp" or "proposal approval"):
+To apply this to Flow Research-style protocols, follow a concrete pattern on a chosen flow (e.g., "learner-on-ramp" or "proposal approval"):
 
 ### 1. Map the User Journey
 
@@ -261,7 +261,7 @@ This is exactly what cross-functional teams (governance, ML, ops) need to align 
 
 ---
 
-## How This Fits Into Flow-Style Systems
+## How This Fits Into Flow Research-Style Systems
 
 Performance auditing is not only an **ops** or **cloud** practice; it ties deeply into:
 
@@ -319,7 +319,7 @@ print(round(goodput, 2))
 
 ### Exercise 1: Run a Mini-Performance Audit
 
-- Pick a Flow-style flow you designed (e.g., governance-proposal approval or learner-reward-distribution):
+- Pick a Flow Research-style flow you designed (e.g., governance-proposal approval or learner-reward-distribution):
 
  - Map the **user journey stages** and assign KPIs.
  - Sketch the **telemetry and traces** you would collect.
@@ -341,7 +341,7 @@ This trains you to think like an **audit-style consultant**, not just a coder.
 
 ### Exercise 3: Design a Scheduled Audit Calendar
 
-- Sketch a **quarterly performance-auditing calendar** for your Flow-style stack:
+- Sketch a **quarterly performance-auditing calendar** for your Flow Research-style stack:
 
  - which protocols or flows you would audit when,
  - who participates (e.g., protocol engineers, MLOps, governance-team),
@@ -356,11 +356,11 @@ This turns auditing into a **habit**, not a one-off panic.
 Rate yourself from 1 to 5:
 
 - I can explain what a performance audit is and how it differs from normal monitoring.
-- I can define KPIs for a Flow-style flow and structure a mini-audit around them.
+- I can define KPIs for a Flow Research-style flow and structure a mini-audit around them.
 - I can collect and interpret latency, throughput, and resource-utilization data to identify bottlenecks.
 - I can connect performance-auditing practices to MLOps, observability, and regulatory-style resilience requirements.
 
-Action item: write a short note in your lab repo describing one performance-auditing-style exercise you ran (or sketched) on a Flow-style protocol and what you would change based on the findings.
+Action item: write a short note in your lab repo describing one performance-auditing-style exercise you ran (or sketched) on a Flow Research-style protocol and what you would change based on the findings.
 
 ---
 
@@ -374,9 +374,9 @@ Action item: write a short note in your lab repo describing one performance-audi
 ## Next Steps
 
 - Read `03-audit-compliance-and-traceability.md` next to see how to fold **audit-style traceability** (e.g., logging and replay-style histories) into your security- and performance-audit practices.
-- Treat every Flow-style release as something that should be preceded or followed by a **spot-performance audit** for the most critical flows.
-- When you design a Flow-style protocol, start by asking: "What are the KPIs and audit-style review cadence for this flow, and how will we measure and improve them over time?"
+- Treat every Flow Research-style release as something that should be preceded or followed by a **spot-performance audit** for the most critical flows.
+- When you design a Flow Research-style protocol, start by asking: "What are the KPIs and audit-style review cadence for this flow, and how will we measure and improve them over time?"
 
 ---
 
-*This lesson gives Flow Initiative trainees an advanced-level understanding of performance auditing in protocol-style systems, focusing on mapping user journeys to KPIs, collecting baselines, diagnosing bottlenecks, and producing actionable recommendations, and how to institutionalize performance-auditing into Flow-style governance-style and ML-driven protocols via regular audits and observability-style telemetry.*
+*This lesson gives Flow Research Initiative trainees an advanced-level understanding of performance auditing in protocol-style systems, focusing on mapping user journeys to KPIs, collecting baselines, diagnosing bottlenecks, and producing actionable recommendations, and how to institutionalize performance-auditing into Flow Research-style governance-style and ML-driven protocols via regular audits and observability-style telemetry.*

@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Identify the main steps in the contract lifecycle: write, test, deploy, monitor.
 - Use basic testing strategies (unit tests, integration tests, state checks).
 - Understand the difference between local testnets, testnets, and mainnets.
-- Apply a "deploy-only-when-tested" discipline in Flow-style labs.
+- Apply a "deploy-only-when-tested" discipline in Flow Research-style labs.
 
 ## Concept Map
 
@@ -52,7 +52,7 @@ $$
 
 Writing a contract is only half the story.
 You must also **test it thoroughly** and **deploy it safely** to the chain you care about.
-In the Flow Initiative, you will run contracts on:
+In the Flow Research Initiative, you will run contracts on:
 
 - Local development environments,
 - Testnets, and
@@ -73,7 +73,7 @@ Testing is the **last line of defense** before deployment:
 - You cannot rely solely on code review or "hope it works."
 - You must check behavior under different conditions, inputs, and edge cases.
 
-For Flow trainees, this is especially important because:
+For Flow Research trainees, this is especially important because:
 
 - Labs and examples can later evolve into production-like systems.
 - Public-good infrastructure often has **high stakes** and **low forgiveness** for mistakes.
@@ -91,7 +91,7 @@ Your job is to **build a testing mindset** into how you design and write contrac
 - Do state transitions match the expected pattern?
 
 Unit tests are fast and deterministic.
-In Flow-style labs, you may use frameworks like:
+In Flow Research-style labs, you may use frameworks like:
 
 - Hardhat or Foundry for Solidity,
 - or Vyper-specific tooling.
@@ -124,7 +124,7 @@ More advanced teams add:
 - **Fuzzing** - automatically generating random inputs to find edge cases.
 - **Invariant checks** - ensuring certain conditions always hold (e.g., total supply never decreases incorrectly).
 
-For beginner-intermediate Flow labs, focus on **unit and integration tests**.
+For beginner-intermediate Flow Research labs, focus on **unit and integration tests**.
 Fuzzing and invariants are a "next-level" practice.
 
 ## Deployment Environments
@@ -137,7 +137,7 @@ Contracts are typically deployed in stages:
 - No real economic value at stake.
 - Used for fast iteration and debugging.
 
-Flow labs often start here: you write, test, and debug contracts without worrying about gas or permanence.
+Flow Research labs often start here: you write, test, and debug contracts without worrying about gas or permanence.
 
 ### 2. Testnet
 
@@ -150,7 +150,7 @@ Testnets are optional but recommended for anything that will interact with real 
 ### 3. Mainnet (or Equivalent)
 
 - The production network where real value is at stake.
-- For Flow exercises, this may be a **simulated L1** or **local mainnet-equivalent**.
+- For Flow Research exercises, this may be a **simulated L1** or **local mainnet-equivalent**.
 
 Deployment here is **irreversible**.
 You must only deploy after thorough testing.
@@ -175,11 +175,11 @@ To avoid mistakes, adopt a deployment checklist:
  - Verify that the contract is correctly deployed.
  - Check events and state for a few transactions.
 
-This discipline is crucial for Flow-style systems that may later handle real-world value.
+This discipline is crucial for Flow Research-style systems that may later handle real-world value.
 
-## How This Fits Into the Flow Initiative
+## How This Fits Into the Flow Research Initiative
 
-In Flow labs:
+In Flow Research labs:
 
 - You will write contracts in Solidity or Vyper.
 - You will run tests in your local environment.
@@ -210,7 +210,7 @@ contract Counter {
 
 ### Exercise 1: Write a Simple Test Plan
 
-Take a small contract from a Flow lab:
+Take a small contract from a Flow Research lab:
 
 - Write a short test plan identifying:
  - What functions need unit tests.
@@ -221,14 +221,14 @@ This is a **high-level test plan**, not code.
 
 ### Exercise 2: Sketch a Deployment Flow
 
-Sketch a deployment flow for a Flow-style contract:
+Sketch a deployment flow for a Flow Research-style contract:
 
 - From local development to testnet to mainnet (or simulated mainnet).
 - Including code review, testing, and post-deployment checks.
 
 This is a **mental model** of the deployment lifecycle.
 
-### Exercise 3: Relate to a Flow Lab
+### Exercise 3: Relate to a Flow Research Lab
 
 Look at a blockchain lab that mentions deployment:
 
@@ -245,9 +245,9 @@ Rate yourself from 1 to 5:
 - I can explain the difference between unit and integration tests.
 - I can identify the main steps in the deployment lifecycle.
 - I can see why testing is crucial for smart contracts.
-- I can connect these practices to Flow-style labs.
+- I can connect these practices to Flow Research-style labs.
 
-Action item: write a short note in your lab repo describing a deployment checklist for a Flow-style contract.
+Action item: write a short note in your lab repo describing a deployment checklist for a Flow Research-style contract.
 
 ## Further Reading
 
@@ -264,4 +264,4 @@ Action item: write a short note in your lab repo describing a deployment checkli
 
 ---
 
-*This lesson gives Flow Initiative trainees an engineer-style understanding of smart-contract testing and deployment, focusing on unit tests, integration tests, and deployment environments, and how they fit into the contract lifecycle on the blockchain.*
+*This lesson gives Flow Research Initiative trainees an engineer-style understanding of smart-contract testing and deployment, focusing on unit tests, integration tests, and deployment environments, and how they fit into the contract lifecycle on the blockchain.*

@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Explain how consensus parameters (e.g., block time, finality threshold, validator set size) affect system behavior.
 - Map parameter choices to trade-offs in latency, security, and decentralization.
 - Analyze existing L1/L2 systems against their consensus-level parameters.
-- Use "tuning thinking" to design or adapt consensus for Flow-style protocols.
+- Use "tuning thinking" to design or adapt consensus for Flow Research-style protocols.
 
 ## Concept Map
 
@@ -60,7 +60,7 @@ Consensus is not a fixed black box; it is a **configuration-driven system** whos
 - how long it takes to reach finality,
 - and how incentives are structured.
 
-In the Flow Initiative, you will not usually be asked to invent a new consensus algorithm from scratch.
+In the Flow Research Initiative, you will not usually be asked to invent a new consensus algorithm from scratch.
 You *will* be asked to **reason about** and **select or adapt** consensus models for L1, L2, and protocol-design work.
 
 This lesson focuses on **engineering-grade intuition** for consensus tuning: how to read whitepapers, how to interpret parameters, and how to map them to real-world performance and risk.
@@ -207,9 +207,9 @@ Again, you can read and reason about these choices.
 
 ---
 
-## Why This Matters for Flow Engineers
+## Why This Matters for Flow Research Engineers
 
-Flow-style engineers will:
+Flow Research-style engineers will:
 
 - Encounter L1s and L2s with different consensus parameters.
 - Design or critique protocols that must meet specific latency and security requirements.
@@ -254,11 +254,11 @@ Take a real-world chain or L2 you know (e.g., Ethereum, a popular rollup):
 
  - What behavior this configuration is optimized for.
  - What trade-offs it makes.
- - Whether it is appropriate for a Flow-style system.
+ - Whether it is appropriate for a Flow Research-style system.
 
 ### Exercise 2: Sketch a Tuned Configuration
 
-Imagine a Flow-style protocol that:
+Imagine a Flow Research-style protocol that:
 
 - Needs **low latency** for user interactions.
 - Needs **high security** for settlement.
@@ -271,7 +271,7 @@ Design a consensus configuration:
 
 ### Exercise 3: Simulate Parameter Changes
 
-In a Flow-style lab:
+In a Flow Research-style lab:
 
 - Change a consensus parameter (e.g., block time) in a local or testnet environment.
 - Observe the effect on latency, throughput, and security.
@@ -288,9 +288,9 @@ Rate yourself from 1 to 5:
 - I can explain what "consensus tuning" means.
 - I can list key parameters that affect consensus behavior.
 - I can interpret how parameters affect latency, security, and decentralization.
-- I can design a tuned configuration for a Flow-style protocol.
+- I can design a tuned configuration for a Flow Research-style protocol.
 
-Action item: write a short note in your lab repo describing the consensus configuration of a Flow-style protocol you would like to build.
+Action item: write a short note in your lab repo describing the consensus configuration of a Flow Research-style protocol you would like to build.
 
 ## Further Reading
 
@@ -307,4 +307,4 @@ Action item: write a short note in your lab repo describing the consensus config
 
 ---
 
-*This lesson gives Flow Initiative trainees an engineer-style understanding of consensus tuning in blockchain systems, focusing on how to read, interpret, and design consensus parameters for specific application needs and trade-offs.*
+*This lesson gives Flow Research Initiative trainees an engineer-style understanding of consensus tuning in blockchain systems, focusing on how to read, interpret, and design consensus parameters for specific application needs and trade-offs.*

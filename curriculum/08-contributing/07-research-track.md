@@ -5,7 +5,7 @@ title: Research Track
 
 # Research Track
 
-Flow Research is an evolving organization. New products emerge from ongoing research into distributed systems, AI, protocol infrastructure, and agent reliability. The research track is a fellowship option for contributors who want to explore new ideas before they become products.
+Flow Research is evolving. New products emerge from ongoing research into distributed systems, AI, protocol infrastructure, and agent reliability. The research track is a fellowship option for contributors who want to explore new ideas before they become products.
 
 ## What research looks like
 

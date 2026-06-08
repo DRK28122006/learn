@@ -28,7 +28,7 @@ By the end of this lesson, you will be able to:
 - Define a blockchain as a technical system, not just a buzzword.
 - Identify the core components of a blockchain (blocks, state, consensus, network).
 - Explain the problems blockchain solves relative to traditional databases.
-- Connect blockchain concepts to real-world systems practiced in the Flow Initiative.
+- Connect blockchain concepts to real-world systems practiced in the Flow Research Initiative.
 
 ## Concept Map
 
@@ -54,7 +54,7 @@ Changing old data changes the hash chain, which is why verification is cheap but
 
 Blockchain is often presented as magic money machine. In reality, it is a very specific **engineering pattern** for building shared, append-only ledgers across many machines and people.
 
-For Flow Initiative trainees, the goal is not to "believe in crypto" but to understand blockchain as a **distributed systems primitive**. You will eventually apply this to:
+For Flow Research Initiative trainees, the goal is not to "believe in crypto" but to understand blockchain as a **distributed systems primitive**. You will eventually apply this to:
 
 - decentralized ledgers,
 - incentive-driven infrastructure, and
@@ -176,7 +176,7 @@ From an engineer's viewpoint, this means:
 
 ## Practical Examples Trainees Will Encounter
 
-As you move deeper into the Flow Initiative blockchain track, you will see variants of:
+As you move deeper into the Flow Research Initiative blockchain track, you will see variants of:
 
 - **L1 blockchains** - base-layer ledgers with consensus and state, such as Ethereum-style chains.
 - **L2 networks** - systems that scale and bundle transactions without sacrificing the security of the base layer.
@@ -188,9 +188,9 @@ Even at the beginner level, it helps to see these patterns:
 - A **registry** where identity or credentials are stored transparently.
 - A **token economy** where value accrues to participants based on agreed-on rules.
 
-## Why This Matters for Flow Engineers
+## Why This Matters for Flow Research Engineers
 
-Flow trainees work on **public-good infrastructure**, where:
+Flow Research trainees work on **public-good infrastructure**, where:
 
 - single-points of failure are dangerous,
 - trust in institutions can be low or contested, and
@@ -258,7 +258,7 @@ Rate yourself from 1 to 5:
 - I can explain how it differs from a traditional database.
 - I can see why this pattern might matter for public-goods infrastructure.
 
-Action item: write a 3-sentence note in your Flow lab repo describing how a blockchain is like a "shared, append-only log" with rules.
+Action item: write a 3-sentence note in your Flow Research lab repo describing how a blockchain is like a "shared, append-only log" with rules.
 
 ## Further Reading
 
@@ -270,9 +270,9 @@ Action item: write a 3-sentence note in your Flow lab repo describing how a bloc
 ## Next Steps
 
 - Read `02-key-terms-and-models.md` next to build precise language for blockchain work.
-- Use this conceptual model when you later encounter Ethereum-style chains, L2s, or token-based systems in the Flow curriculum.
+- Use this conceptual model when you later encounter Ethereum-style chains, L2s, or token-based systems in the Flow Research curriculum.
 - Treat blockchain as a **distributed systems primitive**, not a miracle technology.
 
 ---
 
-*This lesson equips Flow Initiative trainees with a grounded, engineering-style understanding of blockchain as a distributed, append-only ledger driven by consensus and cryptography, preparing them for deeper work in the beginner, intermediate, and advanced tracks.*
+*This lesson equips Flow Research Initiative trainees with a grounded, engineering-style understanding of blockchain as a distributed, append-only ledger driven by consensus and cryptography, preparing them for deeper work in the beginner, intermediate, and advanced tracks.*

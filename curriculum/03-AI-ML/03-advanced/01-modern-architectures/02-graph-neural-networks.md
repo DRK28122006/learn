@@ -44,7 +44,7 @@ flowchart LR
 
 Many ML problems are not just rows or sequences. They are networks.
 
-A graph neural network learns from entities and the relationships between them. In a Flow-style system, this might mean learners connected to lessons, contributors connected to proposals, or services connected through dependencies.
+A graph neural network learns from entities and the relationships between them. In a Flow Research-style system, this might mean learners connected to lessons, contributors connected to proposals, or services connected through dependencies.
 
 :::tip Launch Rule
 Reach for a GNN when the edges are meaningful. If the links are arbitrary or weak, a simpler tabular or sequence model may be better.
@@ -230,7 +230,7 @@ If you cannot define meaningful edges, the GNN probably has no useful graph to l
 
 ### Exercise 1: Build a Graph Schema
 
-Choose a Flow-style system and define nodes, edges, features, and prediction target.
+Choose a Flow Research-style system and define nodes, edges, features, and prediction target.
 
 ### Exercise 2: Run the NumPy Aggregator
 

@@ -65,7 +65,7 @@ Now it is time to **document** those ideas in a way that:
 
 A **specification** (often called a "spec") is a **written description** of what a system or protocol **must do**, not just what it *might* do.
 
-In Flow-style work, good specs help you:
+In Flow Research-style work, good specs help you:
 
 - align teams,
 - avoid mis-implementations, and
@@ -110,7 +110,7 @@ For example:
 
 - the IETF and similar standards bodies insist on **detailed protocol specs** because they expect **many independent implementations** to talk to each other.
 
-In Flow-style thinking:
+In Flow Research-style thinking:
 
 - writing a spec is an **engineering discipline**, not "extra documentation."
 - it reduces churn, mis-alignment, and re-design later.
@@ -249,9 +249,9 @@ This keeps the spec readable and maintainable.
 
 ---
 
-## How This Fits Into Flow-Style Work
+## How This Fits Into Flow Research-Style Work
 
-In Flow-style protocols you can:
+In Flow Research-style protocols you can:
 
 - Write a **core spec** for the protocol (e.g., governance-state machine, reward-calculation rules).
 - Write **second-level specs** for:
@@ -283,7 +283,7 @@ The implementation MAY cache public metadata for 300 seconds.
 
 ### Exercise 1: Draft a Tiny Protocol Spec
 
-Pick a small Flow-style workflow (e.g., a proposal flow, reward-calculation, or on-ramp):
+Pick a small Flow Research-style workflow (e.g., a proposal flow, reward-calculation, or on-ramp):
 
 - Write a short spec that includes:
 
@@ -321,9 +321,9 @@ Rate yourself from 1 to 5:
 - I can explain why a written specification is important for protocol design.
 - I can structure a spec with core sections (scope, actors, behavior, requirements, data, examples).
 - I can write simple "shall"-style requirements that are testable.
-- I can see how diagrams and text fit together in a Flow-style protocol spec.
+- I can see how diagrams and text fit together in a Flow Research-style protocol spec.
 
-Action item: write a short note in your lab repo describing one Flow-style protocol you documented in a spec and how that changed how you think about the design.
+Action item: write a short note in your lab repo describing one Flow Research-style protocol you documented in a spec and how that changed how you think about the design.
 
 ---
 
@@ -337,9 +337,9 @@ Action item: write a short note in your lab repo describing one Flow-style proto
 ## Next Steps
 
 - Read `02-formal-and-semi-formal-notation.md` next to learn lightweight ways to add more rigor (e.g., simple state-machine tables) to your specs.
-- Treat every new Flow-style protocol as something that **must have a spec**, even if it is short.
+- Treat every new Flow Research-style protocol as something that **must have a spec**, even if it is short.
 - Keep your specs living: update them as you learn and iterate, just like your codebase.
 
 ---
 
-*This lesson gives Flow Initiative trainees a beginner-level understanding of specification writing in protocol engineering, focusing on clear structure (title, scope, behavior, requirements, data, and examples), precise "shall"-style requirements, and how to use diagrams to complement text in Flow-style protocol and governance-style systems.*
+*This lesson gives Flow Research Initiative trainees a beginner-level understanding of specification writing in protocol engineering, focusing on clear structure (title, scope, behavior, requirements, data, and examples), precise "shall"-style requirements, and how to use diagrams to complement text in Flow Research-style protocol and governance-style systems.*
